@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "sass": "^1.75.0"
+  },
+  "scripts": {
+    "build:css": "sass --watch src/scss:src/css"
+  }
+}
