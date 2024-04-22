@@ -1,5 +1,85 @@
-.test {
-  @apply mt-20;
+@import url(../../css/main/font.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-top {
+  position: relative;
+}
+.container-top .thumbnail {
+  position: absolute;
+  width: 100%;
+}
+.container-top .thumbnail img {
+  width: 100%;
+}
+.container-top .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 56.25vw;
+}
+.container-top .info .left-info {
+  margin-left: 4.5vw;
+  padding-bottom: 18vw;
+  width: 35vw;
+}
+.container-top .info .left-info img {
+  width: 100%;
+}
+.container-top .info .left-info .decribtion {
+  margin-top: 1.8vw;
+  margin-bottom: 1.8vw;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+.container-top .info .left-info .b1, .container-top .info .left-info .b2, .container-top .info .left-info .b3 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: 500;
+  padding: 0.7vw 1.3vw;
+  border: none;
+  margin-left: 10px;
+  border-radius: 0.3vw;
+}
+.container-top .info .left-info .b1 svg, .container-top .info .left-info .b2 svg, .container-top .info .left-info .b3 svg {
+  margin-right: 0.8vw;
+}
+.container-top .info .left-info .b2 {
+  color: #fff;
+  background-color: rgba(109, 109, 110, 0.7);
+}
+.container-top .info .right-info {
+  padding-bottom: 18vw;
+  margin-right: 3vw;
+}
+.container-top .gradient-screen {
+  position: absolute;
+  width: 100%;
+  height: 56.25vw;
+  background: linear-gradient(0deg, #181818, transparent 50%);
+}
+
+.body-container {
+  position: relative;
+  top: 45vw;
+  width: 100%;
+  height: 2000px;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.body-container .slider {
+  @apply flex;
+}
+.body-container .slider img {
+  @apply aspect-video
+            flex-[0_0_25%];
 }
 
 /*# sourceMappingURL=test.css.map */

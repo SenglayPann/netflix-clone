@@ -1,0 +1,194 @@
+/* Font Family injection */
+
+* {
+  font-family: 'Netflix Sans';
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 100;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 300;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 400;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 700;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 800;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 900;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
+}
+
+.netflix-sans-font-loaded {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.nkufi-font-loaded {
+  font-family: NKufi,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.graphik-font-loaded {
+  font-family: GraphikTH,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.error-page {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: rgba(0,0,0,.18);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-top: 68px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-top {
+  position: relative;
+}
+
+.container-top .thumbnail {
+  position: absolute;
+  width: 100%;
+}
+
+.container-top .thumbnail img {
+  width: 100%;
+}
+
+.container-top .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 56.25vw;
+}
+
+.container-top .info .left-info {
+  margin-left: 4.5vw;
+  padding-bottom: 18vw;
+  width: 35vw;
+}
+
+.container-top .info .left-info img {
+  width: 100%;
+}
+
+.container-top .info .left-info .decribtion {
+  margin-top: 1.8vw;
+  margin-bottom: 1.8vw;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+
+.container-top .info .left-info .b1, .container-top .info .left-info .b2, .container-top .info .left-info .b3 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3vw;
+  font-weight: 500;
+  padding: 0.7vw 1.3vw;
+  border: none;
+  margin-left: 10px;
+  border-radius: 0.3vw;
+}
+
+.container-top .info .left-info .b1 svg, .container-top .info .left-info .b2 svg, .container-top .info .left-info .b3 svg {
+  margin-right: 0.8vw;
+}
+
+.container-top .info .left-info .b2 {
+  color: #fff;
+  background-color: rgba(109, 109, 110, 0.7);
+}
+
+.container-top .info .right-info {
+  padding-bottom: 18vw;
+  margin-right: 3vw;
+}
+
+.container-top .gradient-screen {
+  position: absolute;
+  width: 100%;
+  height: 56.25vw;
+  background: linear-gradient(0deg, #181818, transparent 50%);
+}
+
+.body-container {
+  position: relative;
+  top: 45vw;
+  width: 100%;
+  height: 2000px;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.body-container .slider {
+  display: flex;
+}
+
+.body-container .slider img {
+  aspect-ratio: 16 / 9;
+  flex: 0 0 25%;
+}
+
+/*# sourceMappingURL=o_test.css.map */
