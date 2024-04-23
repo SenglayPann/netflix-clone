@@ -1,13 +1,19 @@
 @import url(../../css/main/font.css);
 
+:root {
+    --slider-padding: 5vw;
+    --card-border: .5vw;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.container-top {
+.container {
     position: relative;
+    // width: 100%;
     .thumbnail {
         position: absolute;
         width: 100%;
@@ -127,25 +133,68 @@
 }
 
 // body part 
-
-.body-container {
-    position: relative;
-        top: 45vw;
-        width: 100%;
-        height: 2000px;
-        background-color: rgba(255, 0, 0, .1);
+.body-wrapper {
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    top: 45vw;
 }
 
-.body-container {
-    .slider {
-        img {
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.carousel-container  {
+    .slider{
+        width: calc(100% - 2 * var(--slider-padding));
+        display: flex;
+        // transform: translateX(-100%);
+
+        .img-container {
+            aspect-ratio: 16/9;
+            flex: 0 0 25%; //   shrink 0 grow 0 25% of parent
+            max-width: 25%; // make sure it is alway25%
+            padding: .1rem;
             
-            @apply aspect-video
-            flex-[0_0_25%]
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--card-border);
+            }
         }
         
-        @apply flex
-        
+
+
 
     }
+}
+
+// handler
+
+.handle {
+    width: var(--slider-padding);
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 5;
+    margin: .1rem 0 .35rem 0;
+    border: none;
+    
+}
+
+.handle:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-handle {
+    margin-right: .1vw;
+    border-radius: 0 var(--card-border) var(--card-border) 0;
+}
+
+.right-handle {
+    margin-left: .1vw;
+    border-radius: var(--card-border) 0 0 var(--card-border);
 }

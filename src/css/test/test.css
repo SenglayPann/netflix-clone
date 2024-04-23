@@ -1,21 +1,26 @@
 @import url(../../css/main/font.css);
+:root {
+  --slider-padding: 5vw;
+  --card-border: .5vw;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.container-top {
+.container {
   position: relative;
 }
-.container-top .thumbnail {
+.container .thumbnail {
   position: absolute;
   width: 100%;
 }
-.container-top .thumbnail img {
+.container .thumbnail img {
   width: 100%;
 }
-.container-top .info {
+.container .info {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -23,22 +28,22 @@
   width: 100%;
   height: 56.25vw;
 }
-.container-top .info .left-info {
+.container .info .left-info {
   margin-left: 4.5vw;
   padding-bottom: 18vw;
   width: 35vw;
 }
-.container-top .info .left-info img {
+.container .info .left-info img {
   width: 100%;
 }
-.container-top .info .left-info .decribtion {
+.container .info .left-info .decribtion {
   margin-top: 1.8vw;
   margin-bottom: 1.8vw;
   color: #fff;
   font-size: 1.2vw;
   font-weight: 300;
 }
-.container-top .info .left-info .b1, .container-top .info .left-info .b2, .container-top .info .left-info .b3 {
+.container .info .left-info .b1, .container .info .left-info .b2, .container .info .left-info .b3 {
   display: inline-flex;
   align-items: center;
   font-size: 1.3vw;
@@ -48,38 +53,75 @@
   margin-left: 10px;
   border-radius: 0.3vw;
 }
-.container-top .info .left-info .b1 svg, .container-top .info .left-info .b2 svg, .container-top .info .left-info .b3 svg {
+.container .info .left-info .b1 svg, .container .info .left-info .b2 svg, .container .info .left-info .b3 svg {
   margin-right: 0.8vw;
 }
-.container-top .info .left-info .b2 {
+.container .info .left-info .b2 {
   color: #fff;
   background-color: rgba(109, 109, 110, 0.7);
 }
-.container-top .info .right-info {
+.container .info .right-info {
   padding-bottom: 18vw;
   margin-right: 3vw;
 }
-.container-top .gradient-screen {
+.container .gradient-screen {
   position: absolute;
   width: 100%;
   height: 56.25vw;
   background: linear-gradient(0deg, #181818, transparent 50%);
 }
 
-.body-container {
-  position: relative;
-  top: 45vw;
+.body-wrapper {
   width: 100%;
   height: 2000px;
+  position: absolute;
+  top: 45vw;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   background-color: rgba(255, 0, 0, 0.1);
 }
 
-.body-container .slider {
-  @apply flex;
+.carousel-container .slider {
+  width: calc(100% - 2 * var(--slider-padding));
+  display: flex;
 }
-.body-container .slider img {
-  @apply aspect-video
-            flex-[0_0_25%];
+.carousel-container .slider .img-container {
+  aspect-ratio: 16/9;
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0.1rem;
+}
+.carousel-container .slider .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--card-border);
+}
+
+.handle {
+  width: var(--slider-padding);
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  margin: 0.1rem 0 0.35rem 0;
+  border: none;
+}
+
+.handle:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left-handle {
+  margin-right: 0.1vw;
+  border-radius: 0 var(--card-border) var(--card-border) 0;
+}
+
+.right-handle {
+  margin-left: 0.1vw;
+  border-radius: var(--card-border) 0 0 var(--card-border);
 }
 
 /*# sourceMappingURL=test.css.map */
