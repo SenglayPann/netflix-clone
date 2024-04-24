@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "Cybernexus"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/carousel"
+LAND_DEST_BRANCH = "feature/carousel"

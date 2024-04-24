@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Modal with Smooth Transition</title>
+    <style>
+        /* General modal backdrop */
+        .modal-bg {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            z-index: 999; /* Ensure the modal appears above other content */
+            transition: opacity 0.4s ease; /* Smooth fade-in/fade-out transition */
+        }
+
+        /* Modal content with animation */
+        .modal-content {
+            position: absolute;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(0); /* Initially scaled down */
+            opacity: 0;
+            transition: transform 0.4s ease-out, top 0.4s ease-out, left 0.4s ease-out, opacity .4s ease-out; /* Smooth transitions */
+        }
+
+        /* Close button styling */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #aaa; /* Light gray color for the close button */
+        }
+        .modal-close:hover {
+            color: #555; /* Darken on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Button to open the modal -->
+<button style="margin-left: 500px; margin-top: 2000px;" id="openModal">Open Animated Modal</button>
+
+<!-- Modal Structure -->
+<div class="modal-bg" id="modalBg">
+    <div class="modal-content" id="modalContent">
+        <span class="modal-close" id="closeModal">&times;</span> <!-- '×' is a close icon -->
+        <h2>Welcome to the Animated Modal</h2>
+        <p>This modal pops up from the button location and animates back to the button when closed.</p>
+    </div>
+</div>
+
+<script>
+    const modalBg = document.getElementById('modalBg'); // Get the modal backdrop
+    const modalContent = document.getElementById('modalContent'); // Get the modal content
+    const openModalBtn = document.getElementById('openModal'); // Get the button to open the modal
+    const closeModalBtn = document.getElementById('closeModal'); // Get the modal close button
+
+    const animateToButton = (element, button) => {
+        // Get the button's position
+        const rect = button.getBoundingClientRect();
+        // Move the modal content to the button's location
+        element.style.transform = 'scale(1)'; // Reset scaling
+        element.style.top = `${rect.top}px`;
+        element.style.left = `${rect.left}px`;
+        element.style.transform += ' translate(-50%, -50%)'; // Align with the button's position
+    };
+
+    openModalBtn.addEventListener('click', () => {
+        const rect = openModalBtn.getBoundingClientRect(); // Get the button's coordinates
+        
+        // Position the modal over the button's location
+        modalContent.style.top = `${rect.top}px`;
+        modalContent.style.left = `${rect.left}px`;
+        modalContent.style.opacity = `1`;
+        
+        // Show the modal background
+        modalBg.style.display = 'block';
+        
+        // Animate the modal to the center
+        setTimeout(() => {
+            modalContent.style.transform = 'scale(1)';
+            modalContent.style.top = '50%';
+            modalContent.style.left = '50%';
+            modalContent.style.transform += ' translate(-50%, -50%)'; // Centering
+        }, 10); // Delay to trigger transition
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        // Animate the modal back to the button
+        animateToButton(modalContent, openModalBtn);
+        
+        setTimeout(() => {
+            modalBg.style.display = 'none';
+        }, 400); // Delay to ensure animation completes
+    });
+
+    // Close the modal when clicking on the background
+    modalBg.addEventListener('click', (e) => {
+        if (e.target === modalBg) {
+            animateToButton(modalContent, openModalBtn);
+            setTimeout(() => {
+                modalBg.style.display = 'none';
+            }, 400); // Delay to ensure animation completes
+        }
+    });
+</script>
+
+</body>
+</html>
