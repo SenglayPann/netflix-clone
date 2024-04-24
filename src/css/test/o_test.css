@@ -156,6 +156,7 @@
   border: none;
   margin-left: 10px;
   border-radius: 0.3vw;
+  cursor: pointer;
 }
 
 .container .info .left-info .b1 svg, .container .info .left-info .b2 svg, .container .info .left-info .b3 svg {
@@ -183,7 +184,7 @@
   width: 100%;
   height: 2000px;
   position: absolute;
-  top: 45vw;
+  top: 50vw;
 }
 
 .carousel-container {
@@ -191,9 +192,11 @@
   justify-content: center;
   width: 100%;
   background-color: rgba(255, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .carousel-container .slider {
+  --slider-index: 1;
   width: calc(100% - 2 * var(--slider-padding));
   display: flex;
 }
@@ -203,6 +206,7 @@
   flex: 0 0 25%;
   max-width: 25%;
   padding: 0.1rem;
+  position: relative;
 }
 
 .carousel-container .slider .img-container img {
@@ -213,15 +217,79 @@
   border-radius: var(--card-border);
 }
 
+.carousel-container .slider .img-container .hidden-info-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: yellow;
+  border-radius: var(--card-border);
+  transition: all 0.2s ease-in-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carousel-container .slider .img-container .hidden-info-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-container .slider .img-container .hidden-info-card .card-info {
+  font-size: 1vw;
+}
+
+.carousel-container .slider .img-container .hidden-info-card:hover {
+  opacity: 1;
+  top: -7vw;
+  left: 4.5vw;
+  scale: 1.5;
+  transition-delay: 0.5s;
+  pointer-events: all;
+  z-index: 15;
+}
+
+.carousel-container .slider .img-container:hover .hidden-info-card {
+  pointer-events: all;
+  z-index: 15;
+}
+
+.carousel-container:hover .arrow {
+  visibility: visible;
+}
+
+.arrow {
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 100;
+  line-height: 0.5rem;
+  transition: font-size 0.1s ease;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1vw;
+}
+
 .handle {
   width: var(--slider-padding);
   background-color: rgba(0, 0, 0, 0.25);
   z-index: 5;
   margin: 0.1rem 0 0.35rem 0;
   border: none;
+  cursor: pointer;
 }
 
-.handle:hover {
+.handle:hover .arrow, .arrow:hover {
+  font-size: 8vw;
+  visibility: visible;
+}
+
+.arrow:hover .handle, .handle:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 

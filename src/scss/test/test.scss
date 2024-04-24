@@ -54,6 +54,7 @@
                 border: none;
                 margin-left: 10px;
                 border-radius: .3vw;
+                cursor: pointer;
                 svg {
                     margin-right: .8vw;
                 }
@@ -87,7 +88,7 @@
     //     background-color: rgba(255, 0, 0, .1);
 
     
-    //     .hidden-info {
+    //     .hidden-info-card {
     //         border-radius: .5vw;
     //         opacity: 0;
     //         position: absolute;
@@ -117,7 +118,7 @@
 
     //         }
     //     }
-    //     .card:hover + .hidden-info, .hidden-info:hover {
+    //     .card:hover + .hidden-info-card, .hidden-info-card:hover {
     //         opacity: 1;
     //         transform: scale(1.2);
     //         transition-delay: .5s;
@@ -137,7 +138,7 @@
     width: 100%;
     height: 2000px;
     position: absolute;
-    top: 45vw;
+    top: 50vw;
 }
 
 .carousel-container {
@@ -145,20 +146,21 @@
     justify-content: center;
     width: 100%;
     background-color: rgba(255, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .carousel-container  {
     .slider{
+        --slider-index: 1;
         width: calc(100% - 2 * var(--slider-padding));
         display: flex;
-        // transform: translateX(-100%);
-
+        // transform: translateX(calc(var(--slider-index) * -100%));
         .img-container {
             aspect-ratio: 16/9;
             flex: 0 0 25%; //   shrink 0 grow 0 25% of parent
             max-width: 25%; // make sure it is alway25%
             padding: .1rem;
-            
+            position: relative;
 
             img {
                 width: 100%;
@@ -166,15 +168,65 @@
                 object-fit: cover;
                 border-radius: var(--card-border);
             }
+            .hidden-info-card {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                background-color: yellow;
+                border-radius: var(--card-border) ;
+                transition: all .2s ease-in-out;
+                z-index: 0;
+                pointer-events: none;
+                img {
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    object-fit: cover;
+                }
+                .card-info {
+                    font-size: 1vw;
+                }
+            }
+            .hidden-info-card:hover {
+                opacity: 1;
+                top: -7vw;
+                left: 4.5vw;
+                scale: 1.5;
+                transition-delay: .5s;
+                pointer-events: all;
+                z-index: 15;
+            }
+            
+        }
+        .img-container:hover .hidden-info-card {
+            pointer-events: all;
+            z-index: 15;
         }
         
-
-
-
     }
 }
 
 // handler
+
+.carousel-container:hover .arrow {
+    visibility: visible;
+}
+
+.arrow {
+    font-size: 6vw;
+    color: #fff;
+    font-weight: 100;
+    line-height: .5rem;
+    transition: font-size .1s ease;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vw;
+}
 
 .handle {
     width: var(--slider-padding);
@@ -182,10 +234,14 @@
     z-index: 5;
     margin: .1rem 0 .35rem 0;
     border: none;
-    
+    cursor: pointer;
 }
 
-.handle:hover {
+.handle:hover .arrow, .arrow:hover{
+    font-size: 8vw;
+    visibility: visible;
+}
+.arrow:hover .handle, .handle:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -198,3 +254,4 @@
     margin-left: .1vw;
     border-radius: var(--card-border) 0 0 var(--card-border);
 }
+
