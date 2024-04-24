@@ -1,5 +1,5 @@
 REVIEWBOARD_URL = "https://review.clp.kr/"
-REPOSITORY = "Cybernexus"
+REPOSITORY = "Cybernexus/Team-Projects/Netfix-Clone"
 REPOSITORY_TYPE = "git"
 BRANCH = "feature/carousel"
 LAND_DEST_BRANCH = "feature/carousel"

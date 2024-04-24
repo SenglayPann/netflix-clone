@@ -88,9 +88,11 @@
 }
 
 .carousel-container .slider {
-  --slider-index: 1;
+  --slider-index: 0;
   width: calc(100% - 2 * var(--slider-padding));
   display: flex;
+  transform: translateX(calc(var(--slider-index) * -100%));
+  transition: transform 0.3s ease-in;
 }
 .carousel-container .slider .img-container {
   aspect-ratio: 16/9;
