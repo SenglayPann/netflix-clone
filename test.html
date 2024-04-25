@@ -4,33 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .media-container {
+  position: relative;
+}
+.media-scroller,
+.media-group {
+  display: grid;
+  gap: 0.25rem;
+  grid-auto-flow: column;
+}
+.media-scroller {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  grid-auto-columns: 100%;
+  padding: 0 3rem;
+  scroll-padding-inline: 3rem;
+}
+.media-group {
+  grid-auto-columns: 1fr;
+}
+.media-element {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.media-element > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.next,
+.previous {
+  display: none;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  width: 3rem;
+  padding: 1rem;
+  background: rgb(0 0 0 / 0);
+  opacity: 0;
+}
+.previous {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.next {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.media-group:first-child :where(.next, .previous) {
+  display: flex;
+}
+.media-scroller:hover :where(.next, .previous) {
+  opacity: 1;
+}
+:where(.next, .previous):hover {
+  background: rgb(0 0 0 / 0.3);
+}
+:where(.next, .previous) > svg {
+  transition: transform 75ms linear;
+  transform: scale(1);
+}
+:where(.next, .previous):hover > svg {
+  transform: scale(1.2);
+}
+.media-group:target :where(.next, .previous) {
+  display: flex;
+}
+.media-scroller:has(:target:not(:first-child))
+  .media-group:first-of-type
+  .next {
+  display: none;
+}
+.navigation-indicators {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  gap: 3px;
+  top: -1rem;
+  right: 2rem;
+}
+.navigation-indicators > * {
+  width: 1rem;
+  height: 2px;
+  background: white;
+  opacity: 0.5;
+}
+.media-scroller:has(.media-group:target)
+  .navigation-indicators
+  > *:nth-child(1) {
+  opacity: 0.5;
+}
+.navigation-indicators > *:nth-child(1),
+.media-group:nth-child(1):target ~ .navigation-indicators > *:nth-child(1) {
+  opacity: 1;
+}
+.media-group:nth-child(2):target ~ .navigation-indicators > *:nth-child(2) {
+  opacity: 1;
+}
+.media-group:nth-child(3):target ~ .navigation-indicators > *:nth-child(3) {
+  opacity: 1;
+}
+.media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4) {
+  opacity: 1;
+}
+.media-scroller:hover .navigation-indicators {
+  opacity: 1;
+}
+    </style>
 </head>
 <body>
-    <article>
-        <div id="div-01">
-          Here is div-01
-          <div id="div-02">
-            Here is div-02
-            <div id="div-03">Here is div-03</div>
+    <div class="media-container">
+        <div class="media-scroller">
+          <!--   Group 1 -->
+          <div class="media-group" id="group-1">
+            <div class="media-element">
+              <img src="1.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="2.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="3.jpg" alt=""/>
+            </div>
+            ... more images here ...
+            <a class="next" href="#group-2" aria-label="next">
+              <svg>
+                <use href="#next"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- Group 2   -->
+          <div class="media-group" id="group-2">
+            <a class="previous" href="#group-1">
+              <svg>
+                <use href="#previous"></use>
+              </svg>
+            </a>
+            <div class="media-element">
+              <img src="4.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="5.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="6.jpg" alt=""/>
+            </div>
+            ... more images here ...
+            <a class="next" href="#group-3" aria-label="next">
+              <svg>
+                <use href="#next"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- Group 3   -->
+          <div class="media-group" id="group-3">
+            <a class="previous" href="#group-2">
+              <svg>
+                <use href="#previous"></use>
+              </svg>
+            </a>
+            <div class="media-element">
+              <img src="7.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="8.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="9.jpg" alt=""/>
+            </div>
+            ... more images here ...
+            <a class="next" href="#group-4" aria-label="next">
+              <svg>
+                <use href="#next"></use>
+              </svg>
+            </a>
+          </div>
+          <!--  Group 4  -->
+          <div class="media-group" id="group-4">
+            <a class="previous" href="#group-3">
+              <svg>
+                <use href="#previous"></use>
+              </svg>
+            </a>
+           <div class="media-element">
+              <img src="10.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="11.jpg" alt="" />
+            </div>
+            <div class="media-element">
+              <img src="12.jpg" alt=""/>
+            </div>
+            ... more images here ...
+          </div>
+          <!-- Pagination Indicators -->
+          <div class="navigation-indicators">
+            <!-- 4 Groups -->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </article>
-
-      <script>
-        const el = document.getElementById("div-03");
-
-        // the closest ancestor with the id of "div-02"
-        console.log(el.closest("#div-02")); // <div id="div-02">
-
-        // the closest ancestor which is a div in a div
-        console.log(el.closest("div div")); // <div id="div-03">
-
-        // the closest ancestor which is a div and has a parent article
-        console.log(el.closest("article > div")); // <div id="div-01">
-
-        // the closest ancestor which is not a div
-        console.log(el.closest(":not(div)")); // <article>
-
-      </script>
+      </div>
 </body>
 </html>

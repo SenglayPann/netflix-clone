@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   position: relative;
 }
@@ -74,9 +78,9 @@
 
 .body-wrapper {
   width: 100%;
-  height: 2000px;
-  position: absolute;
+  position: relative;
   top: 50vw;
+  background-color: cyan;
 }
 
 .carousel-container {
@@ -85,6 +89,7 @@
   width: 100%;
   background-color: rgba(255, 0, 0, 0.1);
   cursor: pointer;
+  position: relative;
 }
 
 .carousel-container .slider {
@@ -92,7 +97,7 @@
   width: calc(100% - 2 * var(--slider-padding));
   display: flex;
   transform: translateX(calc(var(--slider-index) * -100%));
-  transition: transform 0.3s ease-in;
+  transition: transform 0.7s ease-in-out;
 }
 .carousel-container .slider .img-container {
   aspect-ratio: 16/9;
@@ -128,19 +133,22 @@
 }
 .carousel-container .slider .img-container .hidden-info-card .card-info {
   font-size: 1vw;
+  z-index: 100;
 }
 .carousel-container .slider .img-container .hidden-info-card:hover {
   opacity: 1;
   top: -7vw;
-  left: 4.5vw;
+  left: 5.5vw;
   scale: 1.5;
   transition-delay: 0.5s;
   pointer-events: all;
-  z-index: 15;
+  z-index: 20;
+}
+.carousel-container .slider .img-container .hidden-info-card:hover + .slider {
+  z-index: 10;
 }
 .carousel-container .slider .img-container:hover .hidden-info-card {
   pointer-events: all;
-  z-index: 15;
 }
 
 .carousel-container:hover .arrow {
@@ -186,6 +194,14 @@
 .right-handle {
   margin-left: 0.1vw;
   border-radius: var(--card-border) 0 0 var(--card-border);
+}
+
+.hidden-info:hover + .slider {
+  z-index: 10;
+}
+
+.slider:hover {
+  z-index: 4;
 }
 
 /*# sourceMappingURL=page-body.css.map */
