@@ -1,0 +1,77 @@
+@import url(../main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Netflix Sans';
+}
+
+/* Navbar-Chhunkea */
+body {
+    background-color: gray;
+    margin: 0; /* Reset default margin */
+}
+
+.navbar-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center; /* Center all the letters */
+    justify-content: space-between; /* Add this line to evenly space the logo and links */
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    .nav_logo {  // Netflix logo
+        width: 100px;
+        height: 50px;
+        object-fit: contain;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    .nav_avatar {
+        width: 30px;
+        object-fit: contain;
+        vertical-align: middle;
+    }
+
+    /* Scrolling black */
+    &.nav_black {
+        background-color: black;
+    }
+
+    .links1 {
+        // display: flex;
+        justify-content: space-between;
+
+        p {
+            margin-left: 20px;
+            color: white;
+            font-size: 12px;
+        }
+        @apply 
+        hidden
+        md:flex 
+        
+    }
+
+    .avatar {
+        display: flex;
+        align-items: center; /* Align items to vertically center */
+        gap: 20px;
+        color: white;
+        margin-left: auto; /* Push the avatar section to the right */
+        margin-right: 10px;
+
+        .arrow-down {
+            margin-right: 40px;
+            font-size: 9px;
+            width: 10px; /* Adjust the width as needed */
+            display: inline-block; /* Ensure the element takes up space horizontally */
+            color: white;
+        }
+    }
+}
