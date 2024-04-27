@@ -1,0 +1,117 @@
+@import url(../../css/main/font.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    font-size: 62.5%;
+}
+.profile-container { 
+    margin-top: 60px;
+}
+.container { 
+    width: 100vw;
+    height: 100vh;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-section { 
+    position: relative;
+    width: 95vw;
+    margin: auto;
+    height: 7rem;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    margin: 0 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// .smaller-container { 
+//     width: 100vw;
+//     height: 80vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     color: #fff;
+// }
+
+.title { 
+    // margin-top: 30px;
+    position: relative;
+    font-size: calc(2.5rem + 1.2vh);
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.user-profile { 
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-profile img {
+    display: block;
+}
+.user-profile-icon { 
+    background-image: url("https://media.tenor.com/ALNgfWrgk1cAAAAM/sad-hamster-meme-sad-hamster.gif");
+}
+
+.user-profile-icon { 
+    height: 10vw;
+    min-height: 8.4rem;
+    max-height: 20rem;
+    width: auto;
+    min-width: 8.4px;
+    max-width: 20rem;
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+.manage-profile {
+    border: 1px solid grey;
+    color: grey;
+    text-transform: uppercase;
+    padding: 0.8rem 2.6rem;
+    letter-spacing: 0.3rem;
+    font-size: calc(1em + 0.3vw);
+    margin-top: 12rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.manage-profile:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.user-profile-name { 
+    font-size: calc(1em + 0.5vw);
+    color: white;
+    text-align: center;
+
+    
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.button-container { 
+    display: flex;
+    justify-content: center;
+}
+
+.svg-icon { 
+    width: 10vh;
+}
