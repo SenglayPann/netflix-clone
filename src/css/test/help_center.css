@@ -1,0 +1,21 @@
+@import url(../../css/main/font.css);
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Netflix Sans";
+}
+
+.header-container {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-drop-down ul li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=help_center.css.map */
