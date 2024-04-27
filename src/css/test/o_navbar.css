@@ -662,6 +662,10 @@ video {
   margin-right: 8rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-32 {
   margin-top: 8rem;
 }
@@ -674,8 +678,8 @@ video {
   display: block;
 }
 
-.flex {
-  display: flex;
+.hidden {
+  display: none;
 }
 
 .justify-start {
@@ -690,6 +694,11 @@ video {
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 * {
@@ -722,11 +731,7 @@ body {
 
 .navbar-container .nav_logo {
   width: 100px;
-  height: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  font-size: 25px;
-  font-weight: 400;
+  height: 20px;
 }
 
 .navbar-container .nav_avatar {
@@ -742,6 +747,7 @@ body {
 
 .navbar-container .links1 {
   justify-content: space-between;
+  list-style-type: none;
   display: none;
 }
 
@@ -751,7 +757,7 @@ body {
   }
 }
 
-.navbar-container .links1 p {
+.navbar-container .links1 a {
   margin-left: 20px;
   color: white;
   font-size: 12px;
@@ -778,7 +784,68 @@ body {
   color: white;
 }
 
+.navbar-container .avatar .arrow-down .browse-white {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Dropdown button */
+
+.browse-white {
+  color: white;
+  padding: 8px 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  /* Add cursor pointer to indicate it's clickable */
+}
+
+/* Dropdown container */
+
+.browse-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+
+.browse-list-container {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 260px;
+  z-index: 3;
+}
+
+/* Dropdown items texts*/
+
+.browse-list-container .broswe-item a {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change background color on hover */
+
+.browse-list-container .broswe-item a:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown content on hover */
+
+.browse-menu:hover .browse-list-container {
+  display: block;
+}
+
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:hidden {
     display: none;
   }

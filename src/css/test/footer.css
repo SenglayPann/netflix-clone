@@ -46,12 +46,12 @@ body {
   margin-bottom: 30%;
 }
 
-.language {
+.service {
   display: flex;
   align-items: center;
 }
 
-.language-select {
+.service-select {
   appearance: none;
   cursor: pointer;
   height: 2.4rem;
@@ -60,7 +60,9 @@ body {
   padding-inline: 2.4rem;
   outline: none;
   color: gray;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  background-color: black;
 }
 
 .language-icon {
@@ -87,14 +89,6 @@ body {
   display: flex;
   gap: 20px;
   color: #f3f3f3;
-}
-
-.website .social-link svg {
-  fill: white;
-}
-
-.language-select {
-  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=footer.css.map */

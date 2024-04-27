@@ -27,10 +27,7 @@ body {
 }
 .navbar-container .nav_logo {
   width: 100px;
-  height: 50px;
-  object-fit: contain;
-  font-size: 25px;
-  font-weight: 400;
+  height: 20px;
 }
 .navbar-container .nav_avatar {
   width: 30px;
@@ -42,10 +39,11 @@ body {
 }
 .navbar-container .links1 {
   justify-content: space-between;
+  list-style-type: none;
   @apply hidden
         md:flex;
 }
-.navbar-container .links1 p {
+.navbar-container .links1 a {
   margin-left: 20px;
   color: white;
   font-size: 12px;
@@ -64,6 +62,55 @@ body {
   width: 10px; /* Adjust the width as needed */
   display: inline-block; /* Ensure the element takes up space horizontally */
   color: white;
+}
+.navbar-container .avatar .arrow-down .browse-white {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Dropdown button */
+.browse-white {
+  color: white;
+  padding: 8px 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+/* Dropdown container */
+.browse-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.browse-list-container {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 260px;
+  z-index: 3;
+}
+
+/* Dropdown items texts*/
+.browse-list-container .broswe-item a {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change background color on hover */
+.browse-list-container .broswe-item a:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown content on hover */
+.browse-menu:hover .browse-list-container {
+  display: block;
 }
 
 /*# sourceMappingURL=navbar.css.map */
