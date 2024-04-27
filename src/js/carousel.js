@@ -14,13 +14,111 @@ document.addEventListener("click", e => {
 //functions when click on the handle
 
 function onHandleClick(handle) {
+
+    const progressBar = handle.closest(".carousel-row").querySelector(".carousel-progress");
+
     const slider = handle.closest(".carousel-container").querySelector(".slider");
+
     const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
+
+    const progressBarItemCount = progressBar.children.length;
+
     if (handle.classList.contains("left-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex - 1)
+        if (sliderIndex <= 0) {
+            slider.style.setProperty("--slider-index", progressBarItemCount - 1);
+            setTimeout(() => {
+                progressBar.children[sliderIndex].classList.remove("active-item");
+                progressBar.children[progressBarItemCount - 1].classList.add("active-item");
+            }, 600);
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex - 1);
+        }
+        setTimeout(() => {
+            progressBar.children[sliderIndex].classList.remove("active-item");
+            progressBar.children[sliderIndex - 1].classList.add("active-item");
+        }, 600);
     };
 
     if (handle.classList.contains("right-handle")) {
-        slider.style.setProperty("--slider-index", sliderIndex + 1)
+
+        if (sliderIndex + 1 >= progressBarItemCount) {
+            slider.style.setProperty("--slider-index", 0);
+            setTimeout(() => {
+                progressBar.children[sliderIndex].classList.remove("active-item");
+                progressBar.children[0].classList.add("active-item");
+            }, 600);
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex + 1);
+        }
+        setTimeout(() => {
+            progressBar.children[sliderIndex].classList.remove("active-item");
+            progressBar.children[sliderIndex + 1].classList.add("active-item");
+        }, 600);
     };
 };
+
+//throtle
+const throttleProgressBar = throttle(() => {
+    document.querySelectorAll(".carousel-progress").forEach(calProgressBar);
+}, 250)
+
+
+window.addEventListener("resize", throttleProgressBar);
+// progress bar
+
+document.querySelectorAll(".carousel-progress").forEach(calProgressBar);
+
+
+function calProgressBar(progressBar) {
+    progressBar.innerHTML = "";
+
+    const slider = progressBar.closest(".carousel-row").querySelector(".slider");
+    const itemCount = slider.children.length;
+
+    const itemsPerScreen = parseInt(getComputedStyle(slider).getPropertyValue("--items-per-screen"));
+    
+
+    const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
+    //progress bar item calc
+    const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
+
+    for (let i = 0; i < progressBarItemCount; i++) {
+        const barItem = document.createElement("div");
+        barItem.classList.add("progress-item");
+        if (i === sliderIndex) {
+            barItem.classList.add("active-item");
+        }
+        progressBar.appendChild(barItem);
+    }
+}
+
+
+
+// throttle
+
+function throttle(cb, delay = 1000) {
+    let shouldWait = false
+    let waitingArgs;
+    const timeoutFunc = () => {
+      if (waitingArgs == null) {
+        shouldWait = false;
+      } else {
+        cb(...waitingArgs);
+        waitingArgs = null;
+        setTimeout(timeoutFunc, delay)
+      };
+    };
+  
+    return (...args) => {
+      if (shouldWait) {
+        waitingArgs = args;
+        return;
+      };
+  
+      cb(...args);
+      shouldWait = true;
+      setTimeout(timeoutFunc, delay);
+    }
+}
+
+

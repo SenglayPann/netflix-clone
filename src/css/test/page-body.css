@@ -2,6 +2,10 @@
 :root {
   --slider-padding: 5vw;
   --card-border: .5vw;
+  --img-container-gap: .2vw;
+  --hover-card-position-top: -7vw;
+  --items-per-screen: 3;
+  --slider-index: 0;
 }
 
 * {
@@ -93,17 +97,16 @@ body {
 }
 
 .carousel-container .slider {
-  --slider-index: 0;
   width: calc(100% - 2 * var(--slider-padding));
   display: flex;
   transform: translateX(calc(var(--slider-index) * -100%));
-  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, z-index 1s ease;
 }
 .carousel-container .slider .img-container {
   aspect-ratio: 16/9;
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 0.1rem;
+  flex: 0 0 calc(100% / var(--items-per-screen));
+  max-width: calc(100% / var(--items-per-screen));
+  padding: calc(var(--img-container-gap));
   position: relative;
 }
 .carousel-container .slider .img-container img {
@@ -137,8 +140,7 @@ body {
 }
 .carousel-container .slider .img-container .hidden-info-card:hover {
   opacity: 1;
-  top: -7vw;
-  left: 5.5vw;
+  top: calc(var(--hover-card-position-top));
   scale: 1.5;
   transition-delay: 0.5s;
   pointer-events: all;
@@ -149,6 +151,10 @@ body {
 }
 .carousel-container .slider .img-container:hover .hidden-info-card {
   pointer-events: all;
+}
+
+.carousel-row .carousel-progress-container {
+  margin: 0 calc(var(--slider-padding) + var(--img-container-gap));
 }
 
 .carousel-container:hover .arrow {
@@ -202,6 +208,49 @@ body {
 
 .slider:hover {
   z-index: 4;
+}
+
+@media (min-width: 800px) {
+  .slider {
+    --items-per-screen: 4;
+  }
+}
+@media (min-width: 1100px) {
+  .slider {
+    --items-per-screen: 5;
+  }
+}
+@media (min-width: 1400px) {
+  .slider {
+    --items-per-screen: 6;
+  }
+}
+.carousel-progress-container {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel-progress-container .genre-title {
+  font-size: 12px;
+}
+.carousel-progress-container .carousel-progress {
+  display: flex;
+  gap: 0.1rem;
+}
+.carousel-progress-container .carousel-progress .progress-item {
+  width: 12px;
+  height: 2px;
+  background-color: #4d4d4d;
+}
+.carousel-progress-container .carousel-progress .progress-item.active-item {
+  background-color: #aaa;
+}
+
+@media (min-width: 800px) {
+  .carousel-progress-container .genre-title {
+    font-size: 1.4vw;
+  }
 }
 
 /*# sourceMappingURL=page-body.css.map */

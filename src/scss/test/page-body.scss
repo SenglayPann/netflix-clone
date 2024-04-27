@@ -3,12 +3,17 @@
 :root {
     --slider-padding: 5vw;
     --card-border: .5vw;
+    --img-container-gap: .2vw;
+    --hover-card-position-top: -7vw;
+    --items-per-screen: 3;  
+    --slider-index: 0;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -94,6 +99,8 @@ body {
     
 }
 
+
+//carousel part
 .carousel-container {
     display: flex;
     justify-content: center;
@@ -106,18 +113,18 @@ body {
 
 .carousel-container  {
     .slider {
-        --slider-index: 0;
+        
         width: calc(100% - 2 * var(--slider-padding));
         display: flex;
         transform: translateX(calc(var(--slider-index) * -100%));
-        transition: transform .7s ease-in-out ;
+        transition: transform .7s ease-in-out , z-index 1s ease;
         
         .img-container {
             aspect-ratio: 16/9;
-            flex: 0 0 25%; //   shrink 0 grow 0 25% of parent
-            max-width: 25%; // make sure it is alway25%
-            padding: .1rem;
-             position: relative;
+            flex: 0 0 calc(100% / var(--items-per-screen)); //   shrink 0 grow 0 25% of parent
+            max-width: calc(100% / var(--items-per-screen)); // make sure it is alway25%
+            padding: calc(var(--img-container-gap));
+            position: relative;
 
             img {
                 width: 100%;
@@ -125,6 +132,7 @@ body {
                 object-fit: cover;
                 border-radius: var(--card-border);
             }
+
             .hidden-info-card {
                 position: absolute;
                 top: 0;
@@ -150,14 +158,13 @@ body {
             }
             .hidden-info-card:hover {
                 opacity: 1;
-                top: -7vw;
-                left: 5.5vw;
+                top: calc(var(--hover-card-position-top));
                 scale: 1.5;
                 transition-delay: .5s;
                 pointer-events: all;
                 z-index: 20;
-                
             }
+
             .hidden-info-card:hover + .slider{
                 z-index: 10;
             }
@@ -165,6 +172,9 @@ body {
             
             
         }
+        // .img-container:nth-child(calc((var(--slider-index) + 1) * var(--items-per-screen))) .hidden-info-card:hover {
+        //     right: 25%;
+        // }
         .img-container:hover {
             .hidden-info-card {
                 pointer-events: all;
@@ -176,6 +186,11 @@ body {
     
 }
 
+.carousel-row {
+    .carousel-progress-container {
+        margin: 0 calc(var(--slider-padding) + var(--img-container-gap))
+    }
+}
 
 
 
@@ -227,9 +242,62 @@ body {
 
 .hidden-info:hover + .slider {
     z-index: 10;
-  }
+}
   
 
 .slider:hover {
     z-index: 4;
+}
+
+
+// grid system responsiveness
+@media (min-width: 800px) {
+    .slider {
+        --items-per-screen: 4;
+    }
+    
+}
+@media (min-width: 1100px) {
+    .slider {
+        --items-per-screen: 5;
+    }    
+}
+@media (min-width: 1400px) {
+    .slider {
+        --items-per-screen: 6;
+    }    
+}
+
+
+// progress bar
+
+.carousel-progress-container {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    justify-content: space-between;
+    .genre-title {
+        font-size: 12px;
+    }
+    .carousel-progress {
+        display: flex;
+        gap: .1rem;
+        .progress-item {
+            width: 12px;
+            height: 2px;
+            background-color: #4d4d4d;
+            
+        }
+        .progress-item.active-item {
+            background-color: #aaa;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .carousel-progress-container {
+        .genre-title {
+            font-size: 1.4vw;
+        }
+    }
 }
