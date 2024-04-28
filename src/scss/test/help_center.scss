@@ -9,19 +9,56 @@ html {
 }
 
 .header-container { 
-    background-color: blue;
-    display: flex;
-    justify-content: space-between;
+    @apply 
+    bg-blue-50
+    h-[66px]
+    flex
 }
 
 .mobile-drop-down { 
     ul { 
         li { 
-            list-style: none;
-            
+            @apply list-none
+
         }
     }
 }
+
+.logo-container { 
+    @apply 
+    flex
+    w-[88px]
+    p-3
+}
+
+
+
+// .left-container { 
+//     @apply 
+//     flex-grow
+// }
+
+.help-center { 
+    font-size: 18px;
+    border-left: 1px solid black ;
+    @apply 
+    p-2
+    my-3
+    flex-grow
+}
+.border-box { 
+    background: black;
+    height: 24px;
+    left: 100%;
+    margin-left: 16px;
+    position: absolute;
+    top: 4px;
+    width: 1px;
+    
+}
+
+
+
 
 
 

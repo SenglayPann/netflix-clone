@@ -106,13 +106,39 @@ html {
 }
 
 .header-container {
-  background-color: blue;
   display: flex;
-  justify-content: space-between;
+  height: 66px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
 }
 
 .mobile-drop-down ul li {
-  list-style: none;
+  list-style-type: none;
+}
+
+.logo-container {
+  display: flex;
+  width: 88px;
+  padding: 0.75rem;
+}
+
+.help-center {
+  font-size: 18px;
+  border-left: 1px solid black;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.border-box {
+  background: black;
+  height: 24px;
+  left: 100%;
+  margin-left: 16px;
+  position: absolute;
+  top: 4px;
+  width: 1px;
 }
 
 /*# sourceMappingURL=o_help_center.css.map */
