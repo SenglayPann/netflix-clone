@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.header-container {
+    background-color: black;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    .header-main {
+        max-width: 1248px;
+        width: 1248px;
+        min-width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .header1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            span {
+                @apply text-gray-500
+            }
+        }
+        .header2 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        @apply text-white
+            
+    }
+}
+.notification-bar {
+    background-color: #EAEAE6;
+    height: 81px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    .notification-main {
+        max-width: 1248px;
+        width: 1248px;
+        min-width: auto;
+        height: 100%; 
+        display: flex;
+        .notification-bell{
+            display: flex;
+            align-items: center;
+        } 
+        .notification-text {
+            display: flex;
+            align-items: center;
+            .notification-text-inner {
+                flex-direction: column;
+                margin-left: 10px;
+            }
+        }  
+    }
+}
+.back-homepage-container {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    
+    .back-homepage-inner {
+        max-width: 1248px;
+        width: 1248px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border-bottom: 1px solid gray;
+    }
+}
+.regional-info-container {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    .regional-info-inner {
+        max-width: 1248px;
+        width: 1248px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        padding: 0 12px;
+        margin-bottom: 24px;
+        .button-regional {
+            padding: 10px 20px;
+            border: 1px solid gray;
+            border-radius: 5%;
+            margin-left: 10px;
+        }
+    }
+}
+.content-container {
+    display: flex;
+    justify-content: center;
+    .corporation-info-main {
+        max-width: 1248px;
+        width: 1248px;
+        display: flex;
+        padding: 0 12px;
+        
+        .corporation-info-inner {
+            
+            width: 100%;
+            border-bottom: 1px solid gray;
+            
+            
+            
+            h1 {
+                margin-bottom: 32px;
+            }
+            p {
+                margin-bottom: 16px;
+                strong {
+                    font-weight: 700px;
+                }
+            }
+
+        }
+        .related-arctical-container {
+            height: 464px;
+            display: flex;
+            
+            .related-arctical-main {
+                height: 310px;
+                padding: 16px 16px;
+                border: 1px solid gray;
+                align-items: center;
+            }
+            .related-arctical-inner{
+                
+                .related-arctical-li {
+                    display: flex;
+                    margin: 12px 0px
+                }
+
+            }
+        }
+    }
+}      
+.upper-footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+    
+    
+    .upper-footer-main {
+        max-width: 1248px;
+        width: 1248px;
+        display: flex;
+        padding: 0 12px;
+        padding: 24px 0px;
+        border-bottom: 1px solid gray;
+        
+        
+        .upper-footer-inner {
+            color: #EAEAE6;
+            display: flex;
+            h3 {
+                position: relative;
+                top: 10px;
+            }
+            
+            .contact-us-button {
+                padding: 8px 20px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                margin-left: 10px;
+            }
+        }
+    }
+}   
+.lower-footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 24px 0px;
+    .lower-footer-main {
+        max-width: 1248px;
+        width: 1248px;
+        display: flex;
+        padding: 0 12px;
+        color: gray;
+    }
+}

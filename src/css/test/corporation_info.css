@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  background-color: black;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+}
+.header-container .header-main {
+  max-width: 1248px;
+  width: 1248px;
+  min-width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  @apply text-white;
+}
+.header-container .header-main .header1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-container .header-main .header1 span {
+  @apply text-gray-500;
+}
+.header-container .header-main .header2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.notification-bar {
+  background-color: #EAEAE6;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+.notification-bar .notification-main {
+  max-width: 1248px;
+  width: 1248px;
+  min-width: auto;
+  height: 100%;
+  display: flex;
+}
+.notification-bar .notification-main .notification-bell {
+  display: flex;
+  align-items: center;
+}
+.notification-bar .notification-main .notification-text {
+  display: flex;
+  align-items: center;
+}
+.notification-bar .notification-main .notification-text .notification-text-inner {
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.back-homepage-container {
+  height: 88px;
+  display: flex;
+  justify-content: center;
+}
+.back-homepage-container .back-homepage-inner {
+  max-width: 1248px;
+  width: 1248px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom: 1px solid gray;
+}
+
+.regional-info-container {
+  height: 88px;
+  display: flex;
+  justify-content: center;
+}
+.regional-info-container .regional-info-inner {
+  max-width: 1248px;
+  width: 1248px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 0 12px;
+  margin-bottom: 24px;
+}
+.regional-info-container .regional-info-inner .button-regional {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5%;
+  margin-left: 10px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+.content-container .corporation-info-main {
+  max-width: 1248px;
+  width: 1248px;
+  display: flex;
+  padding: 0 12px;
+}
+.content-container .corporation-info-main .corporation-info-inner {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+.content-container .corporation-info-main .corporation-info-inner h1 {
+  margin-bottom: 32px;
+}
+.content-container .corporation-info-main .corporation-info-inner p {
+  margin-bottom: 16px;
+}
+.content-container .corporation-info-main .corporation-info-inner p strong {
+  font-weight: 700px;
+}
+.content-container .corporation-info-main .related-arctical-container {
+  height: 464px;
+  display: flex;
+}
+.content-container .corporation-info-main .related-arctical-container .related-arctical-main {
+  height: 310px;
+  padding: 16px 16px;
+  border: 1px solid gray;
+  align-items: center;
+}
+.content-container .corporation-info-main .related-arctical-container .related-arctical-inner .related-arctical-li {
+  display: flex;
+  margin: 12px 0px;
+}
+
+.upper-footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.upper-footer-container .upper-footer-main {
+  max-width: 1248px;
+  width: 1248px;
+  display: flex;
+  padding: 0 12px;
+  padding: 24px 0px;
+  border-bottom: 1px solid gray;
+}
+.upper-footer-container .upper-footer-main .upper-footer-inner {
+  color: #EAEAE6;
+  display: flex;
+}
+.upper-footer-container .upper-footer-main .upper-footer-inner h3 {
+  position: relative;
+  top: 10px;
+}
+.upper-footer-container .upper-footer-main .upper-footer-inner .contact-us-button {
+  padding: 8px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.lower-footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 24px 0px;
+}
+.lower-footer-container .lower-footer-main {
+  max-width: 1248px;
+  width: 1248px;
+  display: flex;
+  padding: 0 12px;
+  color: gray;
+}
+
+/*# sourceMappingURL=corporation_info.css.map */
