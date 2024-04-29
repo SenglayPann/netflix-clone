@@ -74,13 +74,21 @@ function calProgressBar(progressBar) {
 
     const slider = progressBar.closest(".carousel-row").querySelector(".slider");
     const itemCount = slider.children.length;
+    // console.log(itemCount)
 
     const itemsPerScreen = parseInt(getComputedStyle(slider).getPropertyValue("--items-per-screen"));
+    // console.log(itemsPerScreen)
     
 
-    const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
+    let sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
     //progress bar item calc
     const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
+
+    // reset slider item per screen 
+    if  (sliderIndex >= progressBarItemCount) {
+        slider.style.setProperty("--slider-index", progressBarItemCount - 1)
+        sliderIndex = progressBarItemCount -1;
+    };
 
     for (let i = 0; i < progressBarItemCount; i++) {
         const barItem = document.createElement("div");
