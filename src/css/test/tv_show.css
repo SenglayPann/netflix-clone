@@ -46,80 +46,69 @@ nav {
   margin-left: 30px;
 }
 
+body {
+  background-color: black;
+}
+
 .parents {
+  width: 100%;
+  height: 700px;
+  background-image: url("./background.jpeg");
+  margin-top: 0%;
+}
+
+.child {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  z-index: 4;
-  top: 10px;
 }
-.parents .sign-in {
+
+.svg-icon {
+  width: 100px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.sign-in {
   background-color: #E50914;
   color: #fff;
   width: 110px;
   height: 35px;
   border-radius: 4px;
   margin-right: 30px;
-}
-.parents .svg-icon {
-  width: 100px;
-  margin-left: 30px;
-}
-
-.background {
-  width: 100%;
-  height: 100%;
-  margin-top: -35px;
+  border: none;
+  margin-top: 20px;
 }
 
 .mid {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: -300px;
-}
-.mid .redeem-your-gift {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.mid .enter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.mid .input-parent {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-.mid .button-redeem {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.mid .link {
-  color: #A6A6A6;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.mid .this-page {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  top: 380px;
+  z-index: 1;
 }
 
-h2 {
-  font-size: 4rem;
+.redeem-your-gift {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
   color: #FFFFFF;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
 }
 
-h3 {
+.enter {
+  display: flex;
+  justify-content: center;
   font-size: 2rem;
   color: #FFFFFF;
+}
+
+.input-parent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .input {
@@ -130,6 +119,12 @@ h3 {
   border: 1px solid #8c8c8c;
   display: block;
   color: #fff;
+  font-size: 16px;
+}
+
+.button-redeem {
+  display: flex;
+  justify-content: center;
 }
 
 .redeem {
@@ -139,29 +134,53 @@ h3 {
   min-height: 48px;
   border-radius: 2px;
   display: block;
+  border: none;
+  font-size: 16px;
+}
+
+.need-help {
+  text-decoration: none;
+  color: #A6A6A6;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .link :hover {
   text-decoration: underline;
 }
 
+.this-page {
+  display: flex;
+  justify-content: center;
+}
+
 .paragraph {
   color: #8C8C8C;
   width: 450px;
 }
-.paragraph .learn-more {
+
+.learn-more {
   color: #0071EB;
 }
 
-.footer {
-  margin-top: 200px;
+.list {
+  list-style: none;
 }
 
-.footer-main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+.list :hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 300px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-parent {
@@ -175,15 +194,6 @@ h3 {
 
 .footer-text {
   margin-bottom: 10px;
-}
-
-.list :hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-body {
-  background-color: black;
 }
 
 /*# sourceMappingURL=tv_show.css.map */
