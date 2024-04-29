@@ -100,8 +100,9 @@ body {
     display: none;
     position: absolute;
     background-color:black;
-    min-width: 160px;
-    z-index: 3;
+    min-width: 260px;
+    z-index: 1;
+    left: -100px;
 }
 
 /* Dropdown items texts*/
@@ -109,7 +110,7 @@ body {
     font-size: 12px;
     text-align: center;
     color: gray;
-    padding: 10px 16px;
+    padding: 10px 50px 10px 30px; /* top right bottom left */
     text-decoration: none;
     display: block;
 }
@@ -123,3 +124,5 @@ body {
 .browse-menu:hover .browse-list-container {
     display: block;
 }
+
+

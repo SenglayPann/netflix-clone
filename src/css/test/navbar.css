@@ -90,7 +90,8 @@ body {
   position: absolute;
   background-color: black;
   min-width: 260px;
-  z-index: 3;
+  z-index: 1;
+  left: -100px;
 }
 
 /* Dropdown items texts*/
@@ -98,7 +99,7 @@ body {
   font-size: 12px;
   text-align: center;
   color: gray;
-  padding: 10px 16px;
+  padding: 10px 50px 10px 30px; /* top right bottom left */
   text-decoration: none;
   display: block;
 }
