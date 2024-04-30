@@ -293,7 +293,7 @@ body {
   background-color: yellow;
   border-radius: var(--card-border);
   transition: all 0.15s ease-out;
-  z-index: 10;
+  z-index: 20;
   scale: 1.5;
   pointer-events: none;
 }
@@ -309,7 +309,6 @@ body {
 
 .carousel-container .slider .img-container .hidden-info-card .card-info {
   font-size: 1vw;
-  z-index: 100;
 }
 
 .carousel-container .slider .img-container .hidden-info-card:hover {
@@ -434,6 +433,36 @@ body {
   .carousel-progress-container .genre-title {
     font-size: 1.4vw;
   }
+}
+
+.card-info-wrapper {
+  padding: 10px;
+}
+
+.movie-card-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-card-buttons-container .movie-card-left-buttons {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.card-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #aaa;
+}
+
+.card-button svg {
+  width: 50%;
+  height: 50%;
+  fill: #fff;
 }
 
 /*# sourceMappingURL=o_page-body.css.map */

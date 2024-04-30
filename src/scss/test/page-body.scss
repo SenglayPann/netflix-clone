@@ -184,7 +184,7 @@ body {
                 background-color: yellow;
                 border-radius: var(--card-border) ;
                 transition: all .15s ease-out;
-                z-index: 10;
+                z-index: 20;
                 scale: 1.5;
                 pointer-events: none;
                 img {
@@ -196,7 +196,6 @@ body {
                 }
                 .card-info {
                     font-size: 1vw;
-                    z-index: 100;
                 }
             }
             .hidden-info-card:hover {
@@ -298,7 +297,6 @@ body {
     .slider {
         --items-per-screen: 4;
     }
-    
 }
 @media (min-width: 1100px) {
     .slider {
@@ -309,6 +307,8 @@ body {
     .slider {
         --items-per-screen: 6;
     }    
+
+    
 }
 
 
@@ -344,3 +344,42 @@ body {
         }
     }
 }
+
+
+// movie card buttons
+
+.card-info-wrapper {
+ padding: 10px;
+}
+.movie-card-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    .movie-card-left-buttons {
+        
+        display: flex;
+        gap: .2rem;
+    }
+}
+
+.movie-card-left-buttons {
+
+}
+
+
+.card-button  {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #aaa;
+    svg {
+        width: 50%;
+        height: 50%;
+        fill: #fff;
+    }
+}
+
+
+// @media (ma)
