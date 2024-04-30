@@ -61,6 +61,7 @@ body {
   width: 10px; /* Adjust the width as needed */
   display: inline-block; /* Ensure the element takes up space horizontally */
   color: white;
+  margin-left: 10px;
 }
 .navbar-container .avatar .arrow-down .browse-white {
   display: inline-block;
@@ -149,15 +150,75 @@ body {
 
 .dropdown-notification li img {
   margin-right: 10px; /* Add spacing between image and text */
-  width: 200px;
+  width: 150px;
   height: auto;
-  background-color: purple;
-  border: 2px solid purple;
-  border-radius: 2%;
+  border-radius: 4%;
 }
 
-.dropdown-notification li div {
-  flex: 1; /* Let the div fill the available space */
+.dropdown-image {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* black box hover */
+.dropdown-content {
+  color: gray;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -210px;
+  padding: 10px; /* Increase padding for larger hover area */
+  margin-top: 20px;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Add spacing between list items */
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.dropdown-content li img {
+  margin-right: 10px; /* Add spacing between image and text */
+  height: auto;
+  border-radius: 4%;
+}
+
+.dropdown-image {
+  display: flex;
+  align-items: center;
+}
+
+/* image drop down */
+.dropdown-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-image-container:hover .dropdown-content {
+  display: block;
+}
+
+.center-text-signout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=navbar.css.map */
