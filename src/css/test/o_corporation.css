@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.relative {
+  position: relative;
+}
+
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
@@ -583,22 +587,25 @@ video {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: #F5F5F1;
+  padding: 0px 12px;
 }
 
-.header-container .header-main .header1 {
+.header-container .header-main .header-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.header-container .header-main .header1 span {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+.header-container .header-main .header-left svg {
+  padding-right: 24px;
 }
 
-.header-container .header-main .header2 {
+.header-container .header-main .header-left span {
+  padding-right: 24px;
+}
+
+.header-container .header-main .header-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -610,6 +617,7 @@ video {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid gray;
+  padding: 0px 12px;
 }
 
 .notification-bar .notification-main {
@@ -662,8 +670,7 @@ video {
   display: flex;
   align-items: center;
   border-bottom: 1px solid gray;
-  padding: 0 12px;
-  margin-bottom: 24px;
+  padding: 24px 12px;
 }
 
 .regional-info-container .regional-info-inner .button-regional {
@@ -679,6 +686,7 @@ video {
 }
 
 .content-container .corporation-info-main {
+  margin-top: 32px;
   max-width: 1248px;
   width: 1248px;
   display: flex;
@@ -736,6 +744,7 @@ video {
 }
 
 .upper-footer-container .upper-footer-main .upper-footer-inner {
+  padding: 0px 12px;
   color: #EAEAE6;
   display: flex;
 }
@@ -756,7 +765,8 @@ video {
   display: flex;
   justify-content: center;
   background-color: black;
-  padding: 24px 0px;
+  padding-top: 24px;
+  padding-bottom: 48px;
 }
 
 .lower-footer-container .lower-footer-main {
@@ -765,6 +775,10 @@ video {
   display: flex;
   padding: 0 12px;
   color: gray;
+}
+
+.lower-footer-container .lower-footer-main .lower-footer-inner p {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=o_corporation.css.map */

@@ -11,6 +11,7 @@
     height: 66px;
     display: flex;
     justify-content: center;
+    
     .header-main {
         max-width: 1248px;
         width: 1248px;
@@ -18,21 +19,24 @@
         height: 100%;
         display: flex;
         justify-content: space-between;
-        .header1 {
+        color: #F5F5F1;
+        padding: 0px 12px;
+        .header-left {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            svg {
+                padding-right: 24px;
+            }
             span {
-                @apply text-gray-500
+                padding-right: 24px;
             }
         }
-        .header2 {
+        .header-right {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-        }
-        @apply text-white
-            
+        }   
     }
 }
 .notification-bar {
@@ -41,6 +45,7 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
+    padding: 0px 12px;
     .notification-main {
         max-width: 1248px;
         width: 1248px;
@@ -85,20 +90,24 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid gray;
-        padding: 0 12px;
-        margin-bottom: 24px;
+        padding: 24px 12px;
+        
         .button-regional {
             padding: 10px 20px;
             border: 1px solid gray;
             border-radius: 5%;
             margin-left: 10px;
+            
+            
         }
     }
 }
 .content-container {
+    
     display: flex;
     justify-content: center;
     .corporation-info-main {
+        margin-top: 32px;
         max-width: 1248px;
         width: 1248px;
         display: flex;
@@ -159,7 +168,9 @@
         border-bottom: 1px solid gray;
         
         
+        
         .upper-footer-inner {
+            padding: 0px 12px;
             color: #EAEAE6;
             display: flex;
             h3 {
@@ -180,12 +191,21 @@
     display: flex;
     justify-content: center;
     background-color: black;
-    padding: 24px 0px;
+    padding-top: 24px;
+    padding-bottom: 48px;
     .lower-footer-main {
         max-width: 1248px;
         width: 1248px;
         display: flex;
         padding: 0 12px;
         color: gray;
+        .lower-footer-inner {
+            p {
+                margin-bottom: 10px;
+            }
+        }
     }
+}
+@media (max-width: 768px) {
+    
 }
