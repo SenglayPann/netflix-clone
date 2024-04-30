@@ -85,7 +85,13 @@ body {
 }
 
 /* Dropdown content */
-.browse-list-container {
+.browse-menu {
+  position: relative;
+  display: inline-block;
+  /* Dropdown content */
+  /* Show dropdown content on hover */
+}
+.browse-menu .browse-list-container {
   display: none;
   position: absolute;
   background-color: black;
@@ -93,9 +99,7 @@ body {
   z-index: 1;
   left: -100px;
 }
-
-/* Dropdown items texts*/
-.browse-list-container .broswe-item a {
+.browse-menu .browse-list-container .broswe-item a {
   font-size: 12px;
   text-align: center;
   color: gray;
@@ -103,13 +107,9 @@ body {
   text-decoration: none;
   display: block;
 }
-
-/* Change background color on hover */
-.browse-list-container .broswe-item a:hover {
+.browse-menu .browse-list-container .broswe-item a:hover {
   background-color: #ddd;
 }
-
-/* Show dropdown content on hover */
 .browse-menu:hover .browse-list-container {
   display: block;
 }
@@ -117,8 +117,7 @@ body {
 .dropdown-notification-container {
   position: relative;
 }
-
-.dropdown-notification {
+.dropdown-notification-container .dropdown-notification {
   color: gray;
   display: none;
   position: absolute;
@@ -128,18 +127,15 @@ body {
   z-index: 1;
   left: -350px;
 }
-
 .dropdown-notification-container:hover .dropdown-notification {
   display: block;
 }
-
-.dropdown-notification ul {
+.dropdown-notification-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-.dropdown-notification li {
+.dropdown-notification-container ul li {
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   margin-bottom: 20px; /* Add spacing between list items */
@@ -147,8 +143,7 @@ body {
   margin-top: 20px;
   margin-right: 10px;
 }
-
-.dropdown-notification li img {
+.dropdown-notification-container ul li img {
   margin-right: 10px; /* Add spacing between image and text */
   width: 150px;
   height: auto;
@@ -178,14 +173,12 @@ body {
   padding: 10px; /* Increase padding for larger hover area */
   margin-top: 20px;
 }
-
 .dropdown-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-.dropdown-content li {
+.dropdown-content ul li {
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   margin-bottom: 20px; /* Add spacing between list items */
@@ -193,8 +186,7 @@ body {
   margin-top: 20px;
   margin-right: 10px;
 }
-
-.dropdown-content li img {
+.dropdown-content ul li img {
   margin-right: 10px; /* Add spacing between image and text */
   height: auto;
   border-radius: 4%;
@@ -209,8 +201,8 @@ body {
 .dropdown-image-container {
   position: relative;
   display: inline-block;
+  /* Show dropdown content on hover */
 }
-
 .dropdown-image-container:hover .dropdown-content {
   display: block;
 }
