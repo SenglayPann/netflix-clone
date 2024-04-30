@@ -588,6 +588,10 @@ video {
   }
 }
 
+.block {
+  display: block;
+}
+
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
@@ -598,209 +602,142 @@ video {
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
-nav {
-  background-color: rgb(20, 20, 20);
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav .tvshow {
-  width: 150px;
-  margin-left: 50px;
-  margin-top: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.nav .genres {
-  width: 150px;
-  margin-left: 20px;
-  border: solid 2px;
-  background-color: black;
-  color: white;
-  margin-top: 8px;
-}
-
-.nav .button-second {
-  position: relative;
+.parent-navbar {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-}
-
-.nav .button-second .svg-icon {
-  margin: 10px;
-  color: white;
-}
-
-.hover-color :hover {
-  background-color: gray;
-}
-
-.arrow-down {
-  margin-left: 30px;
-}
-
-body {
+  justify-content: center;
   background-color: black;
 }
 
-.parents {
-  width: 100%;
-  height: 700px;
-  margin-top: 0%;
-  background: linear-gradient(180deg, rgba(26, 26, 26, .9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.child {
+.parent-navbar .child {
   display: flex;
   justify-content: space-between;
+  background-color: black;
+  height: 66px;
 }
 
-.svg-icon {
+.parent-navbar .child .logo-help-center {
+  display: flex;
+  width: auto;
+}
+
+.parent-navbar .child .logo-help-center .svg-icon {
   width: 100px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.sign-in {
-  background-color: #E50914;
-  color: #fff;
-  width: 110px;
-  height: 35px;
-  border-radius: 4px;
-  margin-right: 30px;
-  border: none;
-  margin-top: 20px;
-}
-
-.mid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 380px;
-  z-index: 1;
-}
-
-.redeem-your-gift {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  color: #FFFFFF;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-}
-
-.enter {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  color: #FFFFFF;
-  text-shadow: 1px 1px 10px #000;
-}
-
-.input-parent {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.input {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
-  width: 253px;
-  height: 46px;
-  border: 1px solid #8c8c8c;
-  display: block;
-  color: #fff;
-  font-size: 16px;
-}
-
-.button-redeem {
-  display: flex;
-  justify-content: center;
-}
-
-.redeem {
-  background-color: #E50914;
-  color: #fff;
-  min-width: 152px;
-  min-height: 48px;
-  border-radius: 2px;
-  display: block;
-  border: none;
-  font-size: 16px;
-}
-
-.need-help {
-  text-decoration: none;
-  color: #A6A6A6;
-}
-
-.link {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-.link :hover {
-  text-decoration: underline;
-}
-
-.this-page {
-  display: flex;
-  justify-content: center;
-}
-
-.paragraph {
-  color: #8C8C8C;
-  width: 450px;
-}
-
-.learn-more {
-  color: #0071EB;
-}
-
-.list {
-  list-style: none;
-}
-
-.list :hover {
-  text-decoration: underline;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-.footer {
-  margin-top: 300px;
+.parent-navbar .child .logo-help-center .help-center {
+  margin-top: 20px;
+  font-size: 18px;
+  width: 150px;
+  color: white;
+  cursor: pointer;
+}
+
+.parent-navbar .child .logo-help-center .help-center .ruler {
+  margin: 10px;
+}
+
+.parent-navbar .child .logo-help-center :hover {
+  text-decoration: underline;
+}
+
+.parent-navbar .child .mobile {
+  font-size: 16px;
+  width: 100px;
+  margin-top: 20px;
+  color: white;
+  margin-right: -10px;
+}
+
+.parent-navbar .child .mobile .arrow-down {
+  color: red;
+}
+
+.parent-ring {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeae6;
+  border-bottom: 1px solid #d5d4d1;
+}
+
+.parent-ring .child-ring {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #eaeae6;
+}
+
+.parent-ring .child-ring div {
+  display: flex;
+}
+
+.parent-ring .child-ring div .icon-ring {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.parent-ring .child-ring h5 {
+  font-weight: bold;
+}
+
+.parent-ring .child-ring h5 span {
+  font-weight: 300;
+}
+
+.parent-navbar-under-ring {
+  display: flex;
+  justify-content: center;
+}
+
+.parent-navbar-under-ring .navbar-under-ring {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.parent-navbar-under-ring .navbar-under-ring .back-to-help-home {
+  display: flex;
+  align-items: center;
+}
+
+.parent-navbar-under-ring .navbar-under-ring .back-to-help-home .back {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.parent-navbar-under-ring .navbar-under-ring .button-print {
+  cursor: pointer;
+  display: flex;
+  background-color: lightgrey;
+  width: 110px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.parent-navbar-under-ring .navbar-under-ring .button-print .print-button {
+  margin-left: 10px;
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
   position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
+  top: 25px;
 }
 
-.footer-parent {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  color: #8C8C8C;
+.netflix {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-.footer-text {
-  margin-bottom: 10px;
+.list {
+  margin-top: 25px;
 }
 
-/*# sourceMappingURL=o_tv_show.css.map */
+/*# sourceMappingURL=o_term_of_use.css.map */

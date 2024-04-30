@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// navbar
+.parent-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    .child {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        height: 66px;
+        .logo-help-center {
+            display: flex;
+            width: auto;
+            .svg-icon {
+                width: 100px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .help-center {
+                width: 100px;
+                margin-top: 20px;
+                font-size: 18px;
+                width: 150px;
+                color: white;
+                cursor: pointer;
+                .ruler {
+                    margin: 10px;
+                }
+            }
+        }
+        .logo-help-center :hover {
+            text-decoration: underline;
+        }
+        .mobile {
+            font-size: 16px;
+            width: 100px;
+            margin-top: 20px;
+            color: white;
+            margin-right: -10px;
+            .arrow-down {
+                color: red;
+            }
+        }
+    }
+}
+
+// 2 paragraph under navbar
+.parent-ring {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeae6;        
+    border-bottom: 1px solid #d5d4d1;
+    .child-ring {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        background-color: #eaeae6;
+        div {
+            display: flex;
+            .icon-ring {
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+        }
+        h5 {
+            font-weight: bold;
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// navbar-under-ring
+.parent-navbar-under-ring {
+    display: flex;
+    justify-content: center;
+    .navbar-under-ring {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        .back-to-help-home {
+            display: flex;
+            align-items: center;
+            .back {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+        .button-print {
+            cursor: pointer;
+            display: flex;
+            background-color: lightgrey;
+            width: 110px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            .print-button {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}
+
+// paragraph
+.paragraph {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+.netflix {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.list {
+    margin-top: 25px;
+}
