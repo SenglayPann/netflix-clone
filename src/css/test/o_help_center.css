@@ -105,40 +105,136 @@ html {
   font-family: "Netflix Sans";
 }
 
-.header-container {
-  display: flex;
+.nav-container {
+  background-color: white;
   height: 66px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
-}
-
-.mobile-drop-down ul li {
-  list-style-type: none;
-}
-
-.logo-container {
   display: flex;
-  width: 88px;
-  padding: 0.75rem;
+  justify-content: center;
+  color: black;
 }
 
-.help-center {
-  font-size: 18px;
-  border-left: 1px solid black;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  flex-grow: 1;
-  padding: 0.5rem;
+.nav-container .header-container {
+  max-width: 1248px;
+  width: 1248px;
+  min-width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.border-box {
-  background: black;
-  height: 24px;
-  left: 100%;
-  margin-left: 16px;
+.nav-container .header-container .left-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-container .header-container .left-content .help-center {
+  margin: 20px;
+}
+
+.nav-container .header-container .right-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-container .header-container .right-content .mobile-icon {
+  height: 20px;
+}
+
+.notification-bar {
+  background-color: #EAEAE6;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d5d4d1;
+}
+
+.notification-bar .notification-main {
+  max-width: 1248px;
+  width: 1248px;
+  min-width: auto;
+  height: 100%;
+  display: flex;
+}
+
+.notification-bar .notification-main .notification-bell {
+  display: flex;
+  align-items: center;
+}
+
+.notification-bar .notification-main .notification-text {
+  display: flex;
+  align-items: center;
+}
+
+.notification-bar .notification-main .notification-text .notification-text-inner {
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.notification-bar .notification-main .notification-text .notification-text-inner h3 {
+  font-size: 16px;
+}
+
+.notification-bar .notification-main .notification-text .notification-text-inner p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.search-container {
+  height: 397px;
+  width: 390px;
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    height: 815px;
+    width: 805px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-container {
+    height: 816px;
+    width: 100%;
+    min-width: 806px;
+  }
+}
+
+.search-container .detail-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container .detail-container .title {
+  font-size: 40px;
+  display: block;
+}
+
+.search-container .detail-container .input-container {
+  border-radius: 4px;
+  border: 2px solid gray;
+  position: relative;
+  height: 42px;
+  width: 592px;
+}
+
+.search-container .detail-container .input-container svg {
   position: absolute;
-  top: 4px;
-  width: 1px;
+  margin: 0.25rem;
+  padding-top: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.search-container .detail-container .input-container input {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=o_help_center.css.map */
