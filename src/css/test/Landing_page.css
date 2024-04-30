@@ -1,0 +1,9 @@
+@import url(../main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-black text-white;
+}
+
+/*# sourceMappingURL=Landing_page.css.map */
