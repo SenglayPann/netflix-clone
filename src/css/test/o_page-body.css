@@ -130,6 +130,17 @@ body {
   width: 100%;
 }
 
+.body-container .background-video {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.body-container .background-video video {
+  width: 100%;
+}
+
 .body-container .info {
   display: flex;
   justify-content: space-between;
@@ -137,34 +148,46 @@ body {
   position: absolute;
   width: 100%;
   height: 56.25vw;
+  z-index: 3;
 }
 
 .body-container .info .left-info {
   margin-left: 4.5vw;
-  padding-bottom: 18vw;
-  width: 35vw;
+  padding-bottom: 15vw;
+  width: 50vw;
 }
 
 .body-container .info .left-info img {
-  width: 100%;
+  scale: 1.3;
+  top: -3vw;
+  left: 6vw;
+  position: relative;
+  width: 75%;
+  animation: movie-logo-zoom 12s;
 }
 
 .body-container .info .left-info .decribtion {
-  margin-top: 1.8vw;
+  position: relative;
+  width: 80%;
   margin-bottom: 1.8vw;
   color: #fff;
   font-size: 1.2vw;
   font-weight: 300;
+  animation: movie-describtion-fade 12s;
 }
 
-.body-container .info .left-info .b1, .body-container .info .left-info .b2 {
-  display: inline-flex;
+.body-container .info .left-info .info-buttons-container {
+  display: flex;
+  gap: 1vw;
+}
+
+.body-container .info .left-info .info-buttons-container .b1, .body-container .info .left-info .info-buttons-container .b2 {
+  display: flex;
   align-items: center;
   font-size: 12px;
   font-weight: 500;
   padding: 0.7vw 1.3vw;
   border: none;
-  margin-left: 10px;
   border-radius: 0.3vw;
   cursor: pointer;
   padding-left: 1.8vw;
@@ -173,12 +196,12 @@ body {
   padding-bottom: 1vw;
 }
 
-.body-container .info .left-info .b1:hover, .body-container .info .left-info .b2:hover {
+.body-container .info .left-info .info-buttons-container .b1:hover, .body-container .info .left-info .info-buttons-container .b2:hover {
   opacity: 0.8;
 }
 
 @media (min-width: 640px) {
-  .body-container .info .left-info .b1, .body-container .info .left-info .b2 {
+  .body-container .info .left-info .info-buttons-container .b1, .body-container .info .left-info .info-buttons-container .b2 {
     padding-top: 0.7vw;
     padding-bottom: 0.7vw;
     padding-left: 1.3vw;
@@ -187,12 +210,12 @@ body {
   }
 }
 
-.body-container .info .left-info .b1 svg, .body-container .info .left-info .b2 svg {
+.body-container .info .left-info .info-buttons-container .b1 svg, .body-container .info .left-info .info-buttons-container .b2 svg {
   margin-right: 0.8vw;
   min-width: 15px;
 }
 
-.body-container .info .left-info .b2 {
+.body-container .info .left-info .info-buttons-container .b2 {
   color: #fff;
   background-color: rgba(109, 109, 110, 0.7);
 }
@@ -240,6 +263,7 @@ body {
 
 .body-container .gradient-screen {
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 56.25vw;
   background: linear-gradient(0deg, #181818, transparent 50%);
@@ -266,6 +290,7 @@ body {
   display: flex;
   transform: translateX(calc(var(--slider-index) * -100%));
   transition: transform 0.7s ease-in-out, z-index 1s ease;
+  z-index: 5;
 }
 
 .carousel-container .slider .img-container {
@@ -289,7 +314,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 1;
+  opacity: 0;
   background-color: yellow;
   border-radius: var(--card-border);
   transition: all 0.15s ease-out;
@@ -330,6 +355,13 @@ body {
 
 .carousel-row .carousel-progress-container {
   margin: 0 calc(var(--slider-padding) + var(--img-container-gap));
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 4;
+}
+
+.carousel-row .carousel-progress-container .genre-title {
+  color: #e5e5e5;
 }
 
 .carousel-container:hover .arrow {
@@ -432,6 +464,68 @@ body {
 @media (min-width: 800px) {
   .carousel-progress-container .genre-title {
     font-size: 1.4vw;
+  }
+}
+
+@keyframes movie-logo-zoom {
+  0% {
+    scale: 1.3;
+    top: -3vw;
+    left: 6vw;
+  }
+
+  21% {
+    scale: 1.3;
+    top: -3vw;
+    left: 6vw;
+  }
+
+  30% {
+    scale: 1;
+    top: 5vw;
+    left: 0;
+  }
+
+  83% {
+    scale: 1;
+    top: 5vw;
+    left: 0;
+  }
+
+  100% {
+    scale: 1.3;
+    top: -3vw;
+    left: 6vw;
+  }
+}
+
+@keyframes movie-describtion-fade {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+
+  21% {
+    opacity: 1;
+    top: 0;
+  }
+
+  30% {
+    top: 5vw;
+    opacity: 0;
+  }
+
+  82% {
+    opacity: 0;
+    top: 5vw;
+    z-index: -100;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+    scale: 1;
+    left: 0;
   }
 }
 
