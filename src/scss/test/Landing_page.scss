@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply bg-black text-white;
+
+*{
+    @apply box-border;
 }
+
+body{
+    @apply bg-black text-white ;
+    
+}
+
