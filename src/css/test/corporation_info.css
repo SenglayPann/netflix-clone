@@ -127,8 +127,8 @@
   font-weight: 700px;
 }
 .content-container .corporation-info-main .related-arctical-container {
-  height: 464px;
   display: flex;
+  margin-bottom: 20px;
 }
 .content-container .corporation-info-main .related-arctical-container .related-arctical-main {
   height: 310px;
@@ -145,6 +145,7 @@
   display: flex;
   justify-content: center;
   background-color: black;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
 }
 .upper-footer-container .upper-footer-main {
   max-width: 1248px;
@@ -186,6 +187,15 @@
 }
 .lower-footer-container .lower-footer-main .lower-footer-inner p {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .content-container .corporation-info-main {
+    flex-direction: column;
+  }
+  .content-container .corporation-info-main .corporation-info-inner {
+    height: 600px;
+  }
 }
 
 /*# sourceMappingURL=corporation_info.css.map */

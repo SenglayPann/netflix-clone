@@ -1,2 +1,5 @@
-REVIEWBOARD_URL = 'https://review.clp.kr/'
-REPOSITORY = 'Cybernexus'
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "CyberNexus/Team-Projects/Netflix-Clone"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/jobs"
+LAND_DEST_BRANCH = "feature/jobs"
