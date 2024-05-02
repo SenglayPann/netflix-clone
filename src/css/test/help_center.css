@@ -95,11 +95,10 @@ html {
   justify-content: center;
   padding: 48px 12px;
   @apply relative
-  h-[397px]
-  md:h-[815px]
-  lg:h-[816px];
+  h-[816px];
 }
 .search-container .detail-container {
+  margin: 20px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -112,9 +111,9 @@ html {
 }
 .search-container .detail-container .input-box {
   border-radius: 4px;
-  position: fixed;
   background: linear-gradient(to right, #e50914 -0.08%, #c94ff5 81.14%, #5b79f1 99.92%);
-  @apply w-[590px]
+  width: 100%;
+  @apply flex
       h-[42px]
       relative
       my-6
@@ -125,6 +124,7 @@ html {
   height: 100%;
   width: 100%;
   background-color: #fff;
+  overflow: hidden;
 }
 .search-container .detail-container .input-box .input-container svg {
   @apply absolute
@@ -137,7 +137,6 @@ html {
   padding-top: 5px;
   width: 100%;
   @apply h-[30px]
-          min-w-[200px]
           max-w-[300px]
           border-none
           outline-none
@@ -146,6 +145,7 @@ html {
 .search-container .detail-container .recommendation {
   color: rgba(0, 0, 0, 0.7019607843);
   @apply text-center
+      mx-1
       h-12
       max-w-[600px]
       font-bold;
@@ -179,14 +179,14 @@ html {
   display: flex;
   justify-content: center;
 }
-.container .accordian-box {
+.container .accordion-box {
   position: relative;
   display: flex;
   flex-direction: column;
   @apply mx-3
     pb-3;
 }
-.container .accordian-box .header-accordian {
+.container .accordion-box .header-accordion {
   display: flex;
   border-bottom: 1px solid #d5d4d1;
   @apply flex
@@ -197,18 +197,18 @@ html {
       mx-2
       text-lg;
 }
-.container .accordian-box .header-accordian p {
+.container .accordion-box .header-accordion p {
   @apply p-2;
 }
-.container .accordian-box .accordian-container {
+.container .accordion-box .accordion-container {
   border-radius: 7px;
   border: 1px solid #d5d4d1;
   margin-bottom: 16px;
   @apply overflow-hidden
       max-w-[600px]
-      min-w-[320px];
+      min-w-[220px];
 }
-.container .accordian-box .accordian-container .accordion {
+.container .accordion-box .accordion-container .accordion {
   transition: 0.4s;
   border: none;
   display: flex;
@@ -220,38 +220,38 @@ html {
         p-4
         text-[15px];
 }
-.container .accordian-box .accordian-container .accordion p {
+.container .accordion-box .accordion-container .accordion p {
   @apply font-bold;
 }
-.container .accordian-box .accordian-container .accordion .icon > svg {
+.container .accordion-box .accordion-container .accordion .icon > svg {
   width: 100%;
   height: 100%;
 }
-.container .accordian-box .accordian-container .accordion .icon {
+.container .accordion-box .accordion-container .accordion .icon {
   @apply h-6
           w-6;
 }
-.container .accordian-box .accordian-container .active .icon > svg {
+.container .accordion-box .accordion-container .active .icon > svg {
   transition: transform 0.1s ease-in-out;
 }
-.container .accordian-box .accordian-content {
+.container .accordion-box .accordion-content {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.container .accordian-box .accordian-content .accordian-item li {
+.container .accordion-box .accordion-content .accordion-item li {
   list-style: none;
   font-size: 16px;
   display: flex;
   margin-bottom: 16px;
 }
-.container .accordian-box .accordian-content .accordian-item li svg {
+.container .accordion-box .accordion-content .accordion-item li svg {
   width: 16px;
   height: 24px;
   margin-right: 5px;
 }
-.container .accordian-box .accordian-content .accordian-item li a {
+.container .accordion-box .accordion-content .accordion-item li a {
   color: black;
 }
 
@@ -261,7 +261,7 @@ html {
   @apply mb-[65px];
 }
 .container-box .container-link {
-  @apply min-w-[360px]
+  @apply min-w-[0px]
     max-w-[600px]
     w-[630px]
     mx-3;
@@ -278,7 +278,7 @@ html {
         mb-2;
 }
 .container-box .container-link .quick-link-container .links {
-  @apply min-w-[360px]
+  @apply min-w-[0px]
         max-w-[600px]
         w-[100%];
 }

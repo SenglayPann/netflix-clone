@@ -109,6 +109,7 @@ html {
   justify-content: center;
   padding: 48px 12px;
   .detail-container { 
+    margin: 20px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -121,12 +122,13 @@ html {
     }
     .input-box { 
       border-radius: 4px;
-      position: fixed;
       background: linear-gradient(to right, #e50914 -0.08%, #c94ff5 81.14%, #5b79f1 99.92%);
+      width: 100%;
       .input-container { 
         height: 100%;
         width: 100%;
         background-color: #fff;
+        overflow: hidden;
         svg { 
           @apply
           absolute
@@ -138,9 +140,9 @@ html {
           padding-left: 50px;
           padding-top: 5px;
           width: 100%;
+          
           @apply
           h-[30px]
-          min-w-[200px]
           max-w-[300px]
           border-none
           outline-none
@@ -148,7 +150,7 @@ html {
         }
       }
       @apply
-      w-[590px]
+      flex
       h-[42px]
       relative
       my-6
@@ -169,6 +171,7 @@ html {
       }
       @apply
       text-center
+      mx-1
       h-12
       max-w-[600px]
       font-bold
@@ -176,9 +179,7 @@ html {
   }
   @apply
   relative
-  h-[397px]
-  md:h-[815px]
-  lg:h-[816px]
+  h-[816px]
 }
 
 // EXPLORE TOPIC
@@ -202,15 +203,15 @@ html {
 }
 
 
-// ACCORDIAN SECTION
+// accordion SECTION
 .container { 
   display: flex;
   justify-content: center;
-  .accordian-box { 
+  .accordion-box { 
     position: relative;
     display: flex;
     flex-direction: column;
-    .header-accordian { 
+    .header-accordion { 
       display: flex;
       border-bottom: 1px solid #d5d4d1;
       p { 
@@ -227,7 +228,7 @@ html {
       text-lg
   
     }
-    .accordian-container { 
+    .accordion-container { 
       border-radius: 7px;
       border: 1px solid #d5d4d1;
       margin-bottom: 16px;
@@ -263,14 +264,14 @@ html {
       @apply
       overflow-hidden
       max-w-[600px]
-      min-w-[320px]
+      min-w-[220px]
       }
-    .accordian-content {
+    .accordion-content {
       padding: 0 18px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
-      .accordian-item { 
+      .accordion-item { 
         li { 
           list-style: none;
           font-size: 16px;
@@ -325,7 +326,7 @@ html {
           py-3
         }
         @apply
-        min-w-[360px]
+        min-w-[0px]
         max-w-[600px]
         w-[100%]
       }
@@ -336,7 +337,7 @@ html {
       mx-[10px]
     }
     @apply
-    min-w-[360px]
+    min-w-[0px]
     max-w-[600px]
     w-[630px]
     mx-3
