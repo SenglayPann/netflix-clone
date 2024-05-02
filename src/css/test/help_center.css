@@ -11,17 +11,17 @@ html {
 .nav-container {
   background-color: white;
   height: 66px;
-  display: flex;
-  justify-content: center;
-  color: black;
+  @apply text-black  
+  flex
+  justify-center;
 }
 .nav-container .header-container {
   max-width: 1248px;
   width: 1248px;
   min-width: auto;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
+  @apply flex
+      justify-between;
 }
 .nav-container .header-container .left-content {
   display: flex;
@@ -29,20 +29,35 @@ html {
   align-items: center;
 }
 .nav-container .header-container .left-content .help-center {
+  font-size: 18px;
   margin: 20px;
+  color: #221f1f;
+}
+.nav-container .header-container .left-content .help-center:hover {
+  text-decoration: underline;
+  color: #808080;
+  @apply cursor-pointer;
 }
 .nav-container .header-container .right-content {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @apply flex
+        justify-end
+        items-center;
 }
 .nav-container .header-container .right-content .mobile-icon {
-  height: 20px;
+  height: 25px;
+  width: 25px;
+}
+.nav-container .header-container .right-content p {
+  color: #221f1f;
+}
+.nav-container .header-container .right-content p:hover {
+  text-decoration: underline;
+  @apply cursor-pointer;
 }
 
 .notification-bar {
   background-color: #EAEAE6;
-  height: 81px;
+  height: 80px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #d5d4d1;
@@ -75,11 +90,19 @@ html {
 }
 
 .search-container {
-  @apply h-[397px] w-[390px]
-  md:h-[815px] md:w-[805px]
-  lg:h-[816px] lg:min-w-[806px] lg:w-[100%];
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 12px;
+  @apply relative
+  h-[397px]
+  md:h-[815px]
+  lg:h-[816px];
 }
 .search-container .detail-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -87,27 +110,236 @@ html {
   font-size: 40px;
   @apply block;
 }
-.search-container .detail-container .input-container {
+.search-container .detail-container .input-box {
   border-radius: 4px;
-  border: 2px solid gray;
-  @apply relative
-      w-[592px]
-      h-[42px];
+  position: fixed;
+  background: linear-gradient(to right, #e50914 -0.08%, #c94ff5 81.14%, #5b79f1 99.92%);
+  @apply w-[590px]
+      h-[42px]
+      relative
+      my-6
+      p-[2px]
+      shadow-lg;
 }
-.search-container .detail-container .input-container svg {
+.search-container .detail-container .input-box .input-container {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.search-container .detail-container .input-box .input-container svg {
   @apply absolute
-        m-1
-        pt-1
-        pl-2;
+          m-1
+          pt-1
+          pl-2;
 }
-.search-container .detail-container .input-container input {
-  height: 30px;
-  width: 300px;
-  border: none;
-  outline: none;
-  font-size: 16px;
+.search-container .detail-container .input-box .input-container input {
   padding-left: 50px;
   padding-top: 5px;
+  width: 100%;
+  @apply h-[30px]
+          min-w-[200px]
+          max-w-[300px]
+          border-none
+          outline-none
+          text-[16px];
+}
+.search-container .detail-container .recommendation {
+  color: rgba(0, 0, 0, 0.7019607843);
+  @apply text-center
+      h-12
+      max-w-[600px]
+      font-bold;
+}
+.search-container .detail-container .recommendation span {
+  text-decoration: underline;
+  @apply font-light;
+}
+.search-container .detail-container .recommendation span:hover {
+  @apply text-black
+        cursor-pointer;
+}
+
+.explore-container {
+  @apply w-[100%]
+  mb-12;
+}
+.explore-container #explore-text {
+  text-align: center;
+  font-weight: 700;
+  @apply pt-4
+    text-[16px]
+    mb-2;
+}
+.explore-container #explore-arrow {
+  @apply flex
+    justify-center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .accordian-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @apply mx-3
+    pb-3;
+}
+.container .accordian-box .header-accordian {
+  display: flex;
+  border-bottom: 1px solid #d5d4d1;
+  @apply flex
+      items-center
+      pt-[6px]
+      pb-[16px]
+      pl-3
+      mx-2
+      text-lg;
+}
+.container .accordian-box .header-accordian p {
+  @apply p-2;
+}
+.container .accordian-box .accordian-container {
+  border-radius: 7px;
+  border: 1px solid #d5d4d1;
+  margin-bottom: 16px;
+  @apply overflow-hidden
+      max-w-[600px]
+      min-w-[320px];
+}
+.container .accordian-box .accordian-container .accordion {
+  transition: 0.4s;
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  @apply cursor-pointer
+        w-[100%]
+        bg-white
+        p-4
+        text-[15px];
+}
+.container .accordian-box .accordian-container .accordion p {
+  @apply font-bold;
+}
+.container .accordian-box .accordian-container .accordion .icon > svg {
+  width: 100%;
+  height: 100%;
+}
+.container .accordian-box .accordian-container .accordion .icon {
+  @apply h-6
+          w-6;
+}
+.container .accordian-box .accordian-container .active .icon > svg {
+  transition: transform 0.1s ease-in-out;
+}
+.container .accordian-box .accordian-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.container .accordian-box .accordian-content .accordian-item li {
+  list-style: none;
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 16px;
+}
+.container .accordian-box .accordian-content .accordian-item li svg {
+  width: 16px;
+  height: 24px;
+  margin-right: 5px;
+}
+.container .accordian-box .accordian-content .accordian-item li a {
+  color: black;
+}
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  @apply mb-[65px];
+}
+.container-box .container-link {
+  @apply min-w-[360px]
+    max-w-[600px]
+    w-[630px]
+    mx-3;
+}
+.container-box .container-link .quick-link-container {
+  @apply flex
+      flex-col
+      items-start
+      mx-[10px];
+}
+.container-box .container-link .quick-link-container p {
+  @apply text-lg
+        font-bold
+        mb-2;
+}
+.container-box .container-link .quick-link-container .links {
+  @apply min-w-[360px]
+        max-w-[600px]
+        w-[100%];
+}
+.container-box .container-link .quick-link-container .links li {
+  border-top: 1px solid #d5d4d1;
+  @apply list-none
+          py-3;
+}
+.container-box .container-link .quick-link-container .links li svg {
+  @apply w-4
+            h-4;
+}
+.container-box .container-link .quick-link-container .links li a {
+  @apply text-black
+            text-[16px]
+            ml-2
+            font-bold;
+}
+
+.question-box {
+  height: auto;
+  @apply flex
+  justify-center;
+}
+.question-box .container-help {
+  justify-content: center;
+  height: auto;
+  @apply w-[600px]
+    text-center
+    pb-10;
+}
+.question-box .container-help .need-help-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.question-box .container-help .contact-us {
+  font-size: 16px;
+  width: 216px;
+  height: 48px;
+  border-radius: 4px;
+  @apply text-white
+        bg-black
+        px-3
+        py-3
+        border-none;
+}
+
+.footer-container {
+  background-color: #fafafa;
+  @apply pt-16
+  pb-12
+  px-3;
+}
+.footer-container .footer-links {
+  width: 100%;
+}
+.footer-container .footer-links .link {
+  color: rgba(0, 0, 0, 0.7019607843);
+  @apply text-sm
+      block
+      mb-4;
 }
 
 /*# sourceMappingURL=help_center.css.map */
