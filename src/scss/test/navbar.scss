@@ -52,7 +52,6 @@ body {
         @apply 
         hidden
         md:flex 
-        
     }
 
     .avatar {
@@ -89,11 +88,6 @@ body {
     cursor: pointer; /* Add cursor pointer to indicate it's clickable */
 }
 
-/* Dropdown container */
-.browse-menu {
-    position: relative;
-    display: inline-block;
-}
 
 /* Dropdown content */
 .browse-menu {
@@ -174,61 +168,58 @@ body {
 }
 
 
-
-
 // arrow down
-.dropdown-image {
-    display: flex;
-    align-items: center;
-}
-
-// image drop down
 .dropdown-image-container {
     position: relative;
     display: inline-block;
-}
 
+    .dropdown-image {
+        display: flex;
+        align-items: center;
 
+        /* Apply rotation to the span when hovering over the image */
+        &:hover .arrow-down {
+            transform: rotate(180deg);
+            transition: transform 0.5s ease;
+        }
+    }
 
-/* black box hover */
-.dropdown-content {
-    color: gray;
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 260px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: -210px;
-    padding: 10px; /* Increase padding for larger hover area */
-    margin-top: 20px;
+    /* Dropdown content */
+    .dropdown-content {
+        color: gray;
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 260px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        left: -210px;
+        padding: 10px;
+        margin-top: 20px;
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
 
-        li {
-            display: flex; /* Use flexbox */
-            align-items: center; /* Align items vertically */
-            margin-bottom: 20px; /* Add spacing between list items */
-            margin-left: 10px;
-            margin-top: 20px;
-            margin-right: 10px;
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                margin-top: 20px;
+                margin-right: 10px;
 
-            img {
-                margin-right: 10px; /* Add spacing between image and text */
-                height: auto;
-                border-radius: 4%;
+                img {
+                    margin-right: 10px;
+                    height: auto;
+                    border-radius: 4%;
+                }
             }
         }
     }
 }
 
-.dropdown-image {
-    display: flex;
-    align-items: center;
-}
 
 /* image drop down */
 .dropdown-image-container {
@@ -241,11 +232,12 @@ body {
             display: block;
         }
     }
+
+    // sign-out
+    .center-text-signout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-// sign-out
-.center-text-signout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
