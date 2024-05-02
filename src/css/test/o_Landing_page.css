@@ -681,12 +681,12 @@ body {
   z-index: 2;
 }
 
-.logo {
+.netflix-nav .logo {
   z-index: 1;
   width: 100px;
 }
 
-.button-part {
+.netflix-nav .button-part {
   width: 77px;
   height: 28px;
   background-color: red;
@@ -701,7 +701,8 @@ body {
   width: 100%;
 }
 
-.hero-content {
+.content-part .hero-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -713,12 +714,43 @@ body {
   z-index: 2;
 }
 
-.background-cover {
+.content-part .hero-content .hero-content-content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 700px;
 }
 
-.background-cover > img {
+.content-part .hero-content .hero-content-content * {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content h3 {
+  font-size: 18px;
+  margin: 16px 0px 0px;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content p {
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.content-part .background-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.content-part .background-cover img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
