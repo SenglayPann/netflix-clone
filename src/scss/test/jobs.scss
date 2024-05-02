@@ -174,48 +174,6 @@ html {
                 font-weight: 600;
             }
         }
-        
-        .layout3-top {
-            width: 960px;
-            display: flex;
-            justify-content: center;
-            height: 30px;
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bolder;
-            color: #221F1F;
-        }
-        .layout3-bottom {
-            display: flex;
-            width: 960px;
-            height: 325px;
-            justify-content: center;
-            margin-bottom: 80px;
-            .img-layout3 {
-                width: 360px;
-                height: 367px;
-                position: relative;
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
-                }
-                svg {
-                    height: 90px;
-                    width: 90px;
-                    position: absolute;
-                    top: 120px;
-                    right: 100px;
-                }
-                h4 {
-                    position: absolute;
-                    bottom: 34px;
-                    left: 34px;
-                    color: #FFFFFF;
-                    font-size: 20px;
-                }
-            }
-        }
         .content-text {
             
             padding: 27px;
