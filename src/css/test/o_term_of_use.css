@@ -730,14 +730,55 @@ video {
   top: 25px;
 }
 
-.netflix {
+.paragraph .netflix {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 25px;
 }
 
-.list {
+.paragraph .under-netflix {
+  font-weight: 300;
+}
+
+.paragraph .list {
   margin-top: 25px;
+  margin-left: 20px;
+}
+
+.paragraph .list ol li {
+  position: relative;
+  left: -20px;
+  bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.paragraph .list ol p {
+  font-weight: 300;
+}
+
+.footer-parent {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 80px;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+}
+
+.footer-parent .footer-child :hover {
+  text-decoration: underline;
+}
+
+.footer-parent .footer-child {
+  list-style: none;
+  color: gray;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-parent .footer-child li {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=o_term_of_use.css.map */

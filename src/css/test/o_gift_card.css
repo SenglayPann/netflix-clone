@@ -588,6 +588,10 @@ video {
   }
 }
 
+.block {
+  display: block;
+}
+
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
@@ -598,125 +602,63 @@ video {
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
-nav {
-  background-color: rgb(20, 20, 20);
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav .tvshow {
-  width: 150px;
-  margin-left: 50px;
-  margin-top: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.nav .genres {
-  width: 150px;
-  margin-left: 20px;
-  border: solid 2px;
-  background-color: black;
-  color: white;
-  margin-top: 8px;
-}
-
-.nav .button-second {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav .button-second .svg-icon {
-  margin: 10px;
-  color: white;
-}
-
-.hover-color :hover {
-  background-color: gray;
-}
-
-.arrow-down {
-  margin-left: 30px;
-}
-
 body {
   background-color: black;
 }
 
-.parents {
+@media (max-width: 1199px) {
+  .parents2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .parents {
+    display: none;
+    transition: 1ms;
+  }
+}
+
+.parents2 {
   width: 100%;
-  height: 700px;
-  margin-top: 0%;
-  background: linear-gradient(180deg, rgba(26, 26, 26, .9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  height: 1300px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 20%, transparent 85%), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  transition: 1.4ms;
 }
 
-.child {
-  display: flex;
-  justify-content: space-between;
-}
-
-.svg-icon {
-  width: 100px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.sign-in {
-  background-color: #E50914;
-  color: #fff;
-  width: 110px;
-  height: 35px;
-  border-radius: 4px;
-  margin-right: 30px;
-  border: none;
-  margin-top: 20px;
-}
-
-.mid {
+.parents2 .mid1 {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
   position: relative;
+  left: 40px;
   top: 380px;
   z-index: 1;
 }
 
-.redeem-your-gift {
+.parents2 .mid1 .redeem-your-gift2 {
   display: flex;
-  justify-content: center;
-  font-size: 3rem;
+  justify-content: flex-start;
+  font-size: 60px;
   color: #FFFFFF;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
 }
 
-.enter {
+.parents2 .mid1 .enter2 {
   display: flex;
-  justify-content: center;
-  font-size: 2rem;
+  justify-content: flex-start;
+  font-size: 30px;
   color: #FFFFFF;
-  text-shadow: 1px 1px 10px #000;
 }
 
-.input-parent {
+.parents2 .mid1 .input-parent2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.input {
+.parents2 .mid1 .input-parent2 .input2 {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 2px;
   width: 253px;
@@ -727,12 +669,12 @@ body {
   font-size: 16px;
 }
 
-.button-redeem {
+.parents2 .mid1 .button-redeem2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.redeem {
+.parents2 .mid1 .button-redeem2 .redeem2 {
   background-color: #E50914;
   color: #fff;
   min-width: 152px;
@@ -743,34 +685,206 @@ body {
   font-size: 16px;
 }
 
-.need-help {
+.parents2 .mid1 .link2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.parents2 .mid1 .link2 .need-help2 {
   text-decoration: none;
   color: #A6A6A6;
 }
 
-.link {
+.parents2 .mid1 .link2 :hover {
+  text-decoration: underline;
+}
+
+.parents2 .mid1 .this-page2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.parents2 .mid1 .this-page2 .paragraph2 {
+  color: #8C8C8C;
+  width: 450px;
+}
+
+.parents2 .mid1 .this-page2 .learn-more2 {
+  color: #0071EB;
+}
+
+.parents2 .child2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parents2 .child2 .svg-icon2 {
+  width: 100px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.parents2 .child2 .sign-in2 {
+  background-color: #E50914;
+  color: #fff;
+  width: 110px;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 30px;
+  border: none;
+  margin-top: 20px;
+}
+
+.parents {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-size: cover;
+}
+
+.parents .mid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 380px;
+  z-index: 1;
+}
+
+.parents .mid .redeem-your-gift {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: #FFFFFF;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+}
+
+.parents .mid .enter {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.parents .mid .input-parent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.parents .mid .input-parent .input {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  width: 253px;
+  height: 46px;
+  border: 1px solid #8c8c8c;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+}
+
+.parents .mid .button-redeem {
+  display: flex;
+  justify-content: center;
+}
+
+.parents .mid .button-redeem .redeem {
+  background-color: #E50914;
+  color: #fff;
+  min-width: 152px;
+  min-height: 48px;
+  border-radius: 2px;
+  display: block;
+  border: none;
+  font-size: 16px;
+}
+
+.parents .mid .link {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 
-.link :hover {
+.parents .mid .link .need-help {
+  text-decoration: none;
+  color: #A6A6A6;
+}
+
+.parents .mid .link :hover {
   text-decoration: underline;
 }
 
-.this-page {
+.parents .mid .this-page {
   display: flex;
   justify-content: center;
 }
 
-.paragraph {
+.parents .mid .this-page .paragraph {
   color: #8C8C8C;
   width: 450px;
 }
 
-.learn-more {
+.parents .mid .this-page .learn-more {
   color: #0071EB;
+}
+
+.parents .child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parents .child .svg-icon {
+  width: 100px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.parents .child .sign-in {
+  background-color: #E50914;
+  color: #fff;
+  width: 110px;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 30px;
+  border: none;
+  margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .mid1 {
+    position: relative;
+    right: 25%;
+    margin-top: -200px;
+    -webkit-font-smoothing: antialiased;
+    background-color: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent);
+  }
+}
+
+@media (min-width: 1900px) {
+  .mid1 {
+    position: relative;
+    right: 35%;
+    margin-top: -200px;
+    -webkit-font-smoothing: antialiased;
+    background-color: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent);
+    width: 1360px;
+  }
+
+  .mid1 .need-help2 {
+    text-shadow: 1px 1px 10px #000;
+  }
+
+  .mid1 .paragraph2 {
+    text-shadow: 1px 1px 10px #000;
+    width: auto;
+  }
+
+  .mid1 .redeem-your-gift2 h2 {
+    font-size: 80px;
+  }
 }
 
 .list {
@@ -803,4 +917,4 @@ body {
   margin-bottom: 10px;
 }
 
-/*# sourceMappingURL=o_tv_show.css.map */
+/*# sourceMappingURL=o_gift_card.css.map */
