@@ -152,15 +152,11 @@ html {
 
 .footer-container {
   background-color: #f3f3f3;
-  border-top: 1px solid #737373;
-  @apply mt-0
-    min-h-[165px]
-    max-h-[245px]
-    pb-5;
+  border-top: 1px solid #e6e6e6;
+  @apply mt-0 min-h-[165px] max-h-[245px] pb-5;
 }
 .footer-container .footer-box {
-  @apply mx-[22px]
-        pt-[30px];
+  @apply mx-[22px] pt-[30px];
 }
 .footer-container .footer-box .footer-title-container .footer-title {
   color: #737373;
@@ -172,6 +168,25 @@ html {
 }
 .footer-container .footer-box .footer-links {
   color: #737373;
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-width: 288px;
+  position: relative;
+  @apply min-h-[128px] max-h-[144px];
+}
+.footer-container .footer-box .footer-links .footer-link {
+  position: relative; /* Change to relative positioning */
+  min-width: 144px;
+  max-width: 250px;
+  display: inline-block; /* Add display: inline-block */
+  margin: 0 16px 16px 0; /* Adjust margins for spacing */
+  padding: 0 22px 0 0;
+}
+.footer-container .footer-box .footer-links .footer-link span {
+  width: 100%;
+}
+.footer-container .footer-box .footer-links .footer-link span a {
+  @apply text-[13px];
 }
 
 /*# sourceMappingURL=transfer_profile.css.map */

@@ -848,7 +848,7 @@ html {
 
 .footer-container {
   background-color: #f3f3f3;
-  border-top: 1px solid #737373;
+  border-top: 1px solid #e6e6e6;
   margin-top: 0px;
   max-height: 245px;
   min-height: 165px;
@@ -874,6 +874,32 @@ html {
 
 .footer-container .footer-box .footer-links {
   color: #737373;
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-width: 288px;
+  position: relative;
+  max-height: 144px;
+  min-height: 128px;
+}
+
+.footer-container .footer-box .footer-links .footer-link {
+  position: relative;
+  /* Change to relative positioning */
+  min-width: 144px;
+  max-width: 250px;
+  display: inline-block;
+  /* Add display: inline-block */
+  margin: 0 16px 16px 0;
+  /* Adjust margins for spacing */
+  padding: 0 22px 0 0;
+}
+
+.footer-container .footer-box .footer-links .footer-link span {
+  width: 100%;
+}
+
+.footer-container .footer-box .footer-links .footer-link span a {
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=o_transfer_profile.css.map */

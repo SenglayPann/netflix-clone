@@ -181,31 +181,103 @@ html {
 
 // FOOTER SECTION
 
-.footer-container { 
+// .footer-container { 
+//     background-color: #f3f3f3;
+//     border-top: 1px solid #e6e6e6;
+//     .footer-box { 
+//         .footer-title-container { 
+//             .footer-title { 
+//                 color: #737373;
+//                 text-decoration: none;
+//                 @apply
+//                 text-lg
+//             }
+//             .footer-title:hover { 
+//                 text-decoration: underline;
+//             }
+//         }
+//         .footer-links { 
+//             color: #737373;
+//             box-sizing: border-box;
+//             max-width: 1000px;
+//             min-width: 288px;
+//             position: relative;
+//             .footer-link { 
+//                 position: absolute;
+//                 min-width: 144px;
+//                 max-width: 250px;
+//                 margin: 0px 0px 16px;
+//                 padding: 0px 22px 0px 0px;
+//                 span { 
+//                     width: 100%;
+//                     a { 
+//                         @apply
+//                         text-[13px]
+//                     }
+//                 }
+//             }
+//             @apply
+//             min-h-[128px]
+//             max-h-[144px]
+//         }
+//         @apply
+//         mx-[22px]
+//         pt-[30px]
+//     }
+//     @apply
+//     mt-0
+//     min-h-[165px]
+//     max-h-[245px]
+//     pb-5
+// }
+
+.footer-container {
     background-color: #f3f3f3;
-    border-top: 1px solid #737373;
-    .footer-box { 
-        .footer-title-container { 
-            .footer-title { 
-                color: #737373;
-                text-decoration: none;
-                @apply
-                text-lg
-            }
-            .footer-title:hover { 
-                text-decoration: underline;
-            }
+    border-top: 1px solid #e6e6e6;
+  
+    .footer-box {
+      .footer-title-container {
+        .footer-title {
+          color: #737373;
+          text-decoration: none;
+          @apply text-lg;
+  
+          &:hover {
+            text-decoration: underline;
+          }
         }
-        .footer-links { 
-            color: #737373;
+      }
+  
+      .footer-links {
+        color: #737373;
+        box-sizing: border-box;
+        max-width: 1000px;
+        min-width: 288px;
+        position: relative; // Keep relative positioning for layout purposes
+  
+        .footer-link {
+          position: relative; /* Change to relative positioning */
+          min-width: 144px;
+          max-width: 250px;
+          display: inline-block; /* Add display: inline-block */
+          margin: 0 16px 16px 0; /* Adjust margins for spacing */
+          padding: 0 22px 0 0;
+  
+          span {
+            width: 100%;
+  
+            a {
+              @apply text-[13px];
+            }
+          }
         }
-        @apply
-        mx-[22px]
-        pt-[30px]
+  
+        @apply min-h-[128px] max-h-[144px];
+      }
+  
+      @apply mx-[22px] pt-[30px];
     }
-    @apply
-    mt-0
-    min-h-[165px]
-    max-h-[245px]
-    pb-5
-}
+  
+    @apply mt-0 min-h-[165px] max-h-[245px] pb-5;
+  }
+  
