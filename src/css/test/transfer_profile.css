@@ -11,8 +11,9 @@ html {
   border-bottom: 1px solid #e6e6e6;
   display: flex;
   justify-content: space-between;
-  @apply min-h-[46px]
-    max-h-[91px];
+  @apply h-[46px]
+    sm:h-[76px]
+    md:h-[91px];
 }
 .nav-container .header-container {
   width: 100%;
@@ -23,7 +24,9 @@ html {
 }
 .nav-container .header-container .left-content {
   margin-left: 20px;
-  @apply w-[167px]
+  @apply mt-4
+            sm:mt-0
+            w-[167px]
             h-[90px]
             min-w-[75px]
             max-w-[166.5px]
@@ -31,19 +34,22 @@ html {
             max-h-[45px];
 }
 .nav-container .header-container .left-content svg {
-  @apply w-[100%]
-                h-[45px];
+  @apply h-5
+                w-[74px]
+                sm:h-[45px]
+                sm:w-[167px];
 }
 .nav-container .header-container .sign-out {
   font-size: 18px;
   color: #221f1f;
   height: 90px;
+  font-weight: 500;
   @apply flex
             items-center
             px-[29px]
-            text-[16px]
-            lg:text-[19px]
-            font-semibold;
+            text-sm
+            sm:text-[16px]
+            md:text-[19px];
 }
 .nav-container .header-container .sign-out:hover {
   text-decoration: underline;
@@ -66,7 +72,10 @@ html {
             mb-3;
 }
 .body-container .content-container .title-container .title {
-  @apply text-[32px];
+  font-weight: 500;
+  color: #333333;
+  @apply text-[27px]
+                sm:text-[32px];
 }
 .body-container .content-container .profile-container {
   display: flex;
@@ -93,70 +102,102 @@ html {
   @apply text-center
                 text-lg;
 }
+.body-container .content-container .link-container a:hover {
+  text-decoration: underline;
+}
 .body-container .content-container .button-container {
   @apply flex
             justify-center;
 }
 .body-container .content-container .button-container .transfer-button {
   border-radius: 5px;
-  background-color: red;
+  background-color: #e51e13;
   @apply border-none
                 text-white
                 text-lg
                 w-[340px]
                 h-[48px];
 }
+.body-container .content-container .button-container .transfer-button:hover {
+  background-color: #c01910;
+}
 .body-container .content-container .learn-more-container {
   margin: 0px 55px;
   padding: 15px 0px 35px;
 }
 .body-container .content-container .learn-more-container span p {
+  color: #333333;
   @apply text-lg
                     text-center
                     font-semibold;
+}
+.body-container .content-container .learn-more-container span p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .body-container .content-container .sub-title-container {
   @apply mt-[18px]
             mb-[6px];
 }
 .body-container .content-container .sub-title-container .sub-title {
-  @apply text-[23px]
-                text-center;
+  color: #333333;
+  @apply text-lg
+                md:text-[23px]
+                text-center
+                font-semibold;
 }
 .body-container .content-container .check-mark-container {
   @apply flex
-            min-w-[310px]
+            min-w-[270px]
             max-w-[400px]
-            h-[290px]
             m-[25px]
-            mx-auto
-            bg-purple-200;
+            mx-auto;
 }
 .body-container .content-container .check-mark-container .check-mark-content .check-mark-item {
-  @apply w-[100%]
-                    h-[69px];
+  @apply mt-5;
 }
 .body-container .content-container .check-mark-container .check-mark-content .check-mark-item span {
   display: flex;
 }
 .body-container .content-container .check-mark-container .check-mark-content .check-mark-item span .svg-box {
-  @apply h-[69px];
+  @apply mt-[6px];
 }
 .body-container .content-container .check-mark-container .check-mark-content .check-mark-item span p {
   color: #333;
   @apply text-lg
                             font-light
                             text-wrap
-                            ml-5;
+                            ml-[10px];
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item #span-games #text-box p {
+  font-style: italic;
+  @apply font-light;
+}
+.body-container .content-container .check-mark-container .check-mark-content #item-odd {
+  margin-top: 0;
+}
+.body-container .content-container .check-mark-container .check-mark-content #mark-odd {
+  @apply ml-10
+                    mt-5;
 }
 
 .footer-container {
   background-color: #f3f3f3;
   border-top: 1px solid #e6e6e6;
-  @apply mt-0 min-h-[165px] max-h-[245px] pb-5;
+  @apply min-h-[165px] 
+    max-h-[245px]
+    h-[245px] 
+    pb-5;
 }
 .footer-container .footer-box {
-  @apply mx-[22px] pt-[30px];
+  @apply mx-[20px] 
+      sm:mx-[22px]
+      md:mx-[37px]
+      lg:mx-[67px]
+      pt-[30px];
+}
+.footer-container .footer-box .footer-title-container {
+  @apply mb-5;
 }
 .footer-container .footer-box .footer-title-container .footer-title {
   color: #737373;
@@ -172,21 +213,25 @@ html {
   max-width: 1000px;
   min-width: 288px;
   position: relative;
-  @apply min-h-[128px] max-h-[144px];
+  @apply min-h-[128px] 
+        max-h-[144px];
 }
 .footer-container .footer-box .footer-links .footer-link {
-  position: relative; /* Change to relative positioning */
-  min-width: 144px;
-  max-width: 250px;
-  display: inline-block; /* Add display: inline-block */
-  margin: 0 16px 16px 0; /* Adjust margins for spacing */
+  position: relative;
+  display: inline-block;
+  margin: 0 0 16px;
   padding: 0 22px 0 0;
+  @apply w-[120px]
+            sm:w-[198px]
+            md:w-[213px]
+            lg:w-[227px];
 }
 .footer-container .footer-box .footer-links .footer-link span {
   width: 100%;
 }
 .footer-container .footer-box .footer-links .footer-link span a {
-  @apply text-[13px];
+  @apply text-[13px]
+                text-nowrap;
 }
 
 /*# sourceMappingURL=transfer_profile.css.map */
