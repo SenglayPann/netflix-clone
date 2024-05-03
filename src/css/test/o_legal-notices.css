@@ -661,7 +661,8 @@ video {
 }
 
 .legal-notices-subpage {
-  color: white;
+  color: black;
+  height: 100%;
 }
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header {
@@ -689,6 +690,7 @@ video {
 }
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center {
+  color: white;
   display: flex;
   height: 32px;
   width: auto;
@@ -703,19 +705,81 @@ video {
 }
 
 .legal-notices-subpage .legal-notices-global-notifications {
-  height: 80px;
+  height: 162px;
   width: auto;
   color: black;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box {
-  height: 100%;
-  display: flex;
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 {
+  height: 81px;
+  padding: 0px 24px;
+  background-color: #eaeae6;
+  border-bottom: 1px solid #d5d4d1;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box .notifications-upper {
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper {
+  top: 50%;
   display: flex;
-  flex-direction: column;
+  padding: 16px 16px 16px 40px;
+}
+
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 {
+  padding-right: 24px;
+  padding-top: 15px;
+}
+
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 svg {
+  width: 16px;
+  height: 20px;
+}
+
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-2 {
+  font-size: 16px;
+}
+
+.legal-notices-subpage .content-container {
+  height: 1052px;
+  padding: 32px 12px 48px 12px;
+}
+
+.legal-notices-subpage .content-container .upper-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.legal-notices-subpage .content-container .upper-content-container .back-to-help-home-box {
+  height: 74px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.legal-notices-subpage .content-container .upper-content-container .back-to-help-home-box .back-to-help-home p {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  font-size: 14px;
+  margin: 0px 0px 32px;
+}
+
+.legal-notices-subpage .content-container .upper-content-container .back-to-help-home-box .back-to-help-home svg {
+  height: 16px;
+  width: 16px;
+  padding-right: 5px;
+}
+
+.legal-notices-subpage .content-container .upper-content-container .back-to-help-home-box .button {
+  height: 42 [x];
+}
+
+.legal-notices-subpage .content-container .upper-content-container .back-to-help-home-box .button button {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=o_legal-notices.css.map */
