@@ -2,5 +2,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.legal-notices-subpage {
+  color: white;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header {
+  height: 66px;
+  width: auto;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px;
+  background-color: black;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box {
+  display: flex;
+  padding: 0px 24px 0px 0px;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .logo {
+  height: 32px;
+  width: auto;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center {
+  display: flex;
+  height: 32px;
+  width: auto;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center p {
+  margin: 0px 0px 0px 16px;
+}
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center a {
+  margin: 0px 0px 0px 16px;
+}
+.legal-notices-subpage .legal-notices-global-notifications {
+  height: 80px;
+  width: auto;
+  color: black;
+}
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box {
+  height: 100%;
+  display: flex;
+}
+.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box .notifications-upper {
+  display: flex;
+  flex-direction: column;
+}
 
 /*# sourceMappingURL=legal-notices.css.map */
