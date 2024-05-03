@@ -5,7 +5,7 @@
     --card-border: .5vw;
     --img-container-gap: .2vw;
     --hover-card-position-top: -7vw;
-    --items-per-screen: 3;  
+    --items-per-screen: 2;  
     --slider-index: 0;
     --black-bg: #141414;
     --grey-bg: rgb(255, 255, 255, .1)
@@ -28,14 +28,21 @@ body {
     // width: 100%;
     .thumbnail {
         position: absolute;
+        z-index: 1;
         width: 100%;
         img {
+            height: 100%;
+            object-fit: cover;
             width: 100%;
         }
     }
 
     .background-video {
-        position: absolute; width: 100%; top:0; z-index: 1;
+        position: absolute; 
+        width: 100%;
+        top:0;
+        z-index: 2;
+        transition: opacity .1s ease-in;
         video {
             width: 100%;
         }
@@ -48,7 +55,7 @@ body {
         position: absolute;
         width: 100%;
         height: 56.25vw;
-        z-index: 3;
+        z-index: 2;
         .left-info {
             margin-left: 4.5vw;
             padding-bottom: 15vw;
@@ -59,7 +66,7 @@ body {
                 left: 6vw;
                 position: relative;
                 width: 75%;
-                animation: movie-logo-zoom 12s ;
+                animation: movie-logo-zoom 18s ;
             }
             .decribtion {
                 position: relative;
@@ -68,7 +75,7 @@ body {
                 color: #fff;
                 font-size: 1.2vw;
                 font-weight: 300;
-                animation: movie-describtion-fade 12s;
+                animation: movie-describtion-fade 18s;
             }
             .info-buttons-container {
                 display: flex;
@@ -110,7 +117,8 @@ body {
             width: 10vw; 
             height: 3vw; 
             .sound-on-icon, .sound-off-icon {
-                padding-left: .8vw;
+                padding-left: .6vw;
+                padding-top: .1vw;
                 display: flex; 
                 justify-items: center; 
                 align-items: center; 
@@ -130,10 +138,15 @@ body {
                 background-color: rgb(255, 255, 255, .3);
             }
             .age-rate {
+                color: #e5e5e5;
+                user-select: none;
                 border-left: .3vw solid white;
                 margin-left: 1.5vw;
                 width: 5.5vw;
                 height: 80%;
+                padding-left: .5vw;
+                padding-top: .5vw;
+                font-size: 1vw;
                 background-color: rgb(51, 51, 51, .6);
             }
         }
@@ -141,7 +154,7 @@ body {
 
     .gradient-screen {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         height: 56.25vw;
         background: linear-gradient(0deg, #181818, transparent 50%);
@@ -151,11 +164,10 @@ body {
 
 // body part 
 .body-wrapper {
-    width: 100%;
-
+    width: 100%;;
     position: relative;
     top: 50vw;
-    background-color: cyan;
+    background-color: #181818;
     
 }
 
@@ -165,27 +177,132 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.1);
+    // background-color: rgba(255, 0, 0, 0.1);
     cursor: pointer;
     position: relative;
 }
 
+.genre-title {
+    cursor: pointer;
+    position: relative;
+    .sliding-indicator {
+        top: .3vw;
+        left: 9.8vw; //12
+        position: absolute;
+        font-size: 1vw;
+        color: #54b9c5;
+        text-wrap: nowrap;
+        opacity: 0;
+        // z-index: 5;
+        transition: opacity .3s ease, left .4s ease;
+    }
+
+    .sliding-arrow {
+        top: 0.1vw;
+        left: 10vw;  //14
+        position: absolute;
+        font-size: 1vw;
+        opacity: 0;
+        scale: 1;
+        transition: top .3s ease-in-out, scale .2s ease-in-out, left .1s ease-out, opacity .1s ease-in-out;
+        svg {
+            width: 1.8vw;
+            height: 1.8vw;
+            path {
+                fill: #54b9c5;
+            }
+        }
+    }
+}
+
+
+// effects from js
+.card-info.show {
+    display: block;
+}
+.sliding-arrow.hover-effect {
+    transition-delay: .4s; /* Add delay after hovering stops */
+  }
+
+.carousel-row:hover  .sliding-arrow {
+    opacity: 1;
+}
+
+.title-name:hover {
+    + .sliding-indicator {
+        opacity: 1;
+        + .sliding-arrow {
+            scale: .8;
+            top: 0;
+            left: 15.3vw;
+            opacity: 1;
+        }
+        left: 11vw;
+    }
+}
+
+.sliding-indicator:hover {
+    opacity: 1;
+    + .sliding-arrow {
+        scale: .8;
+        top: 0;
+        left: 15.3vw;
+        opacity: 1;
+    }
+    left: 11vw;
+}
+
+
+@media (min-width: 0) and (max-width: 700px) {
+    .genre-title {
+        .sliding-indicator {
+            left: 5rem;
+            top: .2rem;
+            font-size: .5rem;
+            color: #54b9c5;
+        }
+        .sliding-arrow {
+            left: 5.3rem;
+            top: 0rem;
+            font-size: 1vw;
+            svg {
+                width: 1rem;
+                height: 1rem;
+                path {
+                    fill: #54b9c5;
+                }
+            }
+        }
+    }
+    .title-name:hover {
+        + .sliding-indicator {
+            opacity: 1;
+            + .sliding-arrow {
+                left: 8.1rem;
+                opacity: 1;
+            }
+            left: 6rem;
+        }
+    }
+
+    
+}
 
 .carousel-container  {
     .slider {
-        
+        position: relative;
         width: calc(100% - 2 * var(--slider-padding));
         display: flex;
         transform: translateX(calc(var(--slider-index) * -100%));
         transition: transform .7s ease-in-out , z-index 1s ease;
-        z-index: 5;
+        z-index: 2;
         .img-container {
             aspect-ratio: 16/9;
             flex: 0 0 calc(100% / var(--items-per-screen)); //   shrink 0 grow 0 25% of parent
             max-width: calc(100% / var(--items-per-screen)); // make sure it is alway25%
             padding: calc(var(--img-container-gap));
             position: relative;
-
+            
             img {
                 width: 100%;
                 height: 100%;
@@ -194,43 +311,59 @@ body {
             }
 
             .hidden-info-card {
+                cursor: pointer;
                 position: absolute;
                 top: 0;
-                left: 0;
-                width: 100%;
-                opacity: 0;
-                background-color: yellow;
+                left: 0.2;
+                width: 98%;
+                opacity: 1;// background-color: yellow;
+                background-color: none; // none
                 border-radius: var(--card-border) ;
-                transition: all .15s ease-out;
-                z-index: 20;
-                scale: 1.5;
+                z-index: -1;  //-1
+                scale: .97; // 1
                 pointer-events: none;
+                transition: scale .2s ease-out, z-index .2s ease-out, opacity .2s ease-out, left .2s ease-out, top .2s ease-out;
+                transition: all .2s ease-out;
+
                 img {
                     width: 100%;
                     aspect-ratio: 16/9;
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: var(--card-border);
+                    border-bottom-right-radius: var(--card-border);
                     object-fit: cover;
+                    
                 }
                 .card-info {
+                    display: none;
                     font-size: 1vw;
+                    opacity: 0; //1
                 }
             }
             .hidden-info-card:hover {
                 opacity: 1;
                 top: calc(var(--hover-card-position-top));
                 scale: 1.5;
-                transition-delay: .5s;
                 pointer-events: all;
                 z-index: 20;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+                .card-info {
+                    
+                    opacity: 1;
+                    // transition-delay: 0s;
+                }
+                .card-info:hover {
+                    transition-delay: .3s;
+                }
+                img {
+
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
             }
 
-            .hidden-info-card:hover + .slider{
-                z-index: 10;
+            .hidden-info-card:hover + .carousel-row {
+                z-index: 30;
             }
-            
-            
-            
         }
         // .img-container:nth-child(calc((var(--slider-index) + 1) * var(--items-per-screen))) .hidden-info-card:hover {
         //     right: 25%;
@@ -238,7 +371,24 @@ body {
         .img-container:hover {
             .hidden-info-card {
                 pointer-events: all;
-                // z-index: 20;
+                z-index: 20;
+                background-color: #141414;
+                transition-delay: .5s;
+            }
+
+            .hidden-info-card {
+                opacity: 1;
+                top: calc(var(--hover-card-position-top));
+                scale: 1.5;
+                pointer-events: all;
+                z-index: 20;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+                
+                img {
+
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
             }
         }
         
@@ -250,7 +400,7 @@ body {
     .carousel-progress-container {
         margin: 0 calc(var(--slider-padding) + var(--img-container-gap));
         padding-bottom: 10px;
-        position: relative; z-index: 4;
+        position: relative; z-index: 2;
         .genre-title {
             color: #e5e5e5;
         }
@@ -317,6 +467,11 @@ body {
 
 
 // grid system responsiveness
+@media (min-width: 600px) {
+    .slider {
+        --items-per-screen: 3;
+    }
+}
 @media (min-width: 800px) {
     .slider {
         --items-per-screen: 4;
@@ -370,6 +525,8 @@ body {
 }
 
 
+// animation for the the tove mmovie logo
+
 @keyframes movie-logo-zoom {
     0% {
         scale: 1.3; 
@@ -386,7 +543,7 @@ body {
         top: 5vw;
         left: 0;
     }
-    83% {
+    88% {
         scale: 1;
         top: 5vw;
         left: 0;
@@ -398,6 +555,8 @@ body {
     }
 }
 
+
+// animation for the the hidde part of the hidden card
 @keyframes movie-describtion-fade {
     0% {
         opacity: 1;
@@ -411,7 +570,7 @@ body {
         top: 5vw;
         opacity: 0;
     }
-    82% {
+    88% {
         opacity: 0;
         top: 5vw;
         z-index: -100;
@@ -435,12 +594,9 @@ body {
     .movie-card-left-buttons {
         
         display: flex;
-        gap: .2rem;
+        gap: .3rem;
+        
     }
-}
-
-.movie-card-left-buttons {
-
 }
 
 
@@ -451,13 +607,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #aaa;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
     svg {
-        width: 50%;
-        height: 50%;
+        
+        margin-top: 5%;
+        margin-left: 11%;
+        width: 60%;
+        height: 60%;
         fill: #fff;
     }
 }
 
 
-// @media (ma)
+.bgc-black {
+    background-color: #141414;
+    color: #fff; 
+    svg {
+        margin: 0;
+        path {
+            fill: #fff;
+        }
+
+    }
+}
+
+
+// movie-brief info
+
+.movie-brief-info {
+    * {
+        color: #e5e5e5;
+        font-size: .7rem;
+        font-weight: 300;
+    }
+    .brief-top {
+        display: flex;
+        gap:  5px ;
+        .matching-rate {
+            color: #46d369;
+            font-weight: normal;
+        }
+
+        .brief-age-rate {
+            height: 
+            14px; 
+            font-size: 8px; 
+            border: 1px solid white;
+            padding: 0 2px;
+        }
+    }
+
+    .brief-genre {
+        display: flex; 
+        align-items: center;
+        gap: 5px;
+         div {
+            font-size: .6rem;
+            color: white;
+            font-weight: 200;
+        }
+        span {
+            color: #aaa;
+            font-size: 1.5rem;
+        }
+    }
+}
