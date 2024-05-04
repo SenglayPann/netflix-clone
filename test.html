@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .sliding-arrow {
-      opacity: 0; /* Initially hide the arrow */
-      transition: opacity 0.3s ease; /* Add transition effect */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
 
-    .sliding-arrow.hover-effect {
-      transition-delay: 1s; /* Add delay after hovering stops */
-    }
-
-    .genre-title:hover .sliding-arrow {
-      opacity: 1; /* Make the arrow visible on hover */
-    }
-
-  </style>
+    </style>
 </head>
+
 <body>
-  <div class="carousel-row">
-    <!-- carousel progress bar -->
-    <div class="carousel-progress-container">
-      <div class="genre-title" id="genreTitle">
-        <div class="title-name">Recently Added</div>
-        <div class="sliding-indicator">Explore all</div>
-        <div class="sliding-arrow">
-          <svg viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.451 16.6071L5.57229 24.4858C5.02773 25.0303 4.14718 25.0303 3.60841 24.4858L2.29916 23.1765C1.75461 22.632 1.75461 21.7514 2.29916 21.2126L7.88375 15.6281L2.29916 10.0435C1.75461 9.49891 1.75461 8.61836 2.29916 8.07959L3.60262 6.75876C4.14718 6.2142 5.02773 6.2142 5.5665 6.75876L13.4452 14.6374C13.9955 15.182 13.9955 16.0625 13.451 16.6071Z" fill="black"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+    <div id="movies-container"></div>
+
 </body>
 </html>
 
 <script>
-  const genreTitle = document.getElementById('genreTitle');
-  const slidingArrow = genreTitle.querySelector('.sliding-arrow');
+    fetch('./src/data/movies.json')
+  .then(response => response.json())
+  .then(data => {
+    // Filter movies to find the ones with mood "goofy" or "funny"
+    const goofyFunnyMovies = data.movies.filter(movie => movie.moods.includes("Goofy") || movie.moods.includes("Funny"));
+    
+    // Get the container element where movies will be injected
+    const container = document.getElementById("movies-container");
 
-  genreTitle.addEventListener('mouseleave', () => {
-    // Add class to apply transition delay after hovering stops
-    slidingArrow.classList.add('hover-effect');
+    // Clear the container
+    container.innerHTML = '';
+
+    // Create and inject HTML elements for each movie
+    goofyFunnyMovies.forEach(movie => {
+      // Create HTML string using template literals
+      const movieHTML = `
+        <div>
+          <h3>${movie.title}</h3>
+          <img src="${movie.videoThumbnailURL}" alt="${movie.title} thumbnail">
+        </div>
+      `;
+
+      // Inject the HTML string into the container
+      container.insertAdjacentHTML('beforeend', movieHTML);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+  });
+    fetch('./src/data/movies.json')
+  .then(response => response.json())
+  .then(data => {
+    // Filter movies to find the ones with mood "goofy" or "funny"
+    const goofyFunnyMovies = data.movies.filter(movie => movie.moods.includes("Goofy") || movie.moods.includes("Funny"));
+    
+    // Get the container element where movies will be injected
+    const container = document.getElementById("movies-container");
+
+    // Clear the container
+    container.innerHTML = '';
+
+    // Create and inject HTML elements for each movie
+    goofyFunnyMovies.forEach(movie => {
+      // Create HTML string using template literals
+      const movieHTML = `
+        <div>
+          <h3>${movie.title}</h3>
+          <img src="${movie.videoThumbnailURL}" alt="${movie.title} thumbnail">
+        </div>
+      `;
+
+      // Inject the HTML string into the container
+      container.insertAdjacentHTML('beforeend', movieHTML);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
   });
 
-  genreTitle.addEventListener('mouseenter', () => {
-    // Remove class to reset transition delay when hovering starts again
-    slidingArrow.classList.remove('hover-effect');
-  });
 
 </script>
