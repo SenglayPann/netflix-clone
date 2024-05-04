@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/src/css/test/o_contact_us.css">
+    <script src="../src/js/contact_us.js" defer></script>
 </head>
 <body>
     <!-- NAV-BAR -->
@@ -55,71 +56,88 @@
 
     <!-- BODY SECTION -->
     <div class="body-container">
-        <div class="body-inner-container">
-            <div class="header-container">
-                <h1 id="header">Contact us</h1>
-            </div>
-            <div class="form-section">
-                <div class="sub-header-container">
+        <div class="container-box">
+                <div class="form-section">
+                    <h1 id="header">Contact us</h1>
                     <h3 id="sub-header">Tell us more and we'll find the best solution for you</h3>
-                </div>
-                <div class="input-container">
-                    <div class="input-box">
-                        <input type="text" placeholder="Describe your issue">
-                        <button id="click-on">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m13.084 1.662 3.398 3.397H0v1.875h16.483l-3.4 3.4 1.327 1.326 4.999-5.001a.938.938 0 0 0 0-1.326l-5-4.997-1.325 1.326Z" fill="#000"></path></svg>
-                        </button>
+                    <div class="input-container">
+                        <div class="input-box">
+                            <input id="input0" type="text" placeholder="Describe your issue">
+                            <button id="click-on">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="m13.084 1.662 3.398 3.397H0v1.875h16.483l-3.4 3.4 1.327 1.326 4.999-5.001a.938.938 0 0 0 0-1.326l-5-4.997-1.325 1.326Z" fill="#000"></path></svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-box">
-                <div class="container-link">
-                    <div class="quick-link-container">
-                        <p>Quick Links</p>
-                        <ul class="links">
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24">
-                                    <path d="M20 3.5v1.197L4 8.254V7.5H2v8h2v-.754l1 .223V18.5c0 .459.313.858.757.971l4 1a1 1 0 001.042-.371l2.471-3.293L20 18.301V19.5h2v-16h-2zM9.598 18.369L7 17.719v-2.307l4.127.918-1.529 2.039zM4 12.697v-2.394l16-3.557v9.508L4 12.697z"></path>
-                                </svg>
-                                <a href="#">Request TV shows or movies</a>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 2C0.335786 2 0 2.33579 0 2.75V12.25C0 13.2165 0.783501 14 1.75 14H14.25C15.2165 14 16 13.2165 16 12.25V2.75C16 2.33579 15.6642 2 15.25 2H0.75ZM8 8.00978L2.76865 3.5H13.2313L8 8.00978ZM8.4897 9.56806L14.5 4.38677V12.25C14.5 12.3881 14.3881 12.5 14.25 12.5H1.75C1.61193 12.5 1.5 12.3881 1.5 12.25V4.38677L7.5103 9.56806L8 9.99022L8.4897 9.56806Z" fill="black"></path>
-                                </svg>
-                                <a href="#">Update email</a>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24">
-                                    <path d="M17 10V7A5 5 0 007 7v3H5v12h14V10zM9 7a3 3 0 016 0v3H9zm8 13H7v-8h10z"></path>
-                                    <path d="M11 14h2v4h-2z"></path>
-                                </svg>
-                                <a href="#">Update password</a>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24">
-                                    <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zM4 6h16v2H4zm0 12v-8h16v8z"></path>
-                                    <path d="M15 14h3v2h-3z"></path>
-                                </svg>
-                                <a href="#">Update payment method</a>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.548 3.60866C2.70368 3.41587 2.87109 3.22941 3.05025 3.05025C3.22941 2.87109 3.41587 2.70368 3.60866 2.548C6.35758 0.328324 10.3952 0.495742 12.9497 3.05025C15.5043 5.60476 15.6717 9.64242 13.452 12.3913C13.297 12.5833 13.1303 12.7691 12.9519 12.9476L12.9497 12.9497L12.9476 12.9519C12.7691 13.1303 12.5833 13.297 12.3913 13.452C9.64242 15.6717 5.60476 15.5043 3.05025 12.9497C0.495742 10.3952 0.328324 6.35758 2.548 3.60866ZM4.11091 11.8891C2.14292 9.92109 1.9781 6.83276 3.61644 4.6771L11.3229 12.3836C9.16724 14.0219 6.07891 13.8571 4.11091 11.8891ZM4.6771 3.61644L12.3836 11.3229C14.0219 9.16724 13.8571 6.07891 11.8891 4.11091C9.92109 2.14292 6.83276 1.9781 4.6771 3.61644Z" fill="black"></path>
-                                </svg>
-                                <a href="#">Cancel account</a>
-                            </li>
-                            <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24">
-                                    <path d="M3 5h18v2H3zM3 11h14v2H3zM3 17h18v2H3z"></path>
-                                </svg>
-                                <a href="#">Review payment history</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div id="quick-link-container">
+                    <p>Quick Links</p>
+                    <ul class="links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M20 3.5v1.197L4 8.254V7.5H2v8h2v-.754l1 .223V18.5c0 .459.313.858.757.971l4 1a1 1 0 001.042-.371l2.471-3.293L20 18.301V19.5h2v-16h-2zM9.598 18.369L7 17.719v-2.307l4.127.918-1.529 2.039zM4 12.697v-2.394l16-3.557v9.508L4 12.697z"></path>
+                            </svg>
+                            <a href="#">Request TV shows or movies</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.75 2C0.335786 2 0 2.33579 0 2.75V12.25C0 13.2165 0.783501 14 1.75 14H14.25C15.2165 14 16 13.2165 16 12.25V2.75C16 2.33579 15.6642 2 15.25 2H0.75ZM8 8.00978L2.76865 3.5H13.2313L8 8.00978ZM8.4897 9.56806L14.5 4.38677V12.25C14.5 12.3881 14.3881 12.5 14.25 12.5H1.75C1.61193 12.5 1.5 12.3881 1.5 12.25V4.38677L7.5103 9.56806L8 9.99022L8.4897 9.56806Z" fill="black"></path>
+                            </svg>
+                            <a href="#">Update email</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M17 10V7A5 5 0 007 7v3H5v12h14V10zM9 7a3 3 0 016 0v3H9zm8 13H7v-8h10z"></path>
+                                <path d="M11 14h2v4h-2z"></path>
+                            </svg>
+                            <a href="#">Update password</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zM4 6h16v2H4zm0 12v-8h16v8z"></path>
+                                <path d="M15 14h3v2h-3z"></path>
+                            </svg>
+                            <a href="#">Update payment method</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.548 3.60866C2.70368 3.41587 2.87109 3.22941 3.05025 3.05025C3.22941 2.87109 3.41587 2.70368 3.60866 2.548C6.35758 0.328324 10.3952 0.495742 12.9497 3.05025C15.5043 5.60476 15.6717 9.64242 13.452 12.3913C13.297 12.5833 13.1303 12.7691 12.9519 12.9476L12.9497 12.9497L12.9476 12.9519C12.7691 13.1303 12.5833 13.297 12.3913 13.452C9.64242 15.6717 5.60476 15.5043 3.05025 12.9497C0.495742 10.3952 0.328324 6.35758 2.548 3.60866ZM4.11091 11.8891C2.14292 9.92109 1.9781 6.83276 3.61644 4.6771L11.3229 12.3836C9.16724 14.0219 6.07891 13.8571 4.11091 11.8891ZM4.6771 3.61644L12.3836 11.3229C14.0219 9.16724 13.8571 6.07891 11.8891 4.11091C9.92109 2.14292 6.83276 1.9781 4.6771 3.61644Z" fill="black"></path>
+                            </svg>
+                            <a href="#">Cancel account</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M3 5h18v2H3zM3 11h14v2H3zM3 17h18v2H3z"></path>
+                            </svg>
+                            <a href="#">Review payment history</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <!-- REPLACING CONTENT -->
+        
     </div>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="footer-container">
+        <div class="footer-inner-container">
+            <ul class="footer-links">
+                <li class="footer-link">
+                    <a href="#">Term of Use</a>
+                </li>
+                <li class="footer-link">
+                    <a href="#">Privacy</a>
+                </li>
+                <li class="footer-link">
+                    <a href="#">Cookie Preferences</a>
+                </li>
+                <li class="footer-link">
+                    <a href="#">Corporate Information</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 </html>

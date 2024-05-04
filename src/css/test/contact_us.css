@@ -56,8 +56,9 @@ html {
 
 .notification-bar {
   background-color: #EAEAE6;
-  height: 80px;
   display: flex;
+  min-height: 80px;
+  max-height: 128px;
   justify-content: center;
   border-bottom: 1px solid #d5d4d1;
 }
@@ -65,7 +66,6 @@ html {
   max-width: 720px;
   width: 720px;
   min-width: auto;
-  height: 100%;
   display: flex;
 }
 .notification-bar .notification-main .notification-bell {
@@ -90,65 +90,110 @@ html {
 }
 
 .body-container {
-  @apply mt-4
-  mb-12;
+  @apply pt-8
+  pb-12;
 }
-.body-container .body-inner-container .header-container {
-  @apply mb-8;
+.body-container .container-box {
+  @apply min-w-[210px]
+    max-w-[720px]
+    mx-auto
+    px-3;
 }
-.body-container .body-inner-container .header-container #header {
+.body-container .container-box .form-section {
+  @apply mb-10
+      px-[10px];
+}
+.body-container .container-box .form-section #header {
   font-weight: 800;
-  line-height: 40px;
-  @apply text-[32px];
+  @apply text-[32px]
+        mb-8;
 }
-.body-container .body-inner-container .form-section .sub-header-container #sub-header {
-  line-height: 27px;
-  margin-bottom: 0;
+.body-container .container-box .form-section #sub-header {
   font-weight: 700;
-  font-size: 18px;
+  @apply text-lg;
 }
-.body-container .body-inner-container .container-box {
-  display: flex;
-  justify-content: center;
-  @apply mb-[65px];
+.body-container .container-box .form-section .input-container {
+  border-radius: 4px;
+  border: 1px solid rgb(213, 212, 209);
+  @apply mt-2
+        h-10
+        min-w-[0px];
 }
-.body-container .body-inner-container .container-box .container-link {
-  @apply min-w-[0px]
-        max-w-[600px]
-        w-[630px]
-        mx-3;
+.body-container .container-box .form-section .input-container .input-box {
+  @apply w-[95%]
+          h-[100%]
+          mx-3
+          flex
+          justify-between;
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container {
+.body-container .container-box .form-section .input-container .input-box input {
+  @apply outline-none
+            border-none;
+}
+.body-container .container-box .form-section .input-container .input-box #click-on {
+  display: none;
+}
+.body-container .container-box #quick-link-container {
   @apply flex
-          flex-col
-          items-start
-          mx-[10px];
+      flex-col
+      items-start
+      mx-[10px];
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container p {
+.body-container .container-box #quick-link-container p {
   @apply text-lg
-            font-bold
-            mb-2;
+        font-bold
+        mb-2;
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container .links {
-  @apply min-w-[0px]
-            max-w-[600px]
-            w-[100%];
+.body-container .container-box #quick-link-container .links {
+  @apply min-w-[210px]
+        max-w-[720px]
+        w-[100%];
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container .links li {
+.body-container .container-box #quick-link-container .links li {
   display: flex;
   border-top: 1px solid #d5d4d1;
   @apply list-none
-              py-3;
+          py-3;
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container .links li svg {
-  @apply w-4
-                h-4;
+.body-container .container-box #quick-link-container .links li svg {
+  @apply mt-1
+            w-4
+            h-4;
 }
-.body-container .body-inner-container .container-box .container-link .quick-link-container .links li a {
+.body-container .container-box #quick-link-container .links li a {
+  text-decoration: underline;
   @apply text-black
-                text-[16px]
-                ml-2
-                font-bold;
+            text-[16px]
+            ml-2
+            font-bold;
+}
+
+.footer-container {
+  background: #000000;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+  @apply w-[100%]
+  h-[220px]
+  pb-12;
+}
+.footer-container .footer-inner-container {
+  @apply relative
+    px-3
+    min-w-[220px]
+    max-w-[720px]
+    mx-auto;
+}
+.footer-container .footer-inner-container .footer-links {
+  @apply mt-10
+      absolute;
+}
+.footer-container .footer-inner-container .footer-links .footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  @apply text-[14px]
+        mb-4
+        font-extralight;
+}
+.footer-container .footer-inner-container .footer-links .footer-link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=contact_us.css.map */
