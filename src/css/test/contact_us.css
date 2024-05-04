@@ -6,6 +6,40 @@ html {
   font-family: "Netflix Sans";
 }
 
+body {
+  background-color: black;
+}
+
+.preloader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  animation: rotate 0.7s linear infinite;
+  background: linear-gradient(90deg, white 0%, red 53%);
+}
+
+.preloader::after {
+  content: " ";
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(450deg); /* Increased to complete two full rotations */
+  }
+}
 .nav-container {
   background-color: #000000;
   height: 66px;
@@ -90,23 +124,26 @@ html {
 }
 
 .body-container {
+  background-color: white;
   @apply pt-8
   pb-12;
 }
+.body-container #header {
+  font-weight: 800;
+  @apply text-[32px]
+    md:text-4xl
+    mb-8
+    ml-[10px];
+}
 .body-container .container-box {
   @apply min-w-[210px]
-    max-w-[720px]
+    max-w-[800px]
     mx-auto
     px-3;
 }
 .body-container .container-box .form-section {
   @apply mb-10
       px-[10px];
-}
-.body-container .container-box .form-section #header {
-  font-weight: 800;
-  @apply text-[32px]
-        mb-8;
 }
 .body-container .container-box .form-section #sub-header {
   font-weight: 700;
@@ -117,10 +154,11 @@ html {
   border: 1px solid rgb(213, 212, 209);
   @apply mt-2
         h-10
-        min-w-[0px];
+        min-w-[0px]
+        max-w-[720px];
 }
 .body-container .container-box .form-section .input-container .input-box {
-  @apply w-[95%]
+  @apply w-[97%]
           h-[100%]
           mx-3
           flex
@@ -132,6 +170,9 @@ html {
 }
 .body-container .container-box .form-section .input-container .input-box #click-on {
   display: none;
+}
+.body-container .container-box .form-section .input-container .input-box #click-on svg {
+  fill: gray;
 }
 .body-container .container-box #quick-link-container {
   @apply flex
@@ -166,6 +207,87 @@ html {
             text-[16px]
             ml-2
             font-bold;
+}
+.body-container .container-box #quick-link-container-replacement {
+  @apply flex
+      flex-col
+      items-start
+      mx-[10px];
+}
+.body-container .container-box #quick-link-container-replacement p {
+  @apply text-lg
+        font-bold
+        pb-6;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement {
+  @apply min-w-[210px]
+        max-w-[720px];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li {
+  display: flex;
+  border-bottom: 1px solid #d5d4d1;
+  @apply pb-3
+          mb-3;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li svg {
+  @apply mt-1
+            mr-2
+            w-6
+            h-6;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a {
+  @apply w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a span {
+  @apply underline
+              text-lg
+              font-bold
+              w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a small {
+  color: rgba(0, 0, 0, 0.7);
+  @apply text-[16px]
+              w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover span {
+  color: rgba(0, 0, 0, 0.7);
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover small {
+  @apply underline;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us {
+  @apply w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container {
+  @apply flex
+          flex-col
+          sm:flex-row
+          gap-4
+          w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  @apply flex
+            py-4
+            px-6
+            text-left
+            min-w-[0px]
+            max-w-[575px]
+            sm:min-w-[281px]
+            sm:max-w-[354px]
+            sm:w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span strong {
+  @apply text-[16px]
+                text-black;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span small {
+  @apply text-[16px]
+                text-black;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button svg {
+  @apply mr-4;
 }
 
 .footer-container {

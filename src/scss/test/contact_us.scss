@@ -6,6 +6,42 @@
 html { 
     font-family: 'Netflix Sans';
 }
+body { 
+  background-color: black;
+}
+
+.preloader { 
+  display: inline-block;
+  width: 30px; 
+  height: 30px;
+  padding: 10px; 
+  border-radius: 50%;
+  animation: rotate 0.7s linear infinite;
+  background: linear-gradient(90deg, white 0%, red 53%);
+  margin: auto;
+}
+
+.preloader::after { 
+  content: " ";
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+@keyframes rotate { 
+  from { 
+      transform: rotate(90deg);
+  }
+  to { 
+      transform: rotate(450deg); /* Increased to complete two full rotations */
+  }
+}
+
 // NAV-BAR
 .nav-container {
     background-color: #000000;
@@ -106,14 +142,17 @@ html {
 
 // BODY SECTION
 .body-container { 
+  background-color: white;
+  #header { 
+    font-weight: 800;
+    @apply
+    text-[32px]
+    md:text-4xl
+    mb-8
+    ml-[10px]
+  }
   .container-box { 
-    .form-section { 
-      #header { 
-        font-weight: 800;
-        @apply
-        text-[32px]
-        mb-8
-      }
+    .form-section {
       #sub-header { 
         font-weight: 700;
         @apply
@@ -130,9 +169,12 @@ html {
           }
           #click-on { 
             display: none;
+            svg { 
+              fill: gray;
+            }
           }
           @apply
-          w-[95%]
+          w-[97%]
           h-[100%]
           mx-3
           flex
@@ -142,6 +184,7 @@ html {
         mt-2
         h-10
         min-w-[0px]
+        max-w-[720px]
       }
       @apply
       mb-10
@@ -187,9 +230,110 @@ html {
       items-start
       mx-[10px]
     }
+
+    #quick-link-container-replacement { 
+      p { 
+        @apply
+        text-lg
+        font-bold
+        pb-6
+      }
+      .links-replacement { 
+        li { 
+          display: flex;
+          border-bottom: 1px solid #d5d4d1;
+          svg { 
+            @apply
+            mt-1
+            mr-2
+            w-6
+            h-6
+          }
+          a { 
+            span { 
+              @apply
+              underline
+              text-lg
+              font-bold
+              w-[100%]
+            }
+            small { 
+              color: rgba(0, 0, 0, 0.7);
+              @apply
+              text-[16px]
+              w-[100%]
+            }
+            @apply
+            w-[100%]
+          }
+          a:hover { 
+            span { 
+              color: rgba(0, 0, 0, 0.7);
+            }
+            small { 
+              @apply
+              underline
+            }
+          }
+          @apply
+          pb-3
+          mb-3
+        }
+        @apply
+        min-w-[210px]
+        max-w-[720px]
+      }
+      #contact-us { 
+        .buttons-container { 
+          .button { 
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            span { 
+              strong { 
+                @apply
+                text-[16px]
+                text-black
+              }
+              small { 
+                @apply
+                text-[16px]
+                text-black
+              }
+            }
+            svg {
+              @apply
+              mr-4
+            }
+            @apply
+            flex
+            py-4
+            px-6
+            text-left
+            min-w-[0px]
+            max-w-[575px]
+            sm:min-w-[281px]
+            sm:max-w-[354px]
+            sm:w-[100%]
+          }
+          @apply
+          flex
+          flex-col
+          sm:flex-row
+          gap-4
+          w-[100%]
+        }
+        @apply
+        w-[100%]
+      }
+      @apply
+      flex
+      flex-col
+      items-start
+      mx-[10px]
+    }
     @apply
     min-w-[210px]
-    max-w-[720px]
+    max-w-[800px]
     mx-auto
     px-3
   }

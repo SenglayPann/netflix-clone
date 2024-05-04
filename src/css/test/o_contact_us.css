@@ -664,6 +664,43 @@ html {
   font-family: "Netflix Sans";
 }
 
+body {
+  background-color: black;
+}
+
+.preloader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  animation: rotate 0.7s linear infinite;
+  background: linear-gradient(90deg, white 0%, red 53%);
+}
+
+.preloader::after {
+  content: " ";
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(450deg);
+    /* Increased to complete two full rotations */
+  }
+}
+
 .nav-container {
   background-color: #000000;
   height: 66px;
@@ -763,15 +800,30 @@ html {
 }
 
 .body-container {
+  background-color: white;
   padding-top: 2rem;
   padding-bottom: 3rem;
+}
+
+.body-container #header {
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  .body-container #header {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .body-container .container-box {
   margin-left: auto;
   margin-right: auto;
   min-width: 210px;
-  max-width: 720px;
+  max-width: 800px;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
@@ -780,12 +832,6 @@ html {
   margin-bottom: 2.5rem;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.body-container .container-box .form-section #header {
-  font-weight: 800;
-  margin-bottom: 2rem;
-  font-size: 32px;
 }
 
 .body-container .container-box .form-section #sub-header {
@@ -800,6 +846,7 @@ html {
   margin-top: 0.5rem;
   height: 2.5rem;
   min-width: 0px;
+  max-width: 720px;
 }
 
 .body-container .container-box .form-section .input-container .input-box {
@@ -807,7 +854,7 @@ html {
   margin-right: 0.75rem;
   display: flex;
   height: 100%;
-  width: 95%;
+  width: 97%;
   justify-content: space-between;
 }
 
@@ -819,6 +866,10 @@ html {
 
 .body-container .container-box .form-section .input-container .input-box #click-on {
   display: none;
+}
+
+.body-container .container-box .form-section .input-container .input-box #click-on svg {
+  fill: gray;
 }
 
 .body-container .container-box #quick-link-container {
@@ -863,6 +914,120 @@ html {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.body-container .container-box #quick-link-container-replacement {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.body-container .container-box #quick-link-container-replacement p {
+  padding-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement {
+  min-width: 210px;
+  max-width: 720px;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li {
+  display: flex;
+  border-bottom: 1px solid #d5d4d1;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li svg {
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li a {
+  width: 100%;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li a span {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li a small {
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  font-size: 16px;
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover span {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover small {
+  text-decoration-line: underline;
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us {
+  width: 100%;
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .body-container .container-box #quick-link-container-replacement #contact-us .buttons-container {
+    flex-direction: row;
+  }
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  display: flex;
+  min-width: 0px;
+  max-width: 575px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button {
+    width: 100%;
+    min-width: 281px;
+    max-width: 354px;
+  }
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span strong {
+  font-size: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span small {
+  font-size: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button svg {
+  margin-right: 1rem;
 }
 
 .footer-container {
