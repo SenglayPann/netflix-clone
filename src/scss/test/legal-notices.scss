@@ -42,6 +42,15 @@
                 }
                 .right-side-box {
                     color: white;
+                    a {
+                        text-decoration: underline;
+                        i {
+                            color: red;
+                            position: relative;
+                            top: 3px;
+                            padding-right: 5px;
+                        }
+                    }
                 }
          
                 
@@ -146,8 +155,92 @@
                 }
                 }
             }
+            .accordion-box-container{
+                .accordion-box {
+                    border: 1px solid #eaeae6;
+                    border-radius: 4px;
+                    .accordion {
+                        color: rgb(229, 9, 20);
+                        font-weight: 600;
+                        i {
+                            color: black;
+                            padding-right: 5px;
+                            position: relative;
+                            top: 3px;
+                            left: 2px;
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                    .panel {
+                        padding-left: 64px;
+                        padding: 0 18px;
+                        background-color: white;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        li {
+                            margin-left: 64px;
+                            list-style-type: disc;
+                            margin-bottom: 8px;
+                            padding-bottom: 24px;
+                        }
+                        .netflix {
+                            padding-top: 24px;
+                        }
 
-            
+                            
+                            a {
+                                color: #e50914;
+                                text-decoration: underline;
+
+                            }
+                    }
+                }
+                   
+            }
+            .last-update-box {
+                display: flex;
+                margin: 16px 0px;
+                height: 24px;
+                .last-updated {
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                .date {
+                    padding-left: 5px;
+                }
+            }
+             
         }
+    .footer-part {
+        height: 220px;
+        background:linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+        padding: 0px 0px 48px;
+        .container {
+            height:172px;
+            padding: 0px 12px;
+            .footer-box {
+                color:rgba(255, 255, 255, .7);
+                padding: 40px 0px 0px;
+                ul {
+                    li {
+                        height: 18px;
+                        font-size: 16px;
+                        margin: 0px 0px 14px;
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+    }   
+            
     }
+    
       

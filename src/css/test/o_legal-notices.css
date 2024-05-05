@@ -650,6 +650,14 @@ video {
   --tw-contain-style:  ;
 }
 
+.hidden {
+  display: none;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
@@ -658,6 +666,18 @@ video {
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .legal-notices-subpage {
@@ -707,6 +727,17 @@ video {
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box {
   color: white;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a {
+  text-decoration: underline;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a i {
+  color: red;
+  position: relative;
+  top: 3px;
+  padding-right: 5px;
 }
 
 .legal-notices-subpage .legal-notices-global-notifications {
@@ -819,6 +850,96 @@ video {
 
 .legal-notices-subpage .content-part-container .title-part p a {
   color: red;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box {
+  border: 1px solid #eaeae6;
+  border-radius: 4px;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .accordion {
+  color: rgb(229, 9, 20);
+  font-weight: 600;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .accordion i {
+  color: black;
+  padding-right: 5px;
+  position: relative;
+  top: 3px;
+  left: 2px;
+  height: 24px;
+  width: 24px;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .panel {
+  padding-left: 64px;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .panel li {
+  margin-left: 64px;
+  list-style-type: disc;
+  margin-bottom: 8px;
+  padding-bottom: 24px;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .panel .netflix {
+  padding-top: 24px;
+}
+
+.legal-notices-subpage .content-part-container .accordion-box-container .accordion-box .panel a {
+  color: #e50914;
+  text-decoration: underline;
+}
+
+.legal-notices-subpage .content-part-container .last-update-box {
+  display: flex;
+  margin: 16px 0px;
+  height: 24px;
+}
+
+.legal-notices-subpage .content-part-container .last-update-box .last-updated {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.legal-notices-subpage .content-part-container .last-update-box .date {
+  padding-left: 5px;
+}
+
+.legal-notices-subpage .footer-part {
+  height: 220px;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+  padding: 0px 0px 48px;
+}
+
+.legal-notices-subpage .footer-part .container {
+  height: 172px;
+  padding: 0px 12px;
+}
+
+.legal-notices-subpage .footer-part .container .footer-box {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 40px 0px 0px;
+}
+
+.legal-notices-subpage .footer-part .container .footer-box ul li {
+  height: 18px;
+  font-size: 16px;
+  margin: 0px 0px 14px;
+}
+
+.legal-notices-subpage .footer-part .container .footer-box ul li a {
+  font-size: 14px;
+}
+
+.legal-notices-subpage .footer-part .container .footer-box ul li:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=o_legal-notices.css.map */
