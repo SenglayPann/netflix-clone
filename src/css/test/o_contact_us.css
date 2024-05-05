@@ -682,8 +682,8 @@ body {
 
 .preloader {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   padding: 10px;
   border-radius: 50%;
   animation: rotate 0.7s linear infinite;
@@ -700,7 +700,7 @@ body {
   top: 0px;
   bottom: 0px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 1px;
 }
 
 @keyframes rotate {
@@ -821,7 +821,6 @@ body {
 .body-container #header {
   font-weight: 800;
   margin-bottom: 2rem;
-  margin-left: 10px;
   font-size: 32px;
 }
 
