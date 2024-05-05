@@ -1,0 +1,41 @@
+@import url(../../css/main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  font-family: "Netflix Sans";
+}
+
+.nav-container {
+  background-color: white;
+  height: 65px;
+  border-bottom: 1px solid #d5d4d1;
+  @apply flex
+    justify-center;
+}
+.nav-container .header-container {
+  width: 100%;
+  height: 100%;
+  @apply flex
+        justify-between
+        items-center
+        mx-6;
+}
+.nav-container .header-container .left-content {
+  @apply h-6
+            w-[89px];
+}
+.nav-container .header-container .right-content span {
+  @apply flex
+                items-center;
+}
+.nav-container .header-container .right-content span #profile-icon {
+  border-radius: 4px;
+  @apply w-8
+                    h-8;
+}
+.nav-container .header-container .right-content span #arrow {
+  @apply mx-2;
+}
+
+/*# sourceMappingURL=account.css.map */
