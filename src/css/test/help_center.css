@@ -173,83 +173,88 @@ html {
     justify-center;
 }
 
-.container {
+.outer-container {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-.container .accordion-box {
+.outer-container .container {
+  display: flex;
+  justify-content: center;
+}
+.outer-container .container .accordion-box {
   position: relative;
   display: flex;
   flex-direction: column;
   @apply mx-3
-    pb-3;
+      pb-3;
 }
-.container .accordion-box .header-accordion {
+.outer-container .container .accordion-box .header-accordion {
   display: flex;
   border-bottom: 1px solid #d5d4d1;
   @apply flex
-      items-center
-      pt-[6px]
-      pb-[16px]
-      pl-3
-      mx-2
-      text-lg;
+        items-center
+        pt-[6px]
+        pb-[16px]
+        pl-3
+        mx-2
+        text-lg;
 }
-.container .accordion-box .header-accordion p {
+.outer-container .container .accordion-box .header-accordion p {
   @apply p-2;
 }
-.container .accordion-box .accordion-container {
+.outer-container .container .accordion-box .accordion-container {
   border-radius: 7px;
   border: 1px solid #d5d4d1;
   margin-bottom: 16px;
   @apply overflow-hidden
-      max-w-[600px]
-      min-w-[220px];
+        max-w-[600px]
+        min-w-[220px];
 }
-.container .accordion-box .accordion-container .accordion {
+.outer-container .container .accordion-box .accordion-container .accordion {
   transition: 0.4s;
   border: none;
   display: flex;
   width: 100%;
   justify-content: space-between;
   @apply cursor-pointer
-        w-[100%]
-        bg-white
-        p-4
-        text-[15px];
+          w-[100%]
+          bg-white
+          p-4
+          text-[15px];
 }
-.container .accordion-box .accordion-container .accordion p {
+.outer-container .container .accordion-box .accordion-container .accordion p {
   @apply font-bold;
 }
-.container .accordion-box .accordion-container .accordion .icon > svg {
+.outer-container .container .accordion-box .accordion-container .accordion .icon > svg {
   width: 100%;
   height: 100%;
 }
-.container .accordion-box .accordion-container .accordion .icon {
+.outer-container .container .accordion-box .accordion-container .accordion .icon {
   @apply h-6
-          w-6;
+            w-6;
 }
-.container .accordion-box .accordion-container .active .icon > svg {
+.outer-container .container .accordion-box .accordion-container .active .icon > svg {
   transition: transform 0.1s ease-in-out;
 }
-.container .accordion-box .accordion-content {
+.outer-container .container .accordion-box .accordion-content {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.container .accordion-box .accordion-content .accordion-item li {
+.outer-container .container .accordion-box .accordion-content .accordion-item li {
   list-style: none;
   font-size: 16px;
   display: flex;
   margin-bottom: 16px;
 }
-.container .accordion-box .accordion-content .accordion-item li svg {
+.outer-container .container .accordion-box .accordion-content .accordion-item li svg {
   width: 16px;
   height: 24px;
   margin-right: 5px;
 }
-.container .accordion-box .accordion-content .accordion-item li a {
+.outer-container .container .accordion-box .accordion-content .accordion-item li a {
   color: black;
 }
 
@@ -283,10 +288,12 @@ html {
 .container-box .container-link .quick-link-container .links li {
   border-top: 1px solid #d5d4d1;
   @apply list-none
-          py-3;
+          py-3
+          flex;
 }
 .container-box .container-link .quick-link-container .links li svg {
-  @apply w-4
+  @apply mt-1
+            w-4
             h-4;
 }
 .container-box .container-link .quick-link-container .links li a {
