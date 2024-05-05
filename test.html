@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/css/test/o_page-body.css">
+  <script src="./src/js/modal.js"></script>
 </head>
-
 <body>
-    <div id="movies-container"></div>
+  <button class="button">click me</button>
 
+  <div id="modal-container" class="modal-container">
+    <div id="modal" class="modal">
+
+      <div class="modal-content-area">
+
+        <div class="modal-video">
+          <video src="./src/video/dummy_video.mp4" autoplay loop muted></video>
+        </div>
+        <!-- overlay -->
+        <div class="modal-video-overlay">
+          <div class="modal-left-info">
+            <!-- logo -->
+            <div class="modal-movie-logo"><img src="" alt=""></div>
+
+            <!-- buttons -->
+            <div class="modal-movie-buttons">
+              <div class="modal-play-button"></div>
+
+
+            </div>
+          </div>
+          <div class="modal-right-info">this is right</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
-
-<script>
-    fetch('./src/data/movies.json')
-  .then(response => response.json())
-  .then(data => {
-    // Filter movies to find the ones with mood "goofy" or "funny"
-    const goofyFunnyMovies = data.movies.filter(movie => movie.moods.includes("Goofy") || movie.moods.includes("Funny"));
-    
-    // Get the container element where movies will be injected
-    const container = document.getElementById("movies-container");
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Create and inject HTML elements for each movie
-    goofyFunnyMovies.forEach(movie => {
-      // Create HTML string using template literals
-      const movieHTML = `
-        <div>
-          <h3>${movie.title}</h3>
-          <img src="${movie.videoThumbnailURL}" alt="${movie.title} thumbnail">
-        </div>
-      `;
-
-      // Inject the HTML string into the container
-      container.insertAdjacentHTML('beforeend', movieHTML);
-    });
-  })
-  .catch(error => {
-    console.error('Error fetching JSON:', error);
-  });
-    fetch('./src/data/movies.json')
-  .then(response => response.json())
-  .then(data => {
-    // Filter movies to find the ones with mood "goofy" or "funny"
-    const goofyFunnyMovies = data.movies.filter(movie => movie.moods.includes("Goofy") || movie.moods.includes("Funny"));
-    
-    // Get the container element where movies will be injected
-    const container = document.getElementById("movies-container");
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Create and inject HTML elements for each movie
-    goofyFunnyMovies.forEach(movie => {
-      // Create HTML string using template literals
-      const movieHTML = `
-        <div>
-          <h3>${movie.title}</h3>
-          <img src="${movie.videoThumbnailURL}" alt="${movie.title} thumbnail">
-        </div>
-      `;
-
-      // Inject the HTML string into the container
-      container.insertAdjacentHTML('beforeend', movieHTML);
-    });
-  })
-  .catch(error => {
-    console.error('Error fetching JSON:', error);
-  });
-
-
-</script>
