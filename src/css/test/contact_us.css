@@ -12,12 +12,13 @@ body {
 
 .preloader {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
   border-radius: 50%;
   animation: rotate 0.7s linear infinite;
   background: linear-gradient(90deg, white 0%, red 53%);
+  margin: auto;
 }
 
 .preloader::after {

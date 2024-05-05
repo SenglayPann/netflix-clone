@@ -650,6 +650,18 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
@@ -670,12 +682,13 @@ body {
 
 .preloader {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
   border-radius: 50%;
   animation: rotate 0.7s linear infinite;
   background: linear-gradient(90deg, white 0%, red 53%);
+  margin: auto;
 }
 
 .preloader::after {

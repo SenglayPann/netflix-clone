@@ -2,8 +2,13 @@ const inputBox = document.getElementById("input0");
 const arrow = document.getElementById("click-on");
 const content = document.getElementById("container-box");
 const arrowChangeColor = document.getElementById("svg-arrow");
+
 const initialHeight = content.clientHeight;
 const initialWidth = content.clientWidth;
+console.log(initialHeight, initialWidth);
+
+// console.log(typeof(initialHeight + "px"));
+
 inputBox.addEventListener('focus', () => {
   arrow.style.display = 'block';
 });
@@ -14,22 +19,20 @@ inputBox.addEventListener('blur', () => {
     arrowChangeColor.style.fill = 'gray';
   }  
 });
+
 inputBox.addEventListener('keydown', () => {
   arrowChangeColor.style.fill = 'black';
 });
 
 content.addEventListener('keypress', (event) => {
-    const inputBox = document.getElementById("input0");
-    const arrowChangeColor = document.getElementById("svg-arrow");
-    content.style.height = initialHeight + "px";
-    content.style.width = initialWidth + "px";
-    console.log()
+    const laoderContainerHeight = initialHeight + "px";
+    const laoderContainerWidth = initialWidth + "px";
     if (event.keyCode === 13) {
-    content.style.height = initialHeight + "px";
-    content.style.width = initialWidth + "px";
     event.preventDefault();
     content.innerHTML = `
-    <div class="preloader"></div>
+    <div class="preloader-container" style="display: flex; width: ${laoderContainerWidth}; height: ${laoderContainerHeight}; ">
+        <div class="preloader"></div>
+    </div>
     `;
     setTimeout(() => {
       content.innerHTML = `
@@ -105,6 +108,6 @@ content.addEventListener('keypress', (event) => {
                 </div>
             </div>
       `;
-    }, 300);
+    }, 1000);
   }
 });

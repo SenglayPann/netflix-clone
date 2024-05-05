@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>.preloader { 
+        display: inline-block;
+        width: 100px; 
+        height: 100px;
+        padding: 10px; 
+        border-radius: 50%;
+        animation: rotate 0.7s linear infinite;
+        background: linear-gradient(90deg, white 0%, red 53%);
+        margin: auto;
+      }
+      
+      .preloader::after { 
+        content: " ";
+        background-color: white;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        border-radius: 50%;
+        margin: 3px;
+      }
+      
+      @keyframes rotate { 
+        from { 
+            transform: rotate(90deg);
+        }
+        to { 
+            transform: rotate(450deg); /* Increased to complete two full rotations */
+        }
+      }
+
+      </style>
+</head>
+<body>
+    <div class="preloader-container" style="display: flex; width: 800px; height: 518px; ">
+        <div class="preloader"></div>
+    </div>
+    
+</body>
+</html>
+
+<script></script>
