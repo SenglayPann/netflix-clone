@@ -944,7 +944,7 @@ body {
   overflow: hidden;
   border-radius: 10px;
   margin-top: 30px;
-  max-width: 1250px;
+  max-width: 908px;
   width: 95%;
   height: 120%;
   background-color: #181818;
@@ -953,28 +953,221 @@ body {
   transition: all 0.1s ease-in;
 }
 
-.modal-content-area {
+#modal .modal-content-area {
   position: relative;
   width: 100%;
 }
 
-.modal-content-area .modal-video {
+#modal .modal-content-area .modal-thumbnail-img {
   width: 100%;
 }
 
-.modal-content-area .modal-video video {
+#modal .modal-content-area .modal-thumbnail-img img {
   width: 100%;
 }
 
-.modal-content-area .modal-video-overlay {
+#modal .modal-content-area .modal-video {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
   top: 0;
+}
+
+#modal .modal-content-area .modal-video video {
+  width: 100%;
+}
+
+#modal .modal-content-area .modal-video-overlay {
+  top: 0;
+  z-index: 3;
   position: absolute;
   background: linear-gradient(0deg, #181818, transparent 50%);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: end;
   color: #e5e5e5;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info {
+  padding-left: 46px;
+  bottom: 0;
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-add-button {
+  position: relative;
+  color: white;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-add-button div {
+  color: #141414;
+  font-size: 0.5rem;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons {
+  position: relative;
+  color: white;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons div {
+  color: #141414;
+  font-size: 0.5rem;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-add-label {
+  left: -1rem;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-reaction-buttons {
+  opacity: 0;
+  border-radius: 1rem;
+  background-color: #2a2a2a;
+  gap: 0.2rem;
+  padding: 12% 18%;
+  position: absolute;
+  top: -8%;
+  left: -115%;
+  display: flex;
+  pointer-events: none;
+  scale: 0.5;
+  transition: opacity 0.2s ease, scale 0.3s ease;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon {
+  scale: 1;
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon svg {
+  margin-top: 5%;
+  margin-left: 3%;
+  width: 60%;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:hover {
+  background: rgba(77, 77, 77, 0.3);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:hover .hidden-add-label, #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:hover .traingle {
+  opacity: 1;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:nth-child(2), #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:nth-child(3) {
+  border: none;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:nth-child(2) {
+  z-index: 1;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:first-child {
+  opacity: 0;
+  left: 1.8rem;
+  transition: opacity 0.5s ease-out, left 0.3s ease-in, scale 0.3s ease-in;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons .hidden-icon:nth-child(3) {
+  opacity: 0;
+  right: 1.8rem;
+  transition: opacity 0.5s ease-in, right 0.3s ease-in, scale 0.3s ease-in;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons:hover .hidden-reaction-buttons {
+  pointer-events: all;
+  scale: 1.1;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons:hover .hidden-icon:first-child {
+  opacity: 1;
+  left: 0;
+  transition-delay: 0.2s;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons:hover .hidden-icon:nth-child(3) {
+  opacity: 1;
+  right: 0;
+  transition-delay: 0.2s;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info img {
+  width: 50%;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons {
+  display: flex;
+  flex-grow: 0;
+  margin-top: 20px;
+  padding-right: 46px;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  padding-left: 1.8vw;
+  padding-right: 1.8vw;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+  #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 {
+    padding-top: 0.7vw;
+    padding-bottom: 0.7vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    font-size: 1.3vw;
+  }
+}
+
+@media (min-width: 768px) {
+  #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 svg {
+  margin-right: 0.8vw;
+  min-width: 15px;
+}
+
+#modal .modal-content-area .modal-video-overlay .modal-right-info {
+  padding-right: 46px;
 }
 
 /*# sourceMappingURL=o_page-body.css.map */
