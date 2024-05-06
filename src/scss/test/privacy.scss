@@ -115,121 +115,141 @@
 .sidebar-left {
     display: flex;
     justify-content: center;
+
+    // right-text
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #ffffff;
+            color: #000000;
+            transition: all 0.3s;
+
+            .sidebar-header {
+                padding: 0px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background: #ffffff;
+            }
+
+            // text in the box
+            ul li a {
+                padding: 10px;
+                font-size: 1.1em;
+                display: block;
+                margin-bottom: 20px;
+
+                &:hover {
+                    color: #fdfdfd;
+                    background: #000000;
+                }
+            }
+        }
+    }
 }
 
-// testing sidebar
-
-// right-text
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background: #ffffff;
-    color: #000000;
-    transition: all 0.3s;
-}
-
-
-#sidebar .sidebar-header {
-    padding: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #ffffff;
-}
-
-// text in the box
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-    margin-bottom: 20px;
-}
-
-#sidebar ul li a:hover {
-    color: #fdfdfd;
-    background: #000000;
-}
 
 #content {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-    
+
+    // arrow-down
+    .sub-menu {
+        display: none;
+        padding-left: 20px; /* Indent sub-menu items */
+    }
+
+    .accordion-btn {
+        display: flex; /* Use flexbox */
+        justify-content: flex-start; /* Align content to the start */
+        margin-bottom: 30px;
+
+        .accordion-text {
+            flex: 1; /* Allow text to take up remaining space */
+            text-align: start;
+        }
+
+        .arrow-icon {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .sub-menu {
+        display: none;
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    // with javascript
+    .accordion-btn.active + .sub-menu {
+        display: block;
+    }
+
+    .sub-menu li {
+        display: block;
+    }
+
+    .border-top-red {
+        border-top: 3px solid #FF0000;
+        margin-bottom: 20px;
+    }
+
+    // big fonts
+    .privacy-big-font {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 50px;
+        margin-bottom: 32px;
+    }
+
+    .section-a-ul {
+        padding-left: 45px;
+        position: relative;
+    }
+
+    .section-a-ul li {
+        margin-bottom: 8px;
+        list-style-type: disc; 
+    }
+
+    .section-a-text {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
 }
 
-// arrow-down
-.sub-menu {
-    display: none;
-    padding-left: 20px; /* Indent sub-menu items */
-}
-
-.accordion-btn {
-    display: flex; /* Use flexbox */
-    justify-content: flex-start; /* Align content to the start */
-    margin-bottom: 30px;
-}
-
-.accordion-text {
-    flex: 1; /* Allow text to take up remaining space */
-    text-align: start;
-}
-
-.arrow-icon {
+// footer
+.footer-parent {
     display: flex;
-    align-items: center;
-}
-
-.sub-menu {
-    display: none;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-}
-
-
-// with javascript
-.accordion-btn.active + .sub-menu {
-    display: block;
-}
-
- .sub-menu li {
-    display: block;
-}
-
-.border-top-red {
-    border-top: 3px solid #FF0000;
-    margin-bottom: 20px;
-}
-
-// big fonts
-.privacy-big-font {
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 50px;
-    margin-bottom: 32px;
-}
-
-.section-a-ul {
-    padding-left: 45px;
+    justify-content: center;
     position: relative;
-}
+    top: 80px;
+    background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
 
-.section-a-ul li {
-    margin-bottom: 8px;
-    list-style-type: disc; 
-}
+    .footer-child {
+        list-style: none;
+        color: gray;
+        margin-top: 30px;
+        cursor: pointer;
+        font-size: 14px;
 
-.section-a-text {
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
+        li {
+            margin-bottom: 10px;
 
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
 
 @media (max-width: 768px) {
     #sidebar {
