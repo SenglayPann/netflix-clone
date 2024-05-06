@@ -1,6 +1,102 @@
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
-*/
+/* Font Family injection */
+
+* {
+  font-family: 'Netflix Sans';
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 100;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 300;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 400;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 700;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 800;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 900;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
+}
+
+.netflix-sans-font-loaded {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.nkufi-font-loaded {
+  font-family: NKufi,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.graphik-font-loaded {
+  font-family: GraphikTH,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.error-page {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: rgba(0,0,0,.18);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-top: 68px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000
+}
+
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -563,3 +659,603 @@ video {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: #fff;
+}
+
+.netflix-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.netflix-nav .nav-container {
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .netflix-nav .nav-container {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .netflix-nav .nav-container {
+    padding: 24px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .netflix-nav .nav-container {
+    padding: 24px 48px;
+  }
+}
+
+.netflix-nav .nav-container .logo {
+  z-index: 1;
+  width: 100px;
+}
+
+.netflix-nav .nav-container .button-part {
+  width: 77px;
+  height: 28px;
+  background-color: red;
+  border-radius: 0.1875rem;
+  text-align: center;
+  position: relative;
+}
+
+.content-part {
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+.content-part .hero-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.content-part .hero-content .hero-content-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 880px;
+  min-width: 330px;
+}
+
+.content-part .hero-content .hero-content-content * {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .content-part .hero-content .hero-content-content h1 {
+    font-size: 36px;
+  }
+}
+
+.content-part .hero-content .hero-content-content h3 {
+  font-size: 18px;
+  margin: 16px 0px 0px;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content p {
+  font-size: 18px;
+  margin: 16px 0px;
+}
+
+@media (min-width: 620px) {
+  .content-part .hero-content .email-signup-part {
+    display: flex;
+  }
+}
+
+@media (max-width: 619px) {
+  .content-part .hero-content .email-signup-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content-part .hero-content .email-signup-part .input-email {
+  padding: 15px 16px 15px;
+  justify-content: center;
+  flex-grow: 1;
+  border: 1px solid gray;
+}
+
+.content-part .hero-content .email-signup-part .input-email input {
+  width: 368px;
+  height: 100%;
+  background: none;
+}
+
+@media (max-width: 400px) {
+  .content-part .hero-content .email-signup-part .input-email input {
+    width: 250px;
+  }
+}
+
+.content-part .hero-content .email-signup-part .getstarted-button {
+  margin-left: 10px;
+  padding: 12px 24px;
+  border: 1px solid black;
+  background-color: red;
+  font-size: 20px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  display: flex;
+}
+
+.content-part .hero-content .email-signup-part .getstarted-button span {
+  position: relative;
+  top: 3px;
+}
+
+@media (max-width: 619px) {
+  .content-part .hero-content .email-signup-part .getstarted-button {
+    width: 173px;
+    margin-top: 10px;
+  }
+}
+
+.content-part .background-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.content-part .background-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.layout1-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout1-container .layout1-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.layout1-container .layout1-main .left-side {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .left-side {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.layout1-container .layout1-main .left-side h2 {
+  font-size: 48px;
+  font-weight: 1000;
+}
+
+.layout1-container .layout1-main .left-side p {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.layout1-container .layout1-main .right-side {
+  height: 480px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .right-side {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.layout1-container .layout1-main .right-side .img-background {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .right-side .img-background {
+    width: 50%;
+  }
+}
+
+.layout1-container .layout1-main .right-side .img-background .video {
+  position: absolute;
+  left: 22px;
+  top: 110px;
+  z-index: -1;
+}
+
+.layout1-container .layout1-main .right-side .img-background .video video {
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow-clip-margin: content-box;
+}
+
+.line {
+  height: 6px;
+  background-color: rgb(35, 35, 35);
+}
+
+.layout2-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout2-container .layout2-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.layout2-container .layout2-main .left-side {
+  position: relative;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main .left-side {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.layout2-container .layout2-main .left-side img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main .left-side img {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container {
+  padding: 8px 12px;
+  border: 2px solid gray;
+  border-radius: 0.75rem;
+  display: flex;
+  width: 310px;
+  position: absolute;
+  left: 8vw;
+  bottom: 8%;
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img {
+  height: 72px;
+  width: 52px;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .content-text {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .first-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .second-text {
+  font-size: 14px;
+  color: #0071eb;
+}
+
+.layout2-container .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.layout2-container .right-side h2 {
+  font-size: 48px;
+  font-weight: 1000;
+}
+
+.layout2-container .right-side p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .right-side {
+    align-self: center;
+    text-align: center;
+    width: auto;
+  }
+
+  .layout2-container .right-side h2 {
+    font-size: 32px;
+  }
+
+  .layout2-container .right-side p {
+    font-size: 18px;
+  }
+}
+
+.layout3-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout3-container .layout3-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.layout3-container .layout3-main .left-side {
+  width: 100%;
+}
+
+.layout3-container .layout3-main .left-side img {
+  width: 100%;
+}
+
+@media (min-width: 1101px) {
+  .layout3-container .layout3-main .left-side {
+    width: 50%;
+    padding-left: 150px;
+  }
+}
+
+.layout3-container .layout3-main .left-side h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main .left-side h2 {
+    font-size: 32px;
+  }
+}
+
+.layout3-container .layout3-main .left-side p {
+  font-size: 24px;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main .left-side p {
+    font-size: 16px;
+  }
+}
+
+.layout4-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout4-container .layout4-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.layout4-container .layout4-main .left-side {
+  width: 50%;
+}
+
+.layout4-container .layout4-main .right-side {
+  width: 50%;
+}
+
+.layout4-container .layout4-main .right-side h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main .right-side h2 {
+    font-size: 32px;
+  }
+}
+
+.layout4-container .layout4-main .right-side p {
+  font-size: 24px;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main .right-side p {
+    font-size: 16px;
+  }
+}
+
+.layout5-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout5-container .layout5-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout5-container .layout5-main h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.layout5-container .layout5-main .layout5-box {
+  width: 100%;
+}
+
+.layout5-container .layout5-main .layout5-box .layout5-box-inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: #2d2d2d;
+  margin: 8px 0px;
+}
+
+.layout5-container .layout5-main .layout5-box .layout5-box-inner h3 {
+  font-size: 24px;
+}
+
+.layout5-container .layout5-main p {
+  margin: 20px 0;
+}
+
+@media (min-width: 620px) {
+  .layout5-container .layout5-main .email-signup-part {
+    display: flex;
+  }
+}
+
+@media (max-width: 619px) {
+  .layout5-container .layout5-main .email-signup-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.layout5-container .layout5-main .email-signup-part .input-email {
+  padding: 15px 16px 15px;
+  justify-content: center;
+  flex-grow: 1;
+  border: 1px solid gray;
+}
+
+.layout5-container .layout5-main .email-signup-part .input-email input {
+  width: 368px;
+  height: 100%;
+  background: none;
+}
+
+@media (max-width: 400px) {
+  .layout5-container .layout5-main .email-signup-part .input-email input {
+    width: 250px;
+  }
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button {
+  margin-left: 10px;
+  padding: 12px 24px;
+  border: 1px solid black;
+  background-color: red;
+  font-size: 20px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  display: flex;
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button p {
+  margin: 0;
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button span {
+  position: relative;
+  top: 3px;
+}
+
+@media (max-width: 619px) {
+  .layout5-container .layout5-main .email-signup-part .getstarted-button {
+    width: 173px;
+    margin-top: 10px;
+  }
+}
+
+/*# sourceMappingURL=o_Landing_page.css.map */
