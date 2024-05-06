@@ -1,0 +1,245 @@
+@import url(../main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+// navbar
+.parent-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    .child {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        height: 66px;
+        .logo-help-center {
+            margin-left: -10px;
+            display: flex;
+            width: auto;
+            .svg-icon {
+                width: 100px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .help-center {
+                width: 100px;
+                margin-top: 20px;
+                font-size: 18px;
+                width: 150px;
+                color: white;
+                cursor: pointer;
+                .ruler {
+                    margin: 10px;
+                }
+            }
+        }
+        .logo-help-center :hover {
+            text-decoration: underline;
+        }
+        .mobile {
+            font-size: 16px;
+            width: 100px;
+            margin-top: 20px;
+            color: white;
+            margin-right: -35px;
+            .arrow-down {
+                color: red;
+            }
+        }
+    }
+}
+
+// 2 paragraph under navbar
+.parent-ring {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeae6;        
+    border-bottom: 1px solid #d5d4d1;
+    .child-ring {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        background-color: #eaeae6;
+        div {
+            display: flex;
+            .icon-ring {
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+        }
+        h5 {
+            font-weight: bold;
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// navbar-under-ring
+.parent-navbar-under-ring {
+    display: flex;
+    justify-content: center;
+    .navbar-under-ring {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        .back-to-help-home {
+            display: flex;
+            align-items: center;
+            .back {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+        .button-print {
+            cursor: pointer;
+            display: flex;
+            background-color: lightgrey;
+            width: 110px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            .print-button {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}
+.sidebar-left {
+    display: flex;
+    justify-content: center;
+}
+
+// testing sidebar
+
+// right-text
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #ffffff;
+    color: #000000;
+    transition: all 0.3s;
+}
+
+
+#sidebar .sidebar-header {
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #ffffff;
+}
+
+// text in the box
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#sidebar ul li a:hover {
+    color: #fdfdfd;
+    background: #000000;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    
+}
+
+// arrow-down
+.sub-menu {
+    display: none;
+    padding-left: 20px; /* Indent sub-menu items */
+}
+
+.accordion-btn {
+    display: flex; /* Use flexbox */
+    justify-content: flex-start; /* Align content to the start */
+    margin-bottom: 30px;
+}
+
+.accordion-text {
+    flex: 1; /* Allow text to take up remaining space */
+    text-align: start;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+
+// with javascript
+.accordion-btn.active + .sub-menu {
+    display: block;
+}
+
+ .sub-menu li {
+    display: block;
+}
+
+.border-top-red {
+    border-top: 3px solid #FF0000;
+    margin-bottom: 20px;
+}
+
+// big fonts
+.privacy-big-font {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 32px;
+}
+
+.section-a-ul {
+    padding-left: 45px;
+    position: relative;
+}
+
+.section-a-ul li {
+    margin-bottom: 8px;
+    list-style-type: disc; 
+}
+
+.section-a-text {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+

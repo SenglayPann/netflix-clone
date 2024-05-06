@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy</title>
+    <link rel="stylesheet" href="../src/css/test/o_privacy.css">
+   
+</head>
+<body>
+
+    <!-- navbar  -->
+    <nav class="parent-navbar">
+        <div class="child container">
+            <div class="logo-help-center">
+                <svg viewBox="0 0 111 30" class="svg-icon svg-icon-netflix-logo"><g id="netflix-logo"><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z" id="Fill-14" fill="#E50914"></path></g></svg>   
+                <h5 class="help-center"><span class="ruler">|</span>Help Center</h5>
+            </div>
+            <div class="mobile">
+            <a href="">
+                <h6>mobile <span class="arrow-down">&#x25BC;</span></h6>
+                </a>
+            </div>    
+        </div>
+    </nav>
+    <!-- 2 paragraph under navbar  -->
+    <div class="parent-ring">
+        <div class="container">
+            <div class="child-ring">
+                <div>
+                    <svg class="icon-ring" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg>
+                    <h5>
+                        Wait times for chat support are longer than usual right now </br>
+                        <span>Check back later, or search our Help Center for answers.</span>
+                    </h5>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="parent-ring">
+        <div class="container">
+            <div class="child-ring">
+                <div>
+                    <svg class="icon-ring" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg>
+                    <h5>
+                        Wait times for chat support are longer than usual right now </br>
+                        <span>Check back later, or search our Help Center for answers.</span>
+                    </h5>
+                </div>               
+            </div>  
+        </div>
+    </div>
+
+    <!-- navbar-under-ring  -->
+    <nav class="parent-navbar-under-ring">
+        <div class="navbar-under-ring container">
+            <div class="back-to-help-home">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81 8.74697H13.9966V7.24697H4.81095L7.52932 4.52961L6.46886 3.46875L2.46959 7.46654C2.32891 7.60716 2.24985 7.79791 2.24982 7.99683C2.24978 8.19574 2.32876 8.38652 2.46939 8.5272L6.46866 12.528L7.52952 11.4675L4.81 8.74697Z" fill="black"></path>
+                </svg>
+                <a class="back" href="">Back to Help Home</a>
+            </div>
+            <div>
+                <div class="button-print">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path d="M19,8 L5,8 C3.34,8 2,9.34 2,11 L2,17 L6,17 L6,21 L18,21 L18,17 L22,17 L22,11 C22,9.34 20.66,8 19,8 Z M16,19 L8,19 L8,14 L16,14 L16,19 Z M19,12 C18.45,12 18,11.55 18,11 C18,10.45 18.45,10 19,10 C19.55,10 20,10.45 20,11 C20,11.55 19.55,12 19,12 Z M18,3 L6,3 L6,7 L18,7 L18,3 Z" id="Shape" fill="#221f1f" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+                    <button class="print-button">Print</button>
+                </div>
+            </div>  
+        </div>  
+    </nav>
+
+
+    <div class="sidebar-left">
+     <div class="container">
+        <!-- Include your title with background color -->
+
+        <div class="wrapper ">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="border-top-red"></div>
+                    <h3>Contatcting Us</h3>
+                </div>
+                <ul class="accordion">
+                    <li>
+                        <button class="accordion-btn"> 
+                            <span class="accordion-text">Section A: Our Collection, Use, and Disclosure of Personal Information</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </button>
+                        <ul class="sub-menu">
+                            <li><a href="#">The Categories of Personal Information We Collect</a></li>
+                            <li><a href="#">Where We Collect Personal Information From</a></li>
+                            <li><a href="#">How We Use Your Personal Information</a></li>
+                            <li><a href="">Who We Disclose Personal Information To</a></li>
+                            <li><a href="">International Transfers of Personal Information</a></li>
+                            <li><a href="">Supplemental Privacy Disclosures</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more accordion items as needed -->
+
+                    <button class="accordion-btn"> 
+                        <span class="accordion-text">Section B: Your Rights and Controls</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </button>
+                    <ul class="sub-menu">
+                        <li><a href="#">Your Privacy Rights</a></li>
+                        <li><a href="#">Communication and Marketing Preferences</a></li>
+                        <li><a href="#">Advertising Choices (Netflix Ad Supported Subscription Plans)</a></li>
+                        <li><a href="">Cookie Choices</a></li>
+                        <li><a href="">Contact and Questions</a></li>
+                    </ul>
+                </li>
+
+                  <!-- Add more accordion items as needed -->
+
+                  <button class="accordion-btn"> 
+                    <span class="accordion-text">Section C: Access to Account and Profiles</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <ul class="sub-menu">
+                    <li><a href="#">Use of Cookies</a></li>
+                    <li><a href="#">Cookies and Similar Technologies, Pixel Tags, and Resettable Device Identifiers</a></li>
+                    <li><a href="#">Why Does Netflix Use These Technologies?</a></li>
+                    <li><a href="">How can I exercise choice regarding these technologies?</a></li>
+                </ul>
+            </li>
+
+             <!-- Add more accordion items as needed -->
+
+                <button class="accordion-btn"> 
+                    <span class="accordion-text">Section E: Other Important Privacy Disclosures</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <ul class="sub-menu">
+                    <li><a href="#">Sharing Functionality in our Service</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Retention of Personal Information</a></li>
+                    <li><a href="">Other Websites, Platforms and Applications</a></li>
+                    <li><a href="">Kids</a></li>
+                    <li><a href="">Changes to this Privacy Statement</a></li>
+                </ul>
+            </li>
+
+                 <!-- Add more accordion items as needed -->
+
+                 <button class="accordion-btn"> 
+                    <span class="accordion-text">Section F: Supplemental Privacy Disclosures for Certain Services</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+
+                <!-- Add more accordion items as needed -->
+
+                <button class="accordion-btn"> 
+                    <span class="accordion-text">Netflix Games Supplemental Privacy Disclosures</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+                <ul class="sub-menu">
+                    <li><a href="#">The Categories of Personal Information We Collect</a></li>
+                    <li><a href="#">How We Use Your Personal Information</a></li>
+                    <li><a href="#">Who We Disclose Personal Information To</a></li>
+                    <li><a href="">Other Players</a></li>
+                    <li><a href="">Games on TV and on Netflix.com</a></li>
+                </ul>
+            </li>
+
+                </ul>
+            </nav>
+        
+            <!-- Page Content  -->
+            <div id="content">
+                <h1 class="privacy-big-font">Privacy Statement</h1>
+                <div class="text-base leading-6 mt-0 mr-0 ml-0">
+                    <p>This Privacy Statement explains how we collect, use, and disclose your personal information when you use the "<strong>Netflix service</strong>" to access "<strong>Netflix content</strong>" as those terms are defined in the Netflix Terms
+                        of Use (<a class="text-red-600" href="#">netflix.com/terms</a>). It also explains what privacy rights you have and how to exercise them. Certain functionalities or apps that are part of the Netflix service may also provide you with
+                        contextual privacy information or choices, in addition to the information and choices described in this Privacy Statement. Please note that this Privacy Statement may be easier to navigate when viewed on your web browser.
+                    </p>
+                </div>
+                   
+                <div class="contact-us">
+                    <h3 class="mt-[20px] text-lg leading-[27px] mb-3">Contacting Us</h3>
+                    <p class="mb-[16px]">For questions about this Privacy Statement, our use of your personal information, or how to exercise <a class="text-red-600" href="#">your privacy rights</a> , please contact our Data Protection Officer/Privacy Office at  <a class="text-red-600" href="#">privacy@netflix.com</a>.
+                        For general questions about the Netflix service, your account, or how to contact customer service, please visit <a class="text-red-600" href="#">help.netflix.com</a>.
+                    </p>
+                    <p class=" mb-[16px]">Information about the specific Netflix entity (or entities) that are responsible for your personal information (known as the “data controller” in certain countries) is available at <a class="text-red-600" href="#">netflix.com/legal/corpinfo</a>.</p>
+                </div>
+
+        <!-- Section A-texts -->
+                <div class="section-a-text">
+                    <h2>
+                        <span class="underline text-2xl mb-[8px] leading-[30px]"><strong>Section A: Our Collection, Use, and Disclosure of Personal Information</strong></span>
+                    </h2>
+
+                    <div>
+                        <h3 class="mt-[24px] font-bold leading-[27px] mb-[8px]">
+                            <span id="categories">The Categories of Personal Information We Collect</span>
+                        </h3>
+    
+                        <p class="leading-[24px] mb-[16px]">We collect the following categories of personal information about you:</p>
+    
+                        <ul class="section-a-ul ml-[16px]">
+                            <li>
+                                <p><strong  class="ml-[16px]">Personal details:</strong> When you create your Netflix account, we collect your contact information (such as your email address) and authentication information for your login (such as a password). Depending on how you subsequently
+                                    set up your account and method of payment, and which features you use, we also collect one or more of the following: first and last name, phone number, postal address, and other identifiers you provide to us. If you subscribe to
+                                    an ad supported subscription plan, we also collect gender and date of birth.</p>
+                            </li>
+                            <li>
+                                <p><strong class="ml-[16px]">Payment details:</strong> We collect your payment details, and other information to process your payments, including your payment history, billing address, and gift cards you have redeemed.</p>
+                            </li>
+                            <li>
+                                <p><strong class="ml-[16px]">Netflix account/profile information: </strong>We collect information that is associated with your Netflix account and/or Netflix profiles on your account (such as profile name and icon, Netflix game handle, ratings and feedback
+                                    you provide for Netflix content), “My List” (watch list of titles), “continue watching” information, account/profile settings, and choices in connection with your use of the Netflix service.</p>
+                            </li>
+                            <li>
+                                <p><strong class="ml-[16px]">Usage information:</strong> We collect information about your interaction with the Netflix service (including playback events, such as play, pause, etc.), choices made when engaging with interactive titles, your Netflix game
+                                    activity (such as gameplay, game use and interaction information, and progress or saved game information), Netflix viewing and gaming history, search queries on the Netflix service, and other information about your use and interaction
+                                    with the Netflix service (such as app clicks, text input, time and duration of access, and camera/photo access for QR-code and similar functionality). </p>
+                            </li>
+                            <li>
+                                <p><strong class="ml-[16px]">Advertising information:</strong> If you subscribe to an ad supported subscription plan, we collect information about the ads on Netflix (“<strong>Advertisements</strong>,” as defined in the Netflix Terms of Use) that you view
+                                    or interact with, device information (such as resettable device identifiers), IP addresses, and information provided by Advertising Companies (such as information about your likely interests they have collected or inferred from
+                                    your visits to other websites and apps). We use this information to display Advertisements to you in the Netflix service (including behavioral advertisements in accordance with your preferences).</p>
+                            </li>
+                            <ul>
+                                <li><strong class="ml-[16px]">Device and network information: </strong>We collect information about your computer or other Netflix capable devices you might use to access our service 
+                                    (such as smart TVs, mobile devices, set top boxes, gaming systems, and other streaming media devices), your network, and network devices. The information includes:
+                                    <div class="small-list-style ml-[5%] font-light mt-2 mb-5">
+                                    <ul>
+                                        <li>
+                                          <p>device IDs or other unique identifiers, including for your network devices (such as your router), and devices that are Netflix capable on your network;</p>
+                                        </li>
+                                        <li>
+                                          <p>IP addresses (which can be used to tell us the general location of your device, such as your city, state/province, and postal code);</p>
+                                        </li>
+                                        <li>
+                                          <p>device and software characteristics (such as type and configuration), referring source (for example, referrer URLs), standard web browser and mobile app log information, and connection information including type (such as wifi or cellular);</p>
+                                        </li>
+                                        <li> 
+                                          <p>performance data such as crash reports, timestamps, and debug log messages;</p>
+                                        </li>
+                                        <li>
+                                          <p>cookie data, resettable device identifiers, advertising identifiers and other unique identifiers (described below in the section “Cookies and Internet Advertising”).</p>
+                                        </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                            </ul>
+                              
+                            <li>
+                                <p><strong class="ml-[16px]">Communications:</strong> If you communicate with Netflix (such as contacting customer support via online chat or voice call), engage in our surveys or feedback requests (such as when you cancel), we collect the contents of
+                                    such communications. We also collect details of communications that we send you (such as via email, push notifications, text message, or within the Netflix service), and information about your interaction and engagement with these
+                                    communications.</p>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+               
+                <div class="mb-[16px] text-lg font-bold leading-[27px]">
+                    <h3><span id="wherecollect">Where We Collect Personal Information From</span></h3>
+                </div>
+
+                <p class="mb-[16px]">We collect your personal information from the following sources:</p>
+
+                <!-- Where we collect -->
+                <div class="section-a-text">
+                    <ul class="section-a-ul ml-[16px]">
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Directly from you:</strong> When you register with the Netflix service, update your Netflix account or profile, correspond with us, or respond to our surveys, you may provide (and we will collect) the following <a class="text-red-600" href="#">categories of personal information</a>:
+                                personal details, payment details, Netflix account/profile information, and communications.</p>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Automatically when you use our service:</strong> We automatically collect the following <a class="text-red-600" href="#">categories of personal information</a> in connection with your use of the Netflix service: Netflix account/profile
+                                information, usage information, advertising information, device and network information, and communications.</p>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">From Partners whose products and services you use:</strong> We may collect the following  <a class="text-red-600" href="#">categories of personal information</a> about you from third parties whose services you use to access, pay for, or
+                                interact with the Netflix service (“<strong>Partners</strong>”): personal details, payment details, usage information, and device and network information. The categories of personal information that Partners provide to us will
+                                vary depending on the nature of the Partner and your relationship with them. Our Partners may include your TV manufacturer, internet service provider, streaming media device provider, mobile phone carriers, or other companies who
+                                collect payment for the Netflix service. For example, Partners may provide us:</p>
+                            <ul class="small-list-style ml-[5%] font-light mt-2 mb-[8px]">
+                                <li>
+                                    <p>personal details (such as your email address), device and network information (such as IP addresses, device IDs, or other unique identifiers), or other personal information in order to activate the Netflix service, or present
+                                        Netflix content to you through portions of the Partner’s user interface;</p>
+                                </li>
+                                <li>
+                                    <p>payment details (such as associated pre-paid promotions and billing information) if they are assisting with billing or collecting payment for the Netflix service; and</p>
+                                </li>
+                                <li>
+                                    <p>search queries and commands applicable to Netflix that you make through Partner devices or voice assistance platforms.;</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">From other sources:</strong> We may collect the following  <a class="text-red-600" href="#">categories of personal information</a> about you from other sources: personal details, payment details, and device and network information. These
+                                sources include:</p>
+                            <ul class="small-list-style ml-[5%] font-light mt-2 mb-5">
+                                <li>
+                                    <p><strong class="ml-[16px]">Service Providers </strong>such as vendors, agents, and contractors that collect or provide personal information to Netflix in connection with services they perform on our behalf (“<strong>Service Providers</strong>”).
+                                        This may include Service Providers such as those that:</p>
+                                    <ul class="small-list-style ml-[5%] font-light mt-2 mb-5">
+                                        <li>
+                                            <p>help us determine a general geographic location based on your IP address in order to customize our service and for other uses consistent with this Privacy Statement;</p>
+                                        </li>
+                                        <li>
+                                            <p>provide us with information to secure our systems, prevent fraud, and help us protect the security of Netflix and our users;</p>
+                                        </li>
+                                        <li>
+                                            <p>provide us with payment processing services including payment or balance information, or updates to that information; and</p>
+                                        </li>
+                                        <li>
+                                            <p>provide Netflix games, or portions or features of those games, as part of the Netflix service (for example, some Netflix games are licensed from and run by Service Providers).</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Netflix Marketing Providers</strong> when you interact with marketing campaigns promoting the Netflix service or Netflix content (such as our ads on third party services). Please see the “Cookies and Internet Advertising” section
+                                below for details.</p>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Third-party sites and forums</strong> where we provide support for the Netflix service (such as an online support forum for Netflix customer support or for a particular Netflix game).</p>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Publicly available sources</strong> such as public posts on social media platforms (for example, where you have tagged Netflix in a publicly-available social media post, or shared or liked content we have made available on
+                                social media) and other information available through public databases, in accordance with applicable laws.</p>
+                        </li>
+                        <li class="mb-[16px]">
+                            <p><strong class="ml-[16px]">Advertising Companies:</strong> If you subscribe to an ad supported subscription plan, we may collect advertising information about you from other sources, including (collectively referred to as “<strong>Advertising Companies</strong>”):</p>
+                            <ul class="small-list-style ml-[5%] font-light mt-2 mb-5">
+                                <li class="mb-[16px]">
+                                    <p>Advertisers that run Advertisements on Netflix (“<strong>Advertisers</strong>”) may provide us with unique identifiers (for example, cookies or resettable device identifiers), demographic information and other information (such
+                                        as information about your likely interests they have collected or inferred based on your activities online) in order to deliver Advertisements;</p>
+                                </li>
+                                <li class="mb-[16px]">
+                                    <p>service providers that facilitate the sale, operations, and management of Advertisements (“<strong>Ad Service Providers</strong>”);</p>
+                                </li>
+                                <li>
+                                    <p>ad measurement companies that support Netflix and Advertisers in understanding the effectiveness of Advertisements run on Netflix (“<strong>Ad Measurement Companies</strong>”); and</p>
+                                </li>
+                                <li>
+                                    <p>online and offline information providers to support Advertisements (for example, by providing your general location information based on your device’s IP address, such as city, state, and postal code).</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header-disclose">
+                    <h3 class="mt-[40px] text-lg font-bold leading-[27px] mb-[8px]"><span id="howuse">How We Use Your Personal Information</span></h3>
+                    <p class="mb-[16px] leading-[24px]">We may disclose your <a class="text-red-600" href="#">personal information</a> to the following parties:</p>
+                </div>
+
+                <div class="section-a-text">
+                    <ul class="section-a-ul ml-[16px]">
+                        <li>
+                            <p><strong  class="ml-[16px]">To provide our service</strong> including all features and functionalities, websites and apps, user interfaces, and content and software associated with the Netflix service. This includes personalized recommendations for Netflix
+                                content that we think will be of interest to you learn more regarding recommendations for shows and movies:  <a class="text-red-600" href="#">netflix.com/recommendations</a>. This may also include personalizing
+                                the features and functionalities of the service (such as the way in which the recommendations are presented to you), and localizing Netflix content relevant to your geography in compliance with our content partners’ licensing terms.
+                                We use the following <a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, Netflix account/profile information, usage information, device and network information, and communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To administer and operate our business</strong> including purposes such as processing payments and any gift cards you redeem, sending transactional communications to you (such as confirmation of subscription start date or information
+                                about changes to your account), determining your internet service provider to support network troubleshooting issues, responding to your inquiries and requests, and assisting you with operational requests such as password resets.
+                                We use the following <a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, payment details, Netflix account/profile information, usage information, device and network information, and
+                                communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To research, analyze, and improve our services</strong> such as analyzing and understanding our audience to improve our services and optimize Netflix content selection and service delivery. This may also include processing
+                                your personal information in connection with any surveys you participate in. We use the following<a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, payment details, Netflix account/profile
+                                information, usage information, device and network information, and communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To enable Partner integrations and promotions</strong> so that our Partners can promote the Netflix service and make it available to you through Partner devices and integrations, based on the specific relationship you have
+                                with the Partner. We use the following <a href="#categories">categories of personal information</a> for this purpose: personal details, payment details, Netflix account/profile information, usage information, device and network
+                                information, and communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To send marketing and informational messages</strong> including news and promotional communications about our service, new features, available Netflix content, and special offers, as well as Netflix marketing on third party
+                                services. Any of these messages, including Netflix marketing on third party services, may be personalized for you or your likely interests. Please see the section “Communication Preferences” below to change your communications
+                                preferences. To understand your choices in connection with Netflix’s marketing on third party services, please see the “Cookies and Internet Advertising” section below. Depending on the nature of the message we send, we may use
+                                the following <a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, Netflix account/profile information, usage information, device and network information, and communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To operate our ad supported subscription plan</strong> including to provide, analyze, administer, enhance, optimize, select, and deliver Advertisements. We use the following<a class="text-red-600" href="#">categories of personal information</a> 
+                                for this purpose: personal details, Netflix account/profile information, usage information, advertising information, and device and network information.<br><br>We use your personal information to present you with Advertisements.
+                                Some of our Advertisements may be behavioral advertisements (“<strong>behavioral advertisements</strong>” are those that are selected based on information about your use and/or interactions with unaffiliated third party services).
+                                Within our ad supported subscriptions plan, behavioral advertisements may be based on information regarding your use and/or interactions with unaffiliated third party services provided to us by Advertising Companies (see definition
+                                above). Please see the section “Advertising Choices” below to learn about your choices.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">For safety, security, and fraud prevention</strong> including to secure our systems, protect our business, and to investigate, prevent, and detect prohibited or illegal activities and other security/technical issues. We use
+                                the following <a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, payment details, Netflix account/profile information, usage information, advertising information, device and network
+                                information, and communications.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">To comply with law and enforce our Terms of Use</strong> including to satisfy applicable law, regulation, legal process, or governmental request, and to protect against harm to the rights, property or safety of Netflix, its
+                                users or the public, as required or permitted by law. This also includes enforcing our terms, such as determining whether and for which Netflix signup offers you are eligible and whether a particular device is permitted to use
+                                the account consistent with our Terms of Use. We use the following <a class="text-red-600" href="#">categories of personal information</a> for this purpose: personal details, payment details, Netflix account/profile information, usage information,
+                                advertising information, device and network information, and communications.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- disclose -->
+                <div>
+                    <h3 ><span class="mt-[40px] text-lg font-bold leading-[27px] mb-[8px]">Who We Disclose Personal Information To</span></h3>
+                    <p class="leading-[24px] mb-[16px]">We may disclose your <a class="text-red-600" href="#">personal information</a> to the following parties:</p>
+                </div>
+
+                <!-- li-disclose -->
+                <div>
+                    <ul class="section-a-ul ml-[16px]">
+                        <li>
+                            <p><strong class="ml-[16px]">The Netflix family of companies:</strong> We share your personal information among the Netflix family of companies (see <a href="https://help.netflix.com/legal/corpinfo">help.netflix.com/legal/corpinfo</a>) as needed for the
+                                following <a href="#">purposes</a>: to provide our service; to administer and operate our business; to research, analyze, and improve our services; to enable Partner integrations and promotions; to send marketing and informational
+                                messages; to operate our ad supported subscription plan; for safety, security, and fraud prevention; and to comply with law and enforce our Terms of Use.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Service Providers:</strong> We use Service Providers to perform services on our behalf or to assist us with the provision of services to you. For example, we use Service Providers to provide communications, security, infrastructure
+                                and IT services, game-related services, to personalize and improve our service, and to process payments. We do not authorize them to use or disclose your personal information except in connection with providing their services (which
+                                may include maintaining and improving their services). To help maintain the safety and security of our service and users, we and our Service Providers may monitor and record message content (such as chat functionality) to identify
+                                harmful behavior, security risks, and violations of our Terms of Use and community guidelines. Our Service Providers may process your personal information for the following <a href="#">purposes</a>: to provide our service;
+                                to administer and operate our business; to research, analyze, and improve our services; for safety, security, and fraud prevention; and to comply with law and enforce our Terms of Use.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Partners:</strong> If you have a relationship with one or more of our Partners, we may share certain personal information with them to fulfill your requests in compliance with applicable law. For example, depending on what
+                                Partner services you use, we may share personal information so that Netflix content and features can be suggested to you in the Partner’s user interface. Partners may process your personal information for the following <a href="#">purposes</a>:
+                                to administer and operate our business; to research, analyze, and improve our services; to enable Partner integrations and promotions; and to send marketing and informational messages.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Netflix marketing providers:</strong> When we market Netflix on third party services, some of those services, as well as the marketing Service Providers that we use to purchase, deliver, optimize, or measure our marketing (collectively
+                                “<strong>Netflix Marketing Providers</strong>”) may receive information from us (for example, the steps completed in Netflix membership process). Common uses of this type of information are to measure the effectiveness and optimize
+                                our marketing campaigns, and to avoid marketing to a device of a person that is already a Netflix member. Netflix uses contractual and technical measures designed to prevent Netflix Marketing Providers from accessing information
+                                regarding specific shows or movie title selections you make, URLs you land on, or shows or movies you have watched on our service.We do not share information about title selections of shows or movies you have watched on our service.
+                                Netflix Marketing Providers may process your personal information for the following <a href="#">purposes</a>: to research, analyze, and improve our services; and to send marketing and informational messages.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Advertising Companies:</strong> If you subscribe to an ad supported subscription plan, we may share certain personal information with Advertising Companies (see definition above) in order to select Advertisements shown on Netflix,
+                                to facilitate interaction with Advertisements, and to measure and improve effectiveness of Advertisements. These companies may process your personal information for the following <a href="#">purposes</a>: to operate our ad
+                                supported subscription plan.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Promotional collaborations:</strong> We may collaborate with third parties to offer promotions. To fulfill these types of promotions, we and the third parties may use your personal information for the following <a href="#">purposes</a>:
+                                to enable Partner integrations and promotions; and to send marketing and informational messages.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Corporate transactions:</strong> In connection with a reorganization, restructuring, merger or sale, or other transfer of assets, we will transfer personal information provided the receiving party agrees to respect your personal
+                                information in a manner that is consistent with this Privacy Statement. We may disclose your personal information in such instances for the following <a href="#">purposes</a>: to provide our service; to administer and operate
+                                our business; to research, analyze, and improve our services; to enable Partner integrations and promotions; to send marketing and informational messages; to operate our ad supported subscription plan; for safety, security, and
+                                fraud prevention; and to comply with law and enforce our Terms of Use.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Safety, security and fraud prevention:</strong> Netflix and its Service Providers may disclose your personal information to third parties where we reasonably believe disclosure is needed for the <a href="#">purpose</a>                        of: safety, security, and fraud prevention.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Compliance with law and enforcing our Terms of Use:</strong> We may disclose your personal information as necessary to comply with applicable law, regulation, legal process, or governmental request, and processing necessary
+                                to protect against harm to the rights, property or safety of Netflix, its users or the public, as required or permitted by law. We may disclose personal information for the following <a href="#">purpose</a>: to comply with
+                                law and enforce our Terms of Use.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- international-transfer -->
+                <div>
+                    <h3 class="mt-[40px] text-lg font-bold leading-[27px] mb-[8px]">International Transfers of Personal Information</h3>
+                    <p class="mb-[16px]">Netflix operates from various countries around the world, as do its Service Providers, Partners, and other third parties to whom we may need to disclose your personal information, as described above. This means that when you use or interact
+                        with Netflix, your personal information may be transferred to other countries that have different data protection laws than those where you reside.</p>
+                        <p class="mb-[16px]">However, whenever we transfer personal information to other countries, we ensure that the personal information is transferred in accordance with applicable data protection laws and this Privacy Statement. Specifically, we use a variety of
+                            contractual, technical, and organizational measures as appropriate for such transfers, including data protection agreements, technical protections, and practices to challenge disproportionate or unlawful government authority requests.
+                            You can find out more about how we disclose and transfer your personal information internationally here: <a class="text-red-600" href="#">help.netflix.com/legal/personal-information-international-transfers</a>.
+                        </p>
+                </div>
+
+                <!-- supplement -->
+                <div>
+                    <h3 class="mt-[40px] text-lg font-bold leading-[27px] mb-[8px]">Supplemental Privacy Disclosures</h3>
+                    <p class="mb-[16px]">We provide supplemental information regarding certain aspects of the Netflix service (such as certain Netflix games features) in the section “<a class="text-red-600" href="#">Supplemental Privacy Disclosures for Certain Services</a>” below.</p>
+                </div>
+
+
+
+        <!-- Section B -->
+                <div>
+                    <h2 class="section-b"><span  class="underline text-2xl mb-[8px] mt-[40px] leading-[30px]" id="rightsandcontrols"><strong><span class="underline">Section B: Your Rights and Controls</span></strong></span></h2>
+                    <h3 class="mt-[24px] mb-[8px] font-bold text-lg">Your Privacy Rights</h3>
+                </div>
+
+                <div class="section-b-tetxt">
+                    <ul class="section-a-ul ml-[16px]">
+                        <li>
+                            <p><strong  class="ml-[16px]">Access, correct, update, or delete your personal information:</strong> You have a right to confirm whether we process your personal information and to access and receive a copy of the personal information we process about you.
+                                You may also correct or update out-of-date or inaccurate personal information or request that we delete personal information that we hold about you.<br><br>To request a copy of your personal information, please visit <a class="text-red-600" href="#">netflix.com/account/getmyinfo</a>netflix.com/account/getmyinfo</a>.
+                                In addition, under the "Account" section of our website, you can access and update information about your account, including your contact information, payment information, and various related information about your account.
+                                You must be logged in to access the "Account" section.<br><br>For information about deletion, removal, and retention of personal information, please see: <a class="text-red-600" href="#">netflix.com/account/getmyinfo</a>help.netflix.com/node/100625</a>.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">Portability and downloading a copy of your personal information: </strong>You can request portability of or download a copy of your personal information. If you are the account owner, to download a copy of your personal information
+                                go to: <a class="text-red-600" href="#">netflix.com/account/getmyinfo</a>. For more information, please see: <a class="text-red-600" href="#">netflix.com/account/getmyinfo</a>.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">Objection, restriction, and withdrawal of consent: </strong>You can object to or request that we restrict processing of your personal information. If we have collected and are processing your personal information with your
+                                consent, then you can withdraw your consent at any time. Withdrawing your consent will not affect the lawfulness of any processing we conducted prior to your withdrawal, nor will it affect processing of your personal information
+                                conducted in reliance on lawful processing grounds other than consent. For more information, please see <a class="text-red-600" href="#">netflix.com/account/getmyinfo</a>help.netflix.com/node/100637</a>.</p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">Right to complain:</strong> You have the right to complain to a data protection authority about our processing of your personal information but we encourage you to first contact us with any questions or concerns. </p>
+                        </li>
+                        <li>
+                            <p><strong  class="ml-[16px]">Right not to be subject to automated decision making: </strong>You may have a right not to be subject to a decision made solely using automated means, where such decision would have a legal effect on you or produce a similarly
+                                significant effect.</p>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <p class="mt-[24px] mb-[48px]">You can exercise the rights described above when we receive a verified request in accordance with applicable law.</p>
+                    </div>
+                </div>
+
+                <!-- communication -->
+                <div>
+                    <h3 class="mt-[24px] mb-[8px] font-bold text-lg">Communication and Marketing Preferences</h3>
+                    <ul class="section-a-ul ml-[16px] mt-[24px]">
+                        <li>
+                            <p><strong class="ml-[16px]">Email and Text Messages.</strong> If you no longer want to receive certain communications from us via email or text message, please access the “Notification settings” option for the relevant profile within the “Account” section
+                                of our website. Alternatively, click the “unsubscribe” link in the email or reply STOP (or as otherwise instructed) to the text message (note: you may receive a confirmation text message in this case). Please note that you cannot
+                                unsubscribe from transactional messages from us, such as messages relating to your account transactions.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Push Notifications.</strong> You can choose to receive mobile push notifications from Netflix. Netflix will send you push notifications from time to time in accordance with any notification preferences you have set on your
+                                mobile device. If you later decide you no longer want to receive these notifications, you can use your mobile device’s settings to turn them off (or via the “Notification settings” described in the preceding section). Please note
+                                that individual Netflix games may have their own push notifications (you can use your mobile device's settings functionality to turn them off). We also offer push notifications on certain web browsers. If you agree to receive
+                                those notifications and later decide you no longer want to receive them, you can use your browser’s settings to turn them off.&nbsp;</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Matched Identifier Communications from Netflix.</strong> Some third party services allow us to reach users with online marketing about Netflix content or the Netflix service by sending privacy protected contact information
+                                to the third party. Privacy protected contact information means we use deidentification technologies to convert the original contact information (such as an email address or phone number) into a value (typically a long alphanumeric
+                                sequence of characters) to keep the original information from being revealed. The third party compares Netflix’s privacy protected contact information with privacy protected contact information in its own database and there will
+                                be a match only if you have used the same contact information with Netflix and the third party. If there is a match, Netflix can then choose whether or not to send Netflix marketing to you on that third party service, and can optimize
+                                and better measure the effectiveness of such marketing. You can indicate your choices in the “Privacy and data settings” (for the relevant profile) within the “Account” section of our website.&nbsp;</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Marketing of the Netflix service using cookies and similar technologies.</strong> To exercise choice around cookies or resettable device IDs collected for marketing of the Netflix service or Netflix content on third party service,
+                                please use the tools described in the “<a class="text-red-600" href="#">Cookies and Internet Advertising</a>” section below.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- advertise-cookie -->
+                <div>
+                    <h3 class="mt-[24px] mb-[8px] font-bold text-lg">Advertising Choices (Netflix Ad Supported Subscription Plans)</h3>
+                    <ul class="section-a-ul ml-[16px] mt-[24px]">
+                        <li>
+                            <p><strong class="ml-[16px]">Behavioral Advertising Choices</strong>&nbsp;<br><br>If you subscribe to an ad supported subscription plan, we can present you with Advertisements, including behavioral advertisements. If you do not want to be presented with behavioral
+                                advertisements, you can indicate your choices by changing the “Behavioral Advertising” setting located in the “Privacy and data settings” menu (for the relevant profile) of the “Account” section of our website.&nbsp;<br><br>When you
+                                choose to opt out of receiving behavioral advertisements, you will still see Advertisements, but they will not be behavioral advertisements. If you opt out, we may still collect and use the information for other purposes.<br><br>An
+                                option to opt out is not provided in a Kids profile because we do not engage in behavioral advertising on Kids profiles.</p>
+                        </li>
+                        <li>
+                            <p><strong class="ml-[16px]">Digital Advertising Alliance Opt Out Control<br><br></strong>Netflix supports the following self-regulatory programs, which provide additional privacy choices for behavioral advertising:</p>
+                            <div class="small-list-style ml-[5%] font-light mt-2 mb-10">
+                                <ul >
+                                    <li>
+                                        <p>In Europe: <a class="text-red-600" href="#">European Interactive Digital Advertising Alliance (EDAA)</a></p>
+                                    </li>
+                                    <li>
+                                        <p>In Canada: AdChoices: <a class="text-red-600" href="#">Digital Advertising Alliance of Canada (DAAC)</a> / <a class="text-red-600" href="#">Choix de Pub: l'Alliance de la publicité numérique du Canada (DAAC)</a></p>
+                                    </li>
+                                    <li>
+                                        <p>In the US: <a class="text-red-600" href="#">Digital Advertising Alliance (DAA)</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+
+                    <!-- Rest of your content here -->
+            </div>
+        </div>
+     </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="./privacy.js"></script>
+</body>
+</html>
