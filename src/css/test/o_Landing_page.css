@@ -671,22 +671,45 @@ body {
 }
 
 .netflix-nav {
-  top: 10px;
-  padding: 0px 10px 0px 10px;
-  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   position: fixed;
   z-index: 2;
+  width: 100%;
 }
 
-.netflix-nav .logo {
+.netflix-nav .nav-container {
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .netflix-nav .nav-container {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .netflix-nav .nav-container {
+    padding: 24px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .netflix-nav .nav-container {
+    padding: 24px 48px;
+  }
+}
+
+.netflix-nav .nav-container .logo {
   z-index: 1;
   width: 100px;
 }
 
-.netflix-nav .button-part {
+.netflix-nav .nav-container .button-part {
   width: 77px;
   height: 28px;
   background-color: red;
@@ -716,7 +739,8 @@ body {
 .content-part .hero-content .hero-content-content {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 880px;
+  min-width: 330px;
 }
 
 .content-part .hero-content .hero-content-content * {
@@ -726,9 +750,15 @@ body {
 }
 
 .content-part .hero-content .hero-content-content h1 {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
   text-align: center;
+}
+
+@media (max-width: 960px) {
+  .content-part .hero-content .hero-content-content h1 {
+    font-size: 36px;
+  }
 }
 
 .content-part .hero-content .hero-content-content h3 {
@@ -744,19 +774,19 @@ body {
 
 .content-part .hero-content .email-signup-part {
   display: flex;
-  width: 100%;
-  height: 56px;
 }
 
 .content-part .hero-content .email-signup-part .input-email {
+  padding: 24px 16px 8px;
   justify-content: center;
   flex-grow: 1;
-  border: 1px solid rgb(229, 9, 20);
+  border: 1px solid gray;
 }
 
 .content-part .hero-content .email-signup-part .input-email input {
-  width: 100%;
+  width: 368px;
   height: 100%;
+  background-color: none;
 }
 
 .content-part .hero-content .email-signup-part .input-email .getstarted-button {
