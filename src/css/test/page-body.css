@@ -308,6 +308,17 @@ body {
   font-size: 1vw;
   opacity: 0;
 }
+.carousel-container .slider .img-container .hidden-info-card .card-dummy-video {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  transition: opacity 0.5s ease;
+}
+.carousel-container .slider .img-container .hidden-info-card .card-dummy-video video {
+  width: 100%;
+}
 .carousel-container .slider .img-container .hidden-info-card:hover {
   opacity: 1;
   top: calc(var(--hover-card-position-top));
@@ -325,6 +336,10 @@ body {
 .carousel-container .slider .img-container .hidden-info-card:hover img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+.carousel-container .slider .img-container .hidden-info-card:hover .card-dummy-video {
+  opacity: 1;
+  transition-delay: 0.5s;
 }
 .carousel-container .slider .img-container .hidden-info-card:hover + .carousel-row {
   z-index: 30;
@@ -652,7 +667,6 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid #4d4d4d;
-  margin-bottom: 10px;
 }
 .card-button svg {
   margin-top: 5%;
@@ -691,6 +705,7 @@ body {
   font-weight: 300;
 }
 .movie-brief-info .brief-top {
+  margin-top: 10px;
   display: flex;
   gap: 5px;
 }
@@ -719,17 +734,11 @@ body {
   font-size: 1.5rem;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 #modal-container {
   /* z-index: -999; */
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.209);
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   opacity: 1;
   top: 0;
@@ -740,25 +749,26 @@ body {
 }
 
 #modal {
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 30px;
-  max-width: 908px;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding-top: 30px;
+  max-width: calc(40vw + 45vh);
   width: 95%;
-  height: 120%;
-  background-color: #181818;
   scale: 1;
-  opacity: 1;
-  transition: all 0.1s ease-in;
+  opacity: 0;
+  transition: all 0.2s ease-in;
 }
 #modal .modal-content-area {
   position: relative;
   width: 100%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 #modal .modal-content-area .modal-thumbnail-img {
   width: 100%;
 }
 #modal .modal-content-area .modal-thumbnail-img img {
+  overflow: hidden;
   width: 100%;
 }
 #modal .modal-content-area .modal-video {
@@ -766,11 +776,14 @@ body {
   position: absolute;
   width: 100%;
   top: 0;
+  border-radius: 10px;
 }
 #modal .modal-content-area .modal-video video {
+  overflow: hidden;
   width: 100%;
 }
 #modal .modal-content-area .modal-video-overlay {
+  border-radius: 10px 10px 0 0;
   top: 0;
   z-index: 3;
   position: absolute;
@@ -782,32 +795,70 @@ body {
   align-items: end;
   color: #e5e5e5;
 }
+#modal .modal-content-area .modal-video-overlay #closing-button {
+  cursor: pointer;
+  position: absolute;
+  background-color: #181818;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #modal .modal-content-area .modal-video-overlay .modal-left-info {
   padding-left: 46px;
   bottom: 0;
   width: 60%;
-  @apply mb-20;
+}
+#modal .modal-content-area .modal-video-overlay .modal-left-info img {
+  width: 50%;
 }
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons {
+  cursor: pointer;
   display: flex;
-  align-items: baseline;
-  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+  padding-right: 46px;
+  margin-bottom: 46px;
 }
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
+@media (max-width: 500px) {
+  #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons {
+    gap: 20px;
+  }
+}
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-add-button {
+  margin-left: 20px;
   position: relative;
   color: white;
+  scale: 1.5;
 }
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-add-button div {
   color: #141414;
   font-size: 0.5rem;
 }
+@media (max-width: 500px) {
+  #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-add-button {
+    scale: 1;
+    margin-left: 10px;
+  }
+}
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons {
   position: relative;
   color: white;
+  scale: 1.5;
+}
+@media (max-width: 500px) {
+  #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons {
+    scale: 1;
+  }
 }
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .movie-card-left-buttons .movie-card-reaction-buttons div {
   color: #141414;
@@ -885,15 +936,6 @@ body {
   right: 0;
   transition-delay: 0.2s;
 }
-#modal .modal-content-area .modal-video-overlay .modal-left-info img {
-  width: 50%;
-}
-#modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons {
-  display: flex;
-  flex-grow: 0;
-  margin-top: 20px;
-  padding-right: 46px;
-}
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 {
   display: flex;
   align-items: center;
@@ -903,12 +945,13 @@ body {
   border-radius: 0.3vw;
   cursor: pointer;
   @apply sm:text-[1.3vw]
+                        lg:text-[1vw]
                         px-[1.8vw]
                         py-[.5vw]
                         sm:py-[0.7vw]
                         sm:px-[2.5vw]
                         md:px-[30px]
-                        md:py-[10px]
+                        md:py-[5px]
                         hover:opacity-80;
 }
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 svg {
@@ -916,7 +959,203 @@ body {
   min-width: 15px;
 }
 #modal .modal-content-area .modal-video-overlay .modal-right-info {
-  padding-right: 46px;
+  cursor: pointer;
+  margin-right: 46px;
+  margin-bottom: 50px;
+}
+#modal .modal-content-area .modal-video-overlay .modal-right-info .right-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 3vw;
+  width: 10vw;
+  max-width: 36px;
+  max-height: 36px;
+  height: 3vw;
+}
+#modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-on-icon, #modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-off-icon {
+  padding-left: 0.6vw;
+  padding-top: 0.1vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  max-width: 36px;
+  max-height: 36px;
+  width: 3vw;
+  height: 3vw;
+  border: 1px solid white;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: var(--grey-bg);
+}
+#modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-on-icon svg, #modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-off-icon svg {
+  width: 80%;
+  height: 80%;
+}
+@media (min-width: 1000px) {
+  #modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-on-icon, #modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-off-icon {
+    padding-left: 5px;
+    padding-top: 2px;
+  }
+}
+#modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-on-icon:hover, #modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .sound-off-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#modal .modal-content-area .modal-video-overlay .modal-right-info .right-info .age-rate {
+  color: #e5e5e5;
+  user-select: none;
+  border-left: 0.3vw solid white;
+  margin-left: 1.5vw;
+  width: 5.5vw;
+  height: 80%;
+  padding-left: 0.5vw;
+  padding-top: 0.5vw;
+  font-size: 1vw;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.modal-body-container {
+  background-color: #181818;
+  font-weight: 200;
+  padding: 0 46px;
+  border-radius: 0 0 10px 10px;
+  color: #aaa;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.modal-body-container .modal-brief-container {
+  display: flex;
+  gap: 25px;
+  padding-bottom: 50px;
+}
+.modal-body-container .modal-brief-container .modal-brief-left span {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: normal;
+  padding: 0 2px;
+}
+.modal-body-container .modal-brief-container .modal-brief-left span:nth-child(3) {
+  font-size: 10px;
+  border: 1px solid #aaa;
+  padding: 0 5px;
+  border-radius: 2px;
+}
+.modal-body-container .modal-brief-container .modal-brief-left .maturity {
+  color: #e5e5e5;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.modal-body-container .modal-brief-container .modal-brief-left .maturity span:first-child {
+  font-size: 14px;
+  border: 1px solid #aaa;
+  padding: 0 5px;
+  border-radius: 2px;
+}
+.modal-body-container .modal-brief-container .modal-brief-left p {
+  color: #fff;
+}
+.modal-body-container .modal-brief-container .modal-brief-right p {
+  margin-bottom: 15px;
+}
+.modal-body-container .modal-brief-container .modal-brief-right p span:first-child {
+  text-decoration: none;
+  color: inherit;
+}
+.modal-body-container .modal-brief-container .modal-brief-right p span:first-child:hover {
+  text-decoration: none;
+}
+.modal-body-container .modal-brief-container .modal-brief-right p span {
+  font-weight: 200;
+  color: #fff;
+}
+.modal-body-container .modal-brief-container .modal-brief-right p span:hover {
+  text-decoration: underline;
+}
+.modal-body-container .heading {
+  color: white;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 18px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card {
+  cursor: pointer;
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-img-container {
+  position: relative;
+  width: 100%;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-img-container img {
+  width: 100%;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-img-container .modal-card-overlay {
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  transition: opacity 0.4s ease;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-img-container .modal-card-overlay .play-icon {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d2d2d2;
+  border-radius: 50%;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-img-container .modal-card-overlay .play-icon svg {
+  width: 60%;
+  height: 60%;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-body-container .modal-card-brief-info {
+  padding: 14px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-body-container .modal-card-brief-info span {
+  margin-right: 4px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-body-container .modal-card-brief-info span:nth-child(1) {
+  font-size: 14px;
+  border: 1px solid #aaa;
+  padding: 0 5px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-body-container .modal-card-brief-info span:nth-child(2) {
+  font-size: 10px;
+  border: 1px solid #aaa;
+  padding: 0 5px;
+  border-radius: 2px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card .modal-card-body-container .modal-card-describtion {
+  font-weight: 200;
+  color: #d2d2d2;
+  padding: 0 14px 14px 14px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.modal-body-container .grid-cards-container .modal-grid-cards .modal-card:hover .modal-card-overlay {
+  opacity: 1;
+}
+@media (max-width: 940px) {
+  .modal-body-container .grid-cards-container .modal-grid-cards {
+    grid-template-columns: auto auto;
+  }
 }
 
 /*# sourceMappingURL=page-body.css.map */

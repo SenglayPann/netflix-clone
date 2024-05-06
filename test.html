@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>modal</title>
   <link rel="stylesheet" href="./src/css/test/o_page-body.css">
   <script src="./src/js/modal.js"></script>
 </head>
 <body>
-  <button class="button">click me</button>
+  <button class="modalOpenButton">click me</button>
 
   <div id="modal-container" class="modal-container">
     <div id="modal" class="modal">
 
       <div class="modal-content-area">
-      <!--modalimg  -->
+        <!--modal img  -->
         <div class="modal-thumbnail-img">
           <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
         </div>
@@ -24,6 +24,7 @@
         </div>
         <!-- overlay -->
         <div class="modal-video-overlay">
+          <div id="closing-button" class="closing-button">X</div>
           <div class="modal-left-info">
             <!-- logo -->
             <div class="modal-movie-logo">
@@ -128,10 +129,209 @@
               </div>
             </div>
           </div>
-          <div class="modal-right-info">this is right</div>
+          <!-- right sound icon -->
+          <div class="modal-right-info">
+            <div class="right-info">
+              <div class="sound-on-icon" id="modal-mute-Button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="white"
+                    d="M10.0755 5.3249C10.2026 5.38612 10.3098 5.48192 10.3849 5.60132C10.46 5.72071 10.4999 5.85886 10.5 5.9999V17.9999C10.4998 18.141 10.4598 18.2792 10.3846 18.3986C10.3093 18.518 10.2019 18.6138 10.0747 18.6749C9.9475 18.736 9.80562 18.76 9.6654 18.744C9.52517 18.7281 9.39228 18.673 9.282 18.5849L5.7375 15.7499H2.25C2.05109 15.7499 1.86032 15.6709 1.71967 15.5302C1.57902 15.3896 1.5 15.1988 1.5 14.9999V8.9999C1.5 8.80099 1.57902 8.61023 1.71967 8.46957C1.86032 8.32892 2.05109 8.2499 2.25 8.2499H5.7375L9.282 5.4149C9.39236 5.32669 9.52539 5.27143 9.66578 5.25551C9.80616 5.23959 9.94819 5.26364 10.0755 5.3249ZM9 7.5599L6.468 9.5849C6.33524 9.69141 6.1702 9.7496 6 9.7499H3V14.2499H6C6.1702 14.2502 6.33524 14.3084 6.468 14.4149L9 16.4399V7.5599ZM20.781 8.4689C20.8508 8.53857 20.9063 8.62134 20.9441 8.71245C20.9819 8.80357 21.0013 8.90125 21.0013 8.9999C21.0013 9.09856 20.9819 9.19624 20.9441 9.28735C20.9063 9.37847 20.8508 9.46124 20.781 9.5309L18.3105 11.9999L20.781 14.4689C20.9218 14.6097 21.0009 14.8007 21.0009 14.9999C21.0009 15.1991 20.9218 15.3901 20.781 15.5309C20.6402 15.6717 20.4492 15.7509 20.25 15.7509C20.0508 15.7509 19.8598 15.6717 19.719 15.5309L17.25 13.0604L14.781 15.5309C14.6402 15.6717 14.4492 15.7509 14.25 15.7509C14.0508 15.7509 13.8598 15.6717 13.719 15.5309C13.5782 15.3901 13.4991 15.1991 13.4991 14.9999C13.4991 14.8007 13.5782 14.6097 13.719 14.4689L16.1895 11.9999L13.719 9.5309C13.6493 9.46117 13.594 9.37839 13.5562 9.28728C13.5185 9.19617 13.4991 9.09852 13.4991 8.9999C13.4991 8.90129 13.5185 8.80364 13.5562 8.71253C13.594 8.62142 13.6493 8.53864 13.719 8.4689C13.8598 8.32807 14.0508 8.24896 14.25 8.24896C14.3486 8.24896 14.4463 8.26838 14.5374 8.30612C14.6285 8.34386 14.7113 8.39917 14.781 8.4689L17.25 10.9394L19.719 8.4689C19.7887 8.39906 19.8714 8.34364 19.9626 8.30584C20.0537 8.26803 20.1513 8.24856 20.25 8.24856C20.3487 8.24856 20.4463 8.26803 20.5374 8.30584C20.6286 8.34364 20.7113 8.39906 20.781 8.4689Z"
+                    fill="black" />
+                </svg>
+              </div>
+          </div>
+        </div>
         </div>
       </div>
+      
 
+      <!-- modal body area -->
+      <div class="modal-body-container">
+        <!-- modal brief info top -->
+        <div class="modal-brief-container">
+          <div class="modal-brief-left">
+            <span>2024</span>
+            <span>2h 21m</span>
+            <span>HD</span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" data-icon="AudioDescriptionStandard" aria-hidden="true" class="ltr-18tpq4v"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.9782 7.52002H22.2621C23.37 8.81831 24.0001 10.4801 24.0001 12.2077C24.0001 13.7414 23.505 15.2301 22.6221 16.4453H22.3348H21.8501H21.5662C22.5598 15.2613 23.1207 13.7691 23.1207 12.2077C23.1207 10.449 22.404 8.75599 21.1611 7.52002H21.445H21.9782ZM6.91381 16.4796H8.87336V7.52661H6.42566L0 16.4796H2.87701L3.63174 15.2956H6.91381V16.4796ZM4.8625 13.4299H6.92592V10.224L4.8625 13.4299ZM12.3019 9.62283C13.621 9.62283 14.6839 10.6926 14.6839 12.0048C14.6839 13.3203 13.621 14.3901 12.3019 14.3901H11.6787V9.62283H12.3019ZM12.5443 16.4743C15.0128 16.4743 17.0208 14.4698 17.0208 12.0048C17.0208 9.52935 15.0335 7.52826 12.565 7.52826H12.5373H9.79883V16.4778H12.5443V16.4743ZM20.0103 7.52002H19.7264H19.1932H18.9093C20.1522 8.75599 20.8689 10.449 20.8689 12.2077C20.8689 13.7691 20.308 15.2613 19.3144 16.4453H19.5983H20.083H20.3634C21.2531 15.2301 21.7482 13.7414 21.7482 12.2077C21.7482 10.4801 21.1181 8.81831 20.0103 7.52002ZM17.4745 7.52002H17.7584C18.8663 8.81831 19.4895 10.4801 19.4895 12.2077C19.4895 13.7414 19.0013 15.2301 18.1116 16.4453H17.8277H17.3464H17.0625C18.0492 15.2613 18.6101 13.7691 18.6101 12.2077C18.6101 10.449 17.9004 8.75599 16.6575 7.52002H16.9344H17.4745Z" fill="currentColor"></path></svg>
+            </span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16" viewBox="0 0 16 16" role="img" data-icon="SubtitlesSmall" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.75C0 1.33579 0.335786 1 0.75 1H15.25C15.6642 1 16 1.33579 16 1.75V12.25C16 12.6642 15.6642 13 15.25 13H12.75V15C12.75 15.2652 12.61 15.5106 12.3817 15.6456C12.1535 15.7806 11.8709 15.785 11.6386 15.6572L6.80736 13H0.75C0.335786 13 0 12.6642 0 12.25V1.75ZM1.5 2.5V11.5H7H7.19264L7.36144 11.5928L11.25 13.7315V12.25V11.5H12H14.5V2.5H1.5ZM6 6.5L3 6.5V5L6 5V6.5ZM13 7.5H10V9H13V7.5ZM3 9V7.5L9 7.5V9L3 9ZM13 5H7V6.5H13V5Z" fill="currentColor"></path></svg>
+              </span>
+            <div class="maturity">
+              <span>13+</span>
+              <span>violence</span>
+            </div>
+            <P>Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.</P>
+          </div>
+          <div class="modal-brief-right">
+            <P >
+              <span>Cast: </span>,
+              <span>caster1</span>,
+              <span>caster2</span>,
+              <span>caster3</span>,
+              <span>caster4</span>,
+              <span><i>more</i></span>
+            </P>
+            <P >
+              <span>Genre: </span>,
+              <span>Genre1</span>,
+              <span>Genre2</span>,
+              <span>Genre3</span>
+            </P>
+            <P >
+              <span>This movie is: </span>,
+              <span>Mood1</span>,
+              <span>Mood2</span>,
+              <span>Mood3</span>,
+              <span>Mood4</span>
+            </P>
+          </div>
+        </div>
+
+        <!-- grid-movie-card-area -->
+        <div class="heading">More Like This</div>
+
+        <div class="grid-cards-container">
+
+          <div class="modal-grid-cards">
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            <div class="modal-card">
+              <div class="modal-card-img-container">
+                <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYwOhiGN8er4J6VJfTV8Rdt7h2DJq9oqZYzG9vCXN7rKryH3ramCOCwgnfy_tsCRNIqRMsium14k3MDdyPT5nQUhBxYjGGPuwPJq.webp?r=375" alt="">
+                <div class="modal-card-overlay">
+                  <div class="play-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#e5e5e5" fill-rule="evenodd" clip-rule="evenodd" d="M4.51054 1.64015C4.20147 1.45663 3.81768 1.45312 3.5053 1.63094C3.19291 1.80876 3 2.14055 3 2.5V21.5C3 21.8594 3.19291 22.1912 3.5053 22.3691C3.81768 22.5469 4.20147 22.5434 4.51054 22.3599L20.5105 12.8599C20.814 12.6797 21 12.3529 21 12C21 11.6471 20.814 11.3203 20.5105 11.1401L4.51054 1.64015Z" fill="black"/>
+                      </svg>                                  
+                  </div>
+                </div>
+              </div>
+              <div class="modal-card-body-container">
+                <div class="modal-card-brief-info">
+                  <span>13+</span>
+                  <span>HD</span>
+                  <span>2014</span>
+                </div>
+                <div class="modal-card-describtion">
+                  Andrew Garfield returns as Peter Parker, a teenager embracing his role as superhero as he battles new villains and uncovers more clues about his past.
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
