@@ -57,7 +57,6 @@
             }
         }
         .legal-notices-global-notifications {
-            height: 162px;
             width: auto;
             color: black;
             .global-notifications-box-1 {
@@ -93,12 +92,17 @@
             
         }
     .content-part-container{
-        height: 938px;
-        margin:32px 12px 48px 12px;
+        height: 92vh;
+        margin:0 auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 38px;
+        margin-bottom: 36px;
         .content-part {
             display: flex;
             justify-content: space-between;
             align-items: center; 
+            margin-top: 36px;
             
             .right-side-box {
                 display: flex;
@@ -107,9 +111,7 @@
                 svg {
                     margin-right: 8px;
                     font-size: 16px;
-                    path {
-                        width: 16px;
-                        height: 16px;
+                
                     }
                 }
                 a {
@@ -119,17 +121,21 @@
                 } 
             }
             .button-box {
-                display: flex;
-                width: 111px;
-                height: 42px;
-                border: 1px solid rgba(0, 0, 0, 0);
-                svg {
-                    margin-right: 8px;
-                    justify-content: start;
+                    cursor: pointer;
+                    display: flex;
+                    background-color: lightgrey;
+                    width: 110px;
+                    height: 42px;
                     align-items: center;
-                }
+                    justify-content: center;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    button {
+                        margin-left: 10px;
+                    }
             }
         }
+    }
         .title-part {
             height: 50px;
             
@@ -153,7 +159,7 @@
                 a {
                     color: red;
                 }
-                }
+            }
             }
             .accordion-box-container{
                 .accordion-box {
@@ -171,6 +177,9 @@
                             height: 24px;
                             width: 24px;
                         }
+                    }
+                    .accordion:hover {
+                        text-decoration: underline;
                     }
                     .panel {
                         padding-left: 64px;
@@ -212,7 +221,6 @@
                 }
             }
              
-        }
     .footer-part {
         height: 220px;
         background:linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
@@ -220,6 +228,7 @@
         .container {
             height:172px;
             padding: 0px 12px;
+            margin-left: 10%;
             .footer-box {
                 color:rgba(255, 255, 255, .7);
                 padding: 40px 0px 0px;
@@ -241,6 +250,6 @@
         }
     }   
             
-    }
+    
     
       
