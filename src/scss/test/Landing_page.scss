@@ -10,7 +10,7 @@
 }
 
 body{
-    background: #141414;
+    background: black;
     color: #fff;
 }
 .netflix-nav {
@@ -172,13 +172,24 @@ body{
     display: flex;
     justify-content: center;
     padding: 72px 0;
+   
     .layout1-main {
         width: 1080px;
         display: flex;
+        margin: 0px 32px;
+        @media (max-width:1100px ) {
+            flex-direction:column;
+            justify-content: center;
+        }
+        
         .left-side {
             display: flex;
             flex-direction: column;
             align-self: center;
+            @media (max-width:1100px) {
+                align-items: center;
+                text-align: center;
+            }
             h2 {
                 font-size: 48px;
                 font-weight: 1000;
@@ -190,8 +201,14 @@ body{
             }
         }
         .right-side {
-            height: 530px;
+            height: 480px;
             width: 100%;
+            @media (max-width:1100px) {
+                display: flex;
+                justify-content: center;
+
+            }
+
 
             .img-background {
                 background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png);
@@ -199,8 +216,11 @@ body{
                 background-repeat: no-repeat;
                 background-position: center;
                 height: 100%;
-                width: 93%;
+                width: 100%;
                 position: relative;
+                @media (max-width:1100px) {
+                    width: 50%;
+                }
                 .video {
                    position: absolute;
                    left: 22px; 
@@ -218,7 +238,118 @@ body{
 
         }
     }
+
 }
+.line {
+    height: 6px;
+    background-color:rgb(35 35 35);
+}
+.layout2-container {
+    display: flex;
+    justify-content: center;
+    padding: 72px 0;
+    .layout2-main{
+        width: 1080px;
+        display: flex;
+        margin: 0px 32px;
+        @media (max-width:1100px ) {
+            flex-direction:column-reverse;
+            justify-content: center;
+
+        }
+        .left-side {
+            position: relative;
+            @media (max-width:1100px) {
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                @media (max-width:1100px) {
+                    height: 100%;
+                    width: 50%;
+                }
+               
+            }
+            .sub-img-container {
+                padding: 8px 12px;
+                border: 2px solid gray;
+                border-radius: 0.75rem;
+                display: flex;
+                width:310px;
+                position: absolute;
+                left: 8vw;
+                bottom: 8%;
+                background-color: black;
+                @media (max-width:768px) {
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+
+                
+                .sub-img {
+                    height: 72px;
+                    width: 52px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .content-text {
+                    margin-left:15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    }
+                    .first-text{
+                        font-weight:700;
+                        font-size: 16px;
+                    }
+                    .second-text {
+                        font-size: 14px;
+                        color:#0071eb;
+                    }
+                }
+            }
+        }
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            width: 50%;   
+           h2 {
+            font-size: 48px;
+            font-weight: 1000;
+           }
+           p {
+            font-size: 24px;
+            font-weight: 500;
+           }
+           @media (max-width:1100px) {
+            align-self: center;
+            text-align: center;
+            width: auto;
+            h2 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 18px;
+            }
+
+        
+        }
+        }
+            
+
+
+    }
+
+
+    
+
 
 
 

@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #141414;
+  background: black;
   color: #fff;
 }
 
@@ -168,11 +168,24 @@ body {
 .layout1-container .layout1-main {
   width: 1080px;
   display: flex;
+  margin: 0px 32px;
+}
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .layout1-container .layout1-main .left-side {
   display: flex;
   flex-direction: column;
   align-self: center;
+}
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .left-side {
+    align-items: center;
+    text-align: center;
+  }
 }
 .layout1-container .layout1-main .left-side h2 {
   font-size: 48px;
@@ -183,8 +196,14 @@ body {
   margin-top: 16px;
 }
 .layout1-container .layout1-main .right-side {
-  height: 530px;
+  height: 480px;
   width: 100%;
+}
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .right-side {
+    display: flex;
+    justify-content: center;
+  }
 }
 .layout1-container .layout1-main .right-side .img-background {
   background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png);
@@ -192,8 +211,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  width: 93%;
+  width: 100%;
   position: relative;
+}
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .right-side .img-background {
+    width: 50%;
+  }
 }
 .layout1-container .layout1-main .right-side .img-background .video {
   position: absolute;
@@ -204,6 +228,113 @@ body {
 .layout1-container .layout1-main .right-side .img-background .video video {
   object-fit: contain;
   overflow-clip-margin: content-box;
+}
+
+.line {
+  height: 6px;
+  background-color: rgb(35, 35, 35);
+}
+
+.layout2-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+.layout2-container .layout2-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+.layout2-container .layout2-main .left-side {
+  position: relative;
+}
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main .left-side {
+    display: flex;
+    justify-content: center;
+  }
+}
+.layout2-container .layout2-main .left-side img {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main .left-side img {
+    height: 100%;
+    width: 50%;
+  }
+}
+.layout2-container .layout2-main .left-side .sub-img-container {
+  padding: 8px 12px;
+  border: 2px solid gray;
+  border-radius: 0.75rem;
+  display: flex;
+  width: 310px;
+  position: absolute;
+  left: 8vw;
+  bottom: 8%;
+  background-color: black;
+}
+@media (max-width: 768px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img {
+  height: 72px;
+  width: 52px;
+}
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img img {
+  height: 100%;
+  width: 100%;
+}
+.layout2-container .layout2-main .left-side .sub-img-container .content-text {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.layout2-container .layout2-main .left-side .sub-img-container .first-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+.layout2-container .layout2-main .left-side .sub-img-container .second-text {
+  font-size: 14px;
+  color: #0071eb;
+}
+.layout2-container .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.layout2-container .right-side h2 {
+  font-size: 48px;
+  font-weight: 1000;
+}
+.layout2-container .right-side p {
+  font-size: 24px;
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  .layout2-container .right-side {
+    align-self: center;
+    text-align: center;
+    width: auto;
+  }
+  .layout2-container .right-side h2 {
+    font-size: 32px;
+  }
+  .layout2-container .right-side p {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=Landing_page.css.map */
