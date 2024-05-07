@@ -27,8 +27,8 @@
         modalContainer.style.scale = 1;
         if (modalVideo.paused) {
           modalVideo.muted
-            ? (muteButton.innerHTML = mutedIcon)
-            : (muteButton.innerHTML = unmutedIcon);
+            ? (MmodalMuteButton.innerHTML = mutedIcon)
+            : (MmodalMuteButton.innerHTML = unmutedIcon);
         }
         // wait until the position is ended
         setTimeout(() => {
@@ -109,7 +109,7 @@
   
     //video control for modal
   
-    const muteButton = document.getElementById("modal-mute-button");
+    const MmodalMuteButton = document.getElementById("modal-mute-button");
     const unmutedIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill="white" d="M17.304 21.0151C18.4898 19.8326 19.4302 18.4274 20.0712 16.8803C20.7121 15.3332 21.0411 13.6747 21.039 12.0001C21.0411 10.3255 20.7121 8.66697 20.0712 7.11987C19.4302 5.57277 18.4898 4.1676 17.304 2.98511L16.242 4.04561C17.2883 5.08899 18.118 6.32887 18.6836 7.69397C19.2492 9.05907 19.5393 10.5225 19.5375 12.0001C19.5375 15.1066 18.2775 17.9191 16.242 19.9546L17.304 21.0151Z" fill="black"/>
       <path fill="white" d="M15.1815 18.894C16.0882 17.9896 16.8073 16.915 17.2974 15.7319C17.7876 14.5488 18.0391 13.2806 18.0375 12.0001C18.0391 10.7194 17.7876 9.45106 17.2974 8.26797C16.8073 7.08487 16.0882 6.01028 15.1815 5.10596L14.121 6.16646C14.8882 6.93168 15.4967 7.84096 15.9114 8.84207C16.3261 9.84317 16.5389 10.9164 16.5375 12C16.5393 13.0837 16.3268 14.1571 15.9124 15.1585C15.4979 16.1598 14.8896 17.0694 14.1225 17.835L15.1815 18.894Z" fill="black"/>
@@ -133,11 +133,11 @@
       </defs>
       </svg>        
       `;
-    muteButton.addEventListener("click", function () {
+    MmodalMuteButton.addEventListener("click", function () {
       if (modalVideo.paused) {
         modalVideo.muted
-          ? (muteButton.innerHTML = mutedIcon)
-          : (muteButton.innerHTML = unmutedIcon);
+          ? (MmodalMuteButton.innerHTML = mutedIcon)
+          : (MmodalMuteButton.innerHTML = unmutedIcon);
         modalVideo.play();
         modalVideo.style.opacity = 1;
         setTimeout(() => {
@@ -147,10 +147,10 @@
         }, modalVideo.duration * 3000);
       } else if (modalVideo.muted) {
         modalVideo.muted = false;
-        muteButton.innerHTML = unmutedIcon;
+        MmodalMuteButton.innerHTML = unmutedIcon;
       } else {
         modalVideo.muted = true;
-        muteButton.innerHTML = mutedIcon;
+        MmodalMuteButton.innerHTML = mutedIcon;
       }
     });
   
@@ -158,7 +158,7 @@
   
     modalVideo.addEventListener("pause", () => {
       if (modalVideo.currentTime === 0) {
-        muteButton.innerHTML = replayIcon;
+        MmodalMuteButton.innerHTML = replayIcon;
       }
     });
   // });
