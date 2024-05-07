@@ -1252,14 +1252,40 @@ body {
   padding: 24px;
   background-color: #2d2d2d;
   margin: 8px 0px;
+  transition: 0.4s;
 }
 
 .layout5-container .layout5-main .layout5-box .layout5-box-inner h3 {
   font-size: 24px;
 }
 
+.layout5-container .layout5-main .layout5-box .layout5-box-inner svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.layout5-container .layout5-main .layout5-box .panel {
+  padding: 0px;
+  max-height: 0;
+  background-color: #2d2d2d;
+  margin-top: -4px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+}
+
+@media (max-width: 500px) {
+  .layout5-container .layout5-main .layout5-box .panel {
+    overflow-y: scroll;
+  }
+}
+
+.layout5-container .layout5-main .layout5-box .panel p {
+  font-size: 18px;
+  text-align: left;
+}
+
 .layout5-container .layout5-main p {
   margin: 20px 0;
+  text-align: center;
 }
 
 @media (min-width: 620px) {
@@ -1352,6 +1378,18 @@ body {
 .footer-container .footer-main .footer-inner ul li {
   margin-bottom: 10px;
   text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .footer-container .footer-main .footer-bg {
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  .footer-container .footer-main .footer-sm {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=o_Landing_page.css.map */

@@ -481,6 +481,9 @@ body{
 
         .layout5-box{
             width: 100%;
+            .active, .layout5-box-inner:hover {
+              
+              }
             .layout5-box-inner {
                 display: flex;
                 width: 100%;
@@ -488,15 +491,41 @@ body{
                 padding: 24px;
                 background-color:  #2d2d2d;
                 margin: 8px 0px;
+                transition: 0.4s;
                 h3 {
-      
                     font-size: 24px;
                 }
+            
+                svg {
+                    transition: transform .2s ease-in-out;
+                }
+                
 
+            }
+            .panel {
+            
+                padding: 0px;
+                max-height: 0;
+                background-color:  #2d2d2d;
+                margin-top: -4px;
+                overflow: hidden;
+                transition: max-height .2s ease-out, padding .2s ease-out;
+             
+                @media (max-width: 500px) {
+                    overflow-y: scroll;
+                }
+                p {
+                    font-size: 18px;
+                    text-align: left;
+              
+                    
+                }
+                
             }
         }
         p {
             margin: 20px 0;
+            text-align: center;
         }
       
         .email-signup-part {
@@ -540,6 +569,7 @@ body{
                 display: flex;
                 p {
                     margin: 0;
+                  
                 }
                 
                 span {
@@ -577,13 +607,21 @@ body{
                 flex-direction: column;
                 justify-content: space-between;
                 font-size: 14px;
-                
                 li {
                     margin-bottom: 10px;
                     text-decoration: underline;
                 }
             }
-
+        }
+        .footer-bg {
+            @media (max-width: 960px) {
+                display: none;
+            }
+        }
+        .footer-sm {
+            @media (min-width: 961px) {
+                display: none;
+            }
         }
     }
 }
