@@ -44,7 +44,6 @@
             width: 100px;
             margin-top: 20px;
             color: white;
-            margin-right: -35px;
             .arrow-down {
                 color: red;
             }
@@ -96,6 +95,7 @@
             }
         }
         .button-print {
+            margin-right: 40px;
             cursor: pointer;
             display: flex;
             background-color: lightgrey;
@@ -112,6 +112,9 @@
     }
     
 }
+
+
+// left-sidebar
 .sidebar-left {
     display: flex;
     justify-content: center;
@@ -136,61 +139,57 @@
                 background: #ffffff;
             }
 
+            .accordion-content {
+                display: flex; /* Flex container */
+            }
+            
+            .accordion-text {
+                flex: 1; /* Allow the text to take up remaining space */
+                text-align: start;
+                font-size: 16px;
+            }
+            
+            .sub-menu {
+                left: 30px;
+                position: relative;
+            
+                 max-height: 0;
+                 transition: max-height 0.6s ease;
+                 overflow: hidden;
+            }
+
             // text in the box
             ul li a {
-                padding: 10px;
-                font-size: 1.1em;
+                padding: 8px;
+                font-size: 16px;
                 display: block;
                 margin-bottom: 20px;
 
                 &:hover {
                     color: #fdfdfd;
                     background: #000000;
-                }
+                }   
             }
         }
     }
 }
 
 
-#content {
+
+
+
+// right texts
+#content-right {
     width: 100%;
-    padding: 20px;
+    padding: 40px;
+    padding-top: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-
-    // arrow-down
-    .sub-menu {
-        display: none;
-        padding-left: 20px; /* Indent sub-menu items */
-    }
-
-    .accordion-btn {
-        display: flex; /* Use flexbox */
-        justify-content: flex-start; /* Align content to the start */
-        margin-bottom: 30px;
-
-        .accordion-text {
-            flex: 1; /* Allow text to take up remaining space */
-            text-align: start;
-        }
-
-        .arrow-icon {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    .sub-menu {
-        display: none;
-        list-style: none;
-        padding-left: 0;
-        margin-top: 0;
-    }
 
     // with javascript
     .accordion-btn.active + .sub-menu {
         display: block;
+        max-height: 1000px;
     }
 
     .sub-menu li {
@@ -226,40 +225,89 @@
     }
 }
 
+
 // footer
 .footer-parent {
     display: flex;
     justify-content: center;
     position: relative;
     top: 80px;
+    width: 100%;
     background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
-
+    .footer-child :hover {
+        text-decoration: underline;
+    }
     .footer-child {
         list-style: none;
         color: gray;
         margin-top: 30px;
         cursor: pointer;
         font-size: 14px;
-
         li {
             margin-bottom: 10px;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 }
 
+
+
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
         display: none;
     }
+    
+    .parent-navbar .child .mobile {
+        margin-left: 45px ;
+        margin-right: 0;
+    }
+    // header-netflix-margin
+    .child  {
+        margin-left: 12px;
+    }
+
+    // help center
+    .help-center {
+        display: none;
+    }
+
+    // back-to-home
+    .parent-navbar-under-ring .navbar-under-ring .back-to-help-home {
+        margin-left: 12px;
+    }
+
+    // border print text
+    .parent-navbar-under-ring .navbar-under-ring .button-print .print-button {
+        display: none;
+    }
+    // border print
+    .parent-navbar-under-ring .navbar-under-ring .button-print {
+        width: 50px;
+        height: 40px;
+        padding: 8px 12px !important;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 20px;
+       
+    }
+
+    .parent-ring  {
+        display: block;
+        margin: 0;
+        min-height: 24px;
+        padding: 16px 16px 16px 40px;
+        position: relative;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px
+    }
+    #content-right {
+        padding: 12px;
+    }
+    .footer-parent li{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 }
+
 

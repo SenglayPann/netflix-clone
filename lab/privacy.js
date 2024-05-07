@@ -1,37 +1,31 @@
-// Select all accordion buttons
-var accordionBtns = document.querySelectorAll('.accordion-btn');
 
-// Loop through each accordion button
+// accordion-hidding-texts
+
+var accordionBtns = document.querySelectorAll('.accordion-btn');
 accordionBtns.forEach(function(btn) {
-    // Add click event listener
     btn.addEventListener("click", function() {
-        // Toggle the 'active' class to show/hide the content
         this.classList.toggle('active');
 
-        // Toggle the rotation of the arrow icon
-        var icon = this.querySelector('svg');
-        if (icon.style.transform === 'rotate(90deg)') {
-            icon.style.transform = 'rotate(360deg)';
-        } else {
-            icon.style.transform = 'rotate(90deg)';
-        }
+        var icon = this.querySelector('.arrow-icon');
+        icon.style.transform = icon.style.transform === 'rotate(90deg)' ? 'rotate(360deg)' : 'rotate(90deg)';
 
-        // Select the next sibling element (content) and toggle its visibility
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
+        // Select the next sibling element (sub-menu)
+        var subMenu = this.nextElementSibling;
+
+        // Toggle the 'active' class to trigger CSS transitions
+        if (this.classList.contains('active')) {
+            subMenu.style.maxHeight = subMenu.scrollHeight + "px";
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            subMenu.style.maxHeight = null;
         }
     });
 });
 
-// scroll-down-sidebar
 
-// Select the sidebar element
+
+// scroll-down-sidebar (sticky)
+
 var sidebar = document.getElementById('sidebar');
-
-// Add a scroll event listener to the window
 window.addEventListener('scroll', function() {
     // Get the current scroll position relative to the viewport
     var scrollPosition = window.scrollY || window.pageYOffset;
@@ -42,7 +36,6 @@ window.addEventListener('scroll', function() {
     // Calculate the maximum distance the sidebar can be from the top
     var maxTopDistance = 100; // Adjust this value based on your layout
 
-    // Adjust the sidebar's position based on the scroll position and other factors
     if (scrollPosition > sidebarTopDistance - maxTopDistance) {
         sidebar.style.position = 'sticky';
         sidebar.style.top = '100px';
@@ -54,6 +47,7 @@ window.addEventListener('scroll', function() {
         sidebar.style.overflowY = 'auto';
         sidebar.style.msOverflowStyle = 'none';
         sidebar.style.scrollbarWidth = 'none';
+        sidebar.style.paddingBottom = '40px';
     } else {
         sidebar.style.position = 'static'; // Reset to initial position
     }
@@ -63,3 +57,22 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', function() {
     sidebar.style.maxHeight = 'calc(100vh - 175px)';
 });
+
+
+
+// anchor-clicking
+
+document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Adjust the delay time as needed
+    });
+});
+
+// scroling-black
+
