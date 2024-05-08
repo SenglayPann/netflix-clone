@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.parent-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.parent-navbar .child {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  height: 66px;
+}
+.parent-navbar .child .logo-help-center {
+  display: flex;
+  width: auto;
+}
+.parent-navbar .child .logo-help-center .svg-icon {
+  width: 100px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.parent-navbar .child .logo-help-center .help-center {
+  width: 100px;
+  margin-top: 20px;
+  font-size: 18px;
+  width: 150px;
+  color: white;
+  cursor: pointer;
+}
+.parent-navbar .child .logo-help-center .help-center .ruler {
+  margin: 10px;
+}
+.parent-navbar .child .logo-help-center :hover {
+  text-decoration: underline;
+}
+.parent-navbar .child .mobile {
+  font-size: 16px;
+  width: 100px;
+  margin-top: 20px;
+  color: white;
+  margin-right: -10px;
+}
+.parent-navbar .child .mobile .arrow-down {
+  color: red;
+}
+
+.parent-ring {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeae6;
+  border-bottom: 1px solid #d5d4d1;
+}
+.parent-ring .child-ring {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #eaeae6;
+}
+.parent-ring .child-ring div {
+  display: flex;
+}
+.parent-ring .child-ring div .icon-ring {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.parent-ring .child-ring h5 {
+  font-weight: bold;
+}
+.parent-ring .child-ring h5 span {
+  font-weight: 300;
+}
+
+.parent-navbar-under-ring {
+  display: flex;
+  justify-content: center;
+}
+.parent-navbar-under-ring .navbar-under-ring {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.parent-navbar-under-ring .navbar-under-ring .back-to-help-home {
+  display: flex;
+  align-items: center;
+}
+.parent-navbar-under-ring .navbar-under-ring .back-to-help-home .back {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.parent-navbar-under-ring .navbar-under-ring .button-print {
+  cursor: pointer;
+  display: flex;
+  background-color: lightgrey;
+  width: 110px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.parent-navbar-under-ring .navbar-under-ring .button-print .print-button {
+  margin-left: 10px;
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 25px;
+}
+.paragraph .netflix {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.paragraph .under-netflix {
+  font-weight: 300;
+}
+.paragraph .list {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.paragraph .list ol li {
+  position: relative;
+  left: -20px;
+  bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+.paragraph .list ol p {
+  font-weight: 300;
+}
+
+.footer-parent {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 80px;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+}
+.footer-parent .footer-child :hover {
+  text-decoration: underline;
+}
+.footer-parent .footer-child {
+  list-style: none;
+  color: gray;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.footer-parent .footer-child li {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=term_of_use.css.map */
