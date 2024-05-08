@@ -160,25 +160,46 @@
                     }
                 }
                 a { 
+                    cursor: pointer;
                     p{
                         font-size: 14px;
                         margin: 0;
                     }
                 } 
+                a:hover {
+                    text-decoration: underline;
+                }
             }
             .button-box {
-                    cursor: pointer;
-                    display: flex;
-                    background-color: lightgrey;
-                    width: 110px;
-                    height: 42px;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 5px;
-                    border: 1px solid rgba(0, 0, 0, 0);
-                    button {
-                        margin-left: 10px;
-                    }
+                cursor: pointer;
+                display: flex;
+                background-color: lightgrey;
+                width: 110px;
+                height: 42px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                button {
+                    margin-left: 10px;
+                }
+                @media (max-width:600px) {
+                   display: none; 
+                }
+            }
+            .button-box-responsive {
+                cursor: pointer;
+                background-color: lightgrey;
+                width: 50px;
+                height: 42px;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media (min-width:601px) {
+                    display: none;
+                }
             }
         }
         .title-part {

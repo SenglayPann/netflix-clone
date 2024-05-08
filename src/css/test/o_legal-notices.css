@@ -864,9 +864,17 @@ video {
   font-size: 16px;
 }
 
+.content-part-container .content-part a {
+  cursor: pointer;
+}
+
 .content-part-container .content-part a p {
   font-size: 14px;
   margin: 0;
+}
+
+.content-part-container .content-part a:hover {
+  text-decoration: underline;
 }
 
 .content-part-container .button-box {
@@ -883,6 +891,30 @@ video {
 
 .content-part-container .button-box button {
   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .content-part-container .button-box {
+    display: none;
+  }
+}
+
+.content-part-container .button-box-responsive {
+  cursor: pointer;
+  background-color: lightgrey;
+  width: 50px;
+  height: 42px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 601px) {
+  .content-part-container .button-box-responsive {
+    display: none;
+  }
 }
 
 .title {
