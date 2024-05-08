@@ -788,13 +788,42 @@ video {
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box {
   color: white;
+  display: flex;
 }
 
-.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a:hover {
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box .link-box {
+  position: relative;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box .link-box a:hover {
   text-decoration: underline;
 }
 
-.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box i {
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box .dropdown {
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  padding: 16px;
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: 65px;
+  margin-left: -50px;
+  right: 50px;
+  border: 1px solid lightgrey;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box .dropdown a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box .dropdown a:hover {
+  text-decoration: underline;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header i {
   color: red;
   position: relative;
   top: 3px;
@@ -917,43 +946,43 @@ video {
   }
 }
 
-.title {
+.title-part .title {
   font-size: 40px;
   font-weight: 800;
   padding-bottom: 32px;
 }
 
-.legal-notices-para {
+.title-part .legal-notices-para {
   font-size: 16px;
   margin-bottom: 16px;
 }
 
-h3 {
+.title-part h3 {
   margin: 40px 0px 8px;
   font-size: 18px;
   font-weight: 700;
 }
 
-p {
+.title-part p {
   margin: 0px 0px 16px;
   font-size: 16px;
 }
 
-p a {
+.title-part p a {
   color: red;
 }
 
-.accordion-box {
+.title-part .accordion-box {
   border: 1px solid #eaeae6;
   border-radius: 4px;
 }
 
-.accordion-box .accordion {
+.title-part .accordion-box .accordion {
   color: rgb(229, 9, 20);
   font-weight: 600;
 }
 
-.accordion-box .accordion i {
+.title-part .accordion-box .accordion i {
   color: black;
   padding-right: 5px;
   position: relative;
@@ -963,11 +992,11 @@ p a {
   width: 24px;
 }
 
-.accordion-box .accordion:hover {
+.title-part .accordion-box .accordion:hover {
   text-decoration: underline;
 }
 
-.accordion-box .panel {
+.title-part .accordion-box .panel {
   padding-left: 64px;
   padding: 0 18px;
   background-color: white;
@@ -976,18 +1005,18 @@ p a {
   transition: max-height 0.2s ease-out;
 }
 
-.accordion-box .panel li {
+.title-part .accordion-box .panel li {
   margin-left: 64px;
   list-style-type: disc;
   margin-bottom: 8px;
   padding-bottom: 24px;
 }
 
-.accordion-box .panel .netflix {
+.title-part .accordion-box .panel .netflix {
   padding-top: 24px;
 }
 
-.accordion-box .panel a {
+.title-part .accordion-box .panel a {
   color: #e50914;
   text-decoration: underline;
 }

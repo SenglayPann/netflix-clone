@@ -6,6 +6,8 @@
 .legal-notices-subpage {
     color: black;
     height: 100%;
+
+
     .global-container-ligal-notices {
         .legal-notices-header {
             align-content: center;
@@ -84,8 +86,37 @@
                 }
                 .right-side-box {
                     color: white;
-                    a:hover {
-                        text-decoration: underline;
+                    display: flex;
+                    .link-box {
+                        position: relative;
+                        a:hover {
+                            text-decoration:underline;
+                        }
+                    }
+                    .dropdown {
+                        display: flex;
+                        border-radius: 4px;
+                        flex-direction: column;
+                        padding: 16px;
+                        color: black;
+                        background-color: white;
+                        position: absolute;
+                        top: 65px;
+                        margin-left: -50px;
+                        right: 50px;
+                        border: 1px solid lightgrey;
+                        
+                        a {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    
+
                     }
                         
                         i {
@@ -96,10 +127,8 @@
                         }
                     }
                 }
-         
-                
             }
-        }
+        
         .legal-notices-global-notifications {
             width: auto;
             color: black;
@@ -203,7 +232,7 @@
             }
         }
         .title-part {
-    }
+    
             .title {
                 font-size: 40px;
                 font-weight: 800;
@@ -271,6 +300,7 @@
                             }
                     }
                 }
+            }
                    
                 .last-update-box {
                     display: flex;
