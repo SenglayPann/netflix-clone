@@ -1,0 +1,1512 @@
+/* Font Family injection */
+
+* {
+  font-family: 'Netflix Sans';
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 100;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 300;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 400;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 700;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 800;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 900;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
+}
+
+.netflix-sans-font-loaded {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.nkufi-font-loaded {
+  font-family: NKufi,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.graphik-font-loaded {
+  font-family: GraphikTH,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.error-page {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: rgba(0,0,0,.18);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-top: 68px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000
+}
+
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+
+.-ml-2 {
+  margin-left: -0.5rem;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-32 {
+  margin-right: 8rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.bg-cyan-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 78 99 / var(--tw-bg-opacity));
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: #fff;
+}
+
+.netflix-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.netflix-nav .nav-container {
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .netflix-nav .nav-container {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .netflix-nav .nav-container {
+    padding: 24px 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .netflix-nav .nav-container {
+    padding: 24px 48px;
+  }
+}
+
+.netflix-nav .nav-container .logo {
+  z-index: 1;
+  width: 100px;
+}
+
+.netflix-nav .nav-container .button-part {
+  width: 77px;
+  height: 28px;
+  background-color: red;
+  border-radius: 0.1875rem;
+  text-align: center;
+  position: relative;
+}
+
+.content-part {
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+.content-part .hero-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.content-part .hero-content .hero-content-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 880px;
+  min-width: 330px;
+}
+
+.content-part .hero-content .hero-content-content * {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .content-part .hero-content .hero-content-content h1 {
+    font-size: 36px;
+  }
+}
+
+.content-part .hero-content .hero-content-content h3 {
+  font-size: 18px;
+  margin: 16px 0px 0px;
+  text-align: center;
+}
+
+.content-part .hero-content .hero-content-content p {
+  font-size: 18px;
+  margin: 16px 0px;
+}
+
+@media (min-width: 620px) {
+  .content-part .hero-content .email-signup-part {
+    display: flex;
+  }
+}
+
+@media (max-width: 619px) {
+  .content-part .hero-content .email-signup-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content-part .hero-content .email-signup-part .input-email {
+  padding: 15px 16px 15px;
+  justify-content: center;
+  flex-grow: 1;
+  border: 1px solid gray;
+}
+
+.content-part .hero-content .email-signup-part .input-email input {
+  width: 368px;
+  height: 100%;
+  background: none;
+}
+
+@media (max-width: 400px) {
+  .content-part .hero-content .email-signup-part .input-email input {
+    width: 250px;
+  }
+}
+
+.content-part .hero-content .email-signup-part .getstarted-button {
+  margin-left: 10px;
+  padding: 12px 24px;
+  border: 1px solid black;
+  background-color: red;
+  font-size: 20px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  display: flex;
+}
+
+.content-part .hero-content .email-signup-part .getstarted-button span {
+  position: relative;
+  top: 3px;
+}
+
+@media (max-width: 619px) {
+  .content-part .hero-content .email-signup-part .getstarted-button {
+    width: 173px;
+    margin-top: 10px;
+  }
+}
+
+.content-part .background-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.content-part .background-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.layout1-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout1-container .layout1-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.layout1-container .layout1-main .left-side {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .left-side {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.layout1-container .layout1-main .left-side h2 {
+  font-size: 48px;
+  font-weight: 1000;
+}
+
+@media (max-width: 390px) {
+  .layout1-container .layout1-main .left-side h2 {
+    font-size: 32px;
+  }
+}
+
+.layout1-container .layout1-main .left-side p {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+@media (max-width: 390px) {
+  .layout1-container .layout1-main .left-side p {
+    font-size: 18px;
+  }
+}
+
+.layout1-container .layout1-main .right-side {
+  height: 480px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+@media (max-width: 1100px) {
+  .layout1-container .layout1-main .right-side {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .layout1-container .layout1-main .right-side {
+    height: 256px;
+  }
+}
+
+.layout1-container .layout1-main .right-side .img-background {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .layout1-container .layout1-main .right-side .img-background {
+    width: 100%;
+  }
+}
+
+.layout1-container .layout1-main .right-side .img-background .video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  z-index: -1;
+}
+
+.layout1-container .layout1-main .right-side .img-background .video video {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  overflow-clip-margin: content-box;
+}
+
+.line {
+  height: 6px;
+  background-color: rgb(35, 35, 35);
+}
+
+.layout2-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout2-container .layout2-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.layout2-container .layout2-main .left-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .layout2-main .left-side {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.layout2-container .layout2-main .left-side img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1100px) and (min-width: 800px) {
+  .layout2-container .layout2-main .left-side img {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container {
+  padding: 8px 12px;
+  border: 2px solid gray;
+  border-radius: 0.75rem;
+  display: flex;
+  width: 310px;
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 801px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 200px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 700px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 570px) and (min-width: 531px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 280px;
+  }
+}
+
+@media (max-width: 530px) and (min-width: 450px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 250px;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 390px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 200px;
+  }
+}
+
+@media (max-width: 390px) {
+  .layout2-container .layout2-main .left-side .sub-img-container {
+    width: 180px;
+  }
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img {
+  height: 72px;
+  width: 52px;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .sub-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .content-text {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .first-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.layout2-container .layout2-main .left-side .sub-img-container .second-text {
+  font-size: 14px;
+  color: #0071eb;
+}
+
+.layout2-container .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.layout2-container .right-side h2 {
+  font-size: 48px;
+  font-weight: 1000;
+}
+
+.layout2-container .right-side p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .layout2-container .right-side {
+    align-self: center;
+    text-align: center;
+    width: auto;
+  }
+
+  .layout2-container .right-side h2 {
+    font-size: 32px;
+  }
+
+  .layout2-container .right-side p {
+    font-size: 18px;
+  }
+}
+
+.layout3-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout3-container .layout3-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.layout3-container .layout3-main .left-side {
+  width: 100%;
+}
+
+.layout3-container .layout3-main .left-side img {
+  width: 100%;
+}
+
+@media (min-width: 1101px) {
+  .layout3-container .layout3-main .left-side {
+    width: 50%;
+    padding-left: 150px;
+  }
+}
+
+.layout3-container .layout3-main .left-side h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main .left-side h2 {
+    font-size: 32px;
+  }
+}
+
+.layout3-container .layout3-main .left-side p {
+  font-size: 24px;
+}
+
+@media (max-width: 1100px) {
+  .layout3-container .layout3-main .left-side p {
+    font-size: 16px;
+  }
+}
+
+.layout4-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout4-container .layout4-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.layout4-container .layout4-main .left-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.layout4-container .layout4-main .right-side {
+  width: 100%;
+  align-self: center;
+}
+
+.layout4-container .layout4-main .right-side h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main .right-side h2 {
+    font-size: 32px;
+  }
+}
+
+.layout4-container .layout4-main .right-side p {
+  font-size: 24px;
+}
+
+@media (max-width: 1100px) {
+  .layout4-container .layout4-main .right-side p {
+    font-size: 16px;
+  }
+}
+
+.layout5-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.layout5-container .layout5-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout5-container .layout5-main h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.layout5-container .layout5-main .layout5-box {
+  width: 100%;
+}
+
+.layout5-container .layout5-main .layout5-box .layout5-box-inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: #2d2d2d;
+  margin: 8px 0px;
+  transition: 0.4s;
+}
+
+.layout5-container .layout5-main .layout5-box .layout5-box-inner h3 {
+  font-size: 24px;
+}
+
+.layout5-container .layout5-main .layout5-box .layout5-box-inner svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.layout5-container .layout5-main .layout5-box .panel {
+  padding: 0px;
+  max-height: 0;
+  background-color: #2d2d2d;
+  margin-top: -4px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+}
+
+@media (max-width: 500px) {
+  .layout5-container .layout5-main .layout5-box .panel {
+    overflow-y: scroll;
+  }
+}
+
+.layout5-container .layout5-main .layout5-box .panel p {
+  font-size: 18px;
+  text-align: left;
+}
+
+.layout5-container .layout5-main p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+@media (min-width: 620px) {
+  .layout5-container .layout5-main .email-signup-part {
+    display: flex;
+  }
+}
+
+@media (max-width: 619px) {
+  .layout5-container .layout5-main .email-signup-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.layout5-container .layout5-main .email-signup-part .input-email {
+  padding: 15px 16px 15px;
+  justify-content: center;
+  flex-grow: 1;
+  border: 1px solid gray;
+}
+
+.layout5-container .layout5-main .email-signup-part .input-email input {
+  width: 368px;
+  height: 100%;
+  background: none;
+}
+
+@media (max-width: 400px) {
+  .layout5-container .layout5-main .email-signup-part .input-email input {
+    width: 250px;
+  }
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button {
+  margin-left: 10px;
+  padding: 12px 24px;
+  border: 1px solid black;
+  background-color: red;
+  font-size: 20px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  display: flex;
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button p {
+  margin: 0;
+}
+
+.layout5-container .layout5-main .email-signup-part .getstarted-button span {
+  position: relative;
+  top: 3px;
+}
+
+@media (max-width: 619px) {
+  .layout5-container .layout5-main .email-signup-part .getstarted-button {
+    width: 173px;
+    margin-top: 10px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.footer-container .footer-main {
+  width: 1080px;
+  display: flex;
+  margin: 0px 32px;
+  flex-direction: column;
+}
+
+.footer-container .footer-main .footer-inner {
+  display: flex;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7019607843);
+}
+
+.footer-container .footer-main .footer-inner ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer-container .footer-main .footer-inner ul li {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .footer-container .footer-main .footer-bg {
+    display: none;
+  }
+}
+
+@media (min-width: 961px) {
+  .footer-container .footer-main .footer-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=o_landing_page.css.map */
