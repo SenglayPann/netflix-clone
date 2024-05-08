@@ -1,0 +1,339 @@
+@import url(../../css/main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  font-family: "Netflix Sans";
+}
+
+body {
+  background-color: black;
+}
+
+.preloader {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  animation: rotate 0.7s linear infinite;
+  background: linear-gradient(90deg, white 0%, red 53%);
+  margin: auto;
+}
+
+.preloader::after {
+  content: " ";
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  margin: 1px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(450deg); /* Increased to complete two full rotations */
+  }
+}
+.nav-container {
+  background-color: #000000;
+  @apply text-black  
+    flex
+    justify-center
+    h-[98px]
+    sm:h-[66px];
+}
+.nav-container .header-container {
+  max-width: 720px;
+  width: 720px;
+  min-width: auto;
+  height: 100%;
+  @apply flex
+        justify-between
+        pt-2
+        sm:pt-0;
+}
+.nav-container .header-container .left-content {
+  justify-content: flex-start;
+  align-items: center;
+  @apply block
+          sm:flex;
+}
+.nav-container .header-container .left-content .help-center {
+  margin: 20px;
+  color: white;
+  @apply sm:flex
+            text-[16px]
+            sm:text-[18px];
+}
+.nav-container .header-container .left-content .help-center:hover {
+  text-decoration: underline;
+  @apply cursor-pointer;
+}
+.nav-container .header-container .left-content .n-svg {
+  display: none;
+}
+@media (max-width: 640px) {
+  .nav-container .header-container .left-content .n-svg {
+    @apply flex
+              pl-4;
+  }
+}
+.nav-container .header-container .left-content .netflix-svg {
+  display: none;
+  @apply sm:flex;
+}
+.nav-container .header-container .right-content {
+  @apply flex
+          justify-end
+          sm:items-center;
+}
+.nav-container .header-container .right-content .mobile-icon {
+  height: 25px;
+  width: 25px;
+}
+.nav-container .header-container .right-content p {
+  color: white;
+  @apply font-extralight;
+}
+.nav-container .header-container .right-content p:hover {
+  text-decoration: underline;
+  @apply cursor-pointer;
+}
+
+.notification-bar {
+  background-color: #EAEAE6;
+  display: flex;
+  min-height: 80px;
+  max-height: 128px;
+  justify-content: center;
+  border-bottom: 1px solid #d5d4d1;
+}
+.notification-bar .notification-main {
+  max-width: 720px;
+  width: 720px;
+  min-width: auto;
+  display: flex;
+}
+.notification-bar .notification-main .notification-bell {
+  display: flex;
+  align-items: center;
+}
+.notification-bar .notification-main .notification-text {
+  @apply flex
+            items-center;
+}
+.notification-bar .notification-main .notification-text .notification-text-inner {
+  flex-direction: column;
+  margin-left: 10px;
+}
+.notification-bar .notification-main .notification-text .notification-text-inner h3 {
+  @apply text-[16px]
+                  font-semibold;
+}
+.notification-bar .notification-main .notification-text .notification-text-inner p {
+  @apply font-light
+                  text-[16px];
+}
+
+.body-container {
+  background-color: white;
+  @apply pt-8
+  pb-12;
+}
+.body-container #header {
+  font-weight: 800;
+  @apply text-[32px]
+    md:text-4xl
+    mb-8;
+}
+.body-container .container-box {
+  @apply min-w-[210px]
+    max-w-[800px]
+    mx-auto
+    px-3;
+}
+.body-container .container-box .form-section {
+  @apply mb-10
+      px-[10px];
+}
+.body-container .container-box .form-section #sub-header {
+  font-weight: 700;
+  @apply text-lg;
+}
+.body-container .container-box .form-section .input-container {
+  border-radius: 4px;
+  border: 1px solid rgb(213, 212, 209);
+  @apply mt-2
+        h-10
+        min-w-[0px]
+        max-w-[720px];
+}
+.body-container .container-box .form-section .input-container .input-box {
+  @apply w-[97%]
+          h-[100%]
+          mx-3
+          flex
+          justify-between;
+}
+.body-container .container-box .form-section .input-container .input-box input {
+  @apply outline-none
+            border-none;
+}
+.body-container .container-box .form-section .input-container .input-box #click-on {
+  display: none;
+}
+.body-container .container-box .form-section .input-container .input-box #click-on svg {
+  fill: gray;
+}
+.body-container .container-box #quick-link-container {
+  @apply flex
+      flex-col
+      items-start
+      mx-[10px];
+}
+.body-container .container-box #quick-link-container p {
+  @apply text-lg
+        font-bold
+        mb-2;
+}
+.body-container .container-box #quick-link-container .links {
+  @apply min-w-[210px]
+        max-w-[720px]
+        w-[100%];
+}
+.body-container .container-box #quick-link-container .links li {
+  display: flex;
+  border-top: 1px solid #d5d4d1;
+  @apply list-none
+          py-3;
+}
+.body-container .container-box #quick-link-container .links li svg {
+  @apply mt-1
+            w-4
+            h-4;
+}
+.body-container .container-box #quick-link-container .links li a {
+  text-decoration: underline;
+  @apply text-black
+            text-[16px]
+            ml-2
+            font-bold;
+}
+.body-container .container-box #quick-link-container-replacement {
+  @apply flex
+      flex-col
+      items-start
+      mx-[10px];
+}
+.body-container .container-box #quick-link-container-replacement p {
+  @apply text-lg
+        font-bold
+        pb-6;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement {
+  @apply min-w-[210px]
+        max-w-[720px];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li {
+  display: flex;
+  border-bottom: 1px solid #d5d4d1;
+  @apply pb-3
+          mb-3;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li svg {
+  @apply mt-1
+            mr-2
+            w-6
+            h-6;
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a {
+  @apply w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a span {
+  @apply underline
+              text-lg
+              font-bold
+              w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a small {
+  color: rgba(0, 0, 0, 0.7);
+  @apply text-[16px]
+              w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover span {
+  color: rgba(0, 0, 0, 0.7);
+}
+.body-container .container-box #quick-link-container-replacement .links-replacement li a:hover small {
+  @apply underline;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us {
+  @apply w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container {
+  @apply flex
+          flex-col
+          sm:flex-row
+          gap-4
+          w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  @apply flex
+            py-4
+            px-6
+            text-left
+            min-w-[0px]
+            max-w-[575px]
+            sm:min-w-[281px]
+            sm:max-w-[354px]
+            sm:w-[100%];
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span strong {
+  @apply text-[16px]
+                text-black;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button span small {
+  @apply text-[16px]
+                text-black;
+}
+.body-container .container-box #quick-link-container-replacement #contact-us .buttons-container .button svg {
+  @apply mr-4;
+}
+
+.footer-container {
+  background: #000000;
+  background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
+  @apply w-[100%]
+  h-[220px]
+  pb-12;
+}
+.footer-container .footer-inner-container {
+  @apply relative
+    px-3
+    min-w-[220px]
+    max-w-[720px]
+    mx-auto;
+}
+.footer-container .footer-inner-container .footer-links {
+  @apply mt-10
+      absolute;
+}
+.footer-container .footer-inner-container .footer-links .footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  @apply text-[14px]
+        mb-4
+        font-extralight;
+}
+.footer-container .footer-inner-container .footer-links .footer-link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=contact_us.css.map */
