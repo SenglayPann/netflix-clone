@@ -716,11 +716,17 @@ body {
 
 .nav-container {
   background-color: #000000;
-  height: 66px;
   display: flex;
+  height: 98px;
   justify-content: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .nav-container {
+    height: 66px;
+  }
 }
 
 .nav-container .header-container {
@@ -730,19 +736,38 @@ body {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container {
+    padding-top: 0px;
+  }
 }
 
 .nav-container .header-container .left-content {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content {
+    display: flex;
+  }
 }
 
 .nav-container .header-container .left-content .help-center {
-  font-size: 18px;
   margin: 20px;
   color: white;
-  font-weight: 200;
+  font-size: 16px;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content .help-center {
+    display: flex;
+    font-size: 18px;
+  }
 }
 
 .nav-container .header-container .left-content .help-center:hover {
@@ -750,10 +775,36 @@ body {
   cursor: pointer;
 }
 
+.nav-container .header-container .left-content .n-svg {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nav-container .header-container .left-content .n-svg {
+    display: flex;
+    padding-left: 1rem;
+  }
+}
+
+.nav-container .header-container .left-content .netflix-svg {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content .netflix-svg {
+    display: flex;
+  }
+}
+
 .nav-container .header-container .right-content {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .right-content {
+    align-items: center;
+  }
 }
 
 .nav-container .header-container .right-content .mobile-icon {
@@ -769,6 +820,10 @@ body {
 .nav-container .header-container .right-content p:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.nav-container .help-center2 {
+  color: white;
 }
 
 .notification-bar {

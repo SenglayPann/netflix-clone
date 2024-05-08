@@ -45,28 +45,45 @@ body {
 // NAV-BAR
 .nav-container {
     background-color: #000000;
-    height: 66px;
     .header-container {
         max-width: 720px;
         width: 720px;
         min-width: auto;
         height: 100%;
         .left-content {
-            display: flex;
             justify-content: flex-start;
             align-items: center;
           .help-center { 
-            font-size: 18px;
             margin: 20px;
             color: white;
             @apply
-            font-extralight
+            sm:flex
+            text-[16px]
+            sm:text-[18px]
           }
           .help-center:hover { 
             text-decoration: underline;
             @apply
             cursor-pointer
           }
+          .n-svg { 
+            display: none;
+          }
+          @media (max-width: 640px) { 
+            .n-svg { 
+              @apply
+              flex
+              pl-4
+            }
+          }
+          .netflix-svg { 
+            display: none;
+            @apply
+            sm:flex
+          }
+          @apply
+          block
+          sm:flex
         }
         .right-content {
             .mobile-icon { 
@@ -86,16 +103,23 @@ body {
           @apply
           flex
           justify-end
-          items-center
-        }  
+          sm:items-center
+        }       
         @apply
         flex
         justify-between
+        pt-2
+        sm:pt-0
+    }
+    .help-center2 { 
+      color: white;
     }
     @apply
     text-black  
     flex
     justify-center
+    h-[98px]
+    sm:h-[66px]
 }
   
   

@@ -43,10 +43,11 @@ body {
 }
 .nav-container {
   background-color: #000000;
-  height: 66px;
   @apply text-black  
     flex
-    justify-center;
+    justify-center
+    h-[98px]
+    sm:h-[66px];
 }
 .nav-container .header-container {
   max-width: 720px;
@@ -54,27 +55,44 @@ body {
   min-width: auto;
   height: 100%;
   @apply flex
-        justify-between;
+        justify-between
+        pt-2
+        sm:pt-0;
 }
 .nav-container .header-container .left-content {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
+  @apply block
+          sm:flex;
 }
 .nav-container .header-container .left-content .help-center {
-  font-size: 18px;
   margin: 20px;
   color: white;
-  @apply font-extralight;
+  @apply sm:flex
+            text-[16px]
+            sm:text-[18px];
 }
 .nav-container .header-container .left-content .help-center:hover {
   text-decoration: underline;
   @apply cursor-pointer;
 }
+.nav-container .header-container .left-content .n-svg {
+  display: none;
+}
+@media (max-width: 640px) {
+  .nav-container .header-container .left-content .n-svg {
+    @apply flex
+              pl-4;
+  }
+}
+.nav-container .header-container .left-content .netflix-svg {
+  display: none;
+  @apply sm:flex;
+}
 .nav-container .header-container .right-content {
   @apply flex
           justify-end
-          items-center;
+          sm:items-center;
 }
 .nav-container .header-container .right-content .mobile-icon {
   height: 25px;
@@ -87,6 +105,9 @@ body {
 .nav-container .header-container .right-content p:hover {
   text-decoration: underline;
   @apply cursor-pointer;
+}
+.nav-container .help-center2 {
+  color: white;
 }
 
 .notification-bar {
