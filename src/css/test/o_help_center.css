@@ -688,38 +688,6 @@ video {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.sticky {
-  position: sticky;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-1 {
-  top: 0.25rem;
-}
-
-.z-\[10\] {
-  z-index: 10;
-}
-
 .block {
   display: block;
 }
@@ -752,11 +720,17 @@ html {
 
 .nav-container {
   background-color: white;
-  height: 66px;
   display: flex;
+  height: 98px;
   justify-content: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .nav-container {
+    height: 66px;
+  }
 }
 
 .nav-container .header-container {
@@ -766,18 +740,41 @@ html {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container {
+    padding-top: 0px;
+  }
 }
 
 .nav-container .header-container .left-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content {
+    display: flex;
+  }
 }
 
 .nav-container .header-container .left-content .help-center {
-  font-size: 18px;
   margin: 20px;
   color: #221f1f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content .help-center {
+    display: flex;
+    font-size: 18px;
+    font-weight: 300;
+  }
 }
 
 .nav-container .header-container .left-content .help-center:hover {
@@ -786,10 +783,36 @@ html {
   cursor: pointer;
 }
 
+.nav-container .header-container .left-content .n-svg {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nav-container .header-container .left-content .n-svg {
+    display: flex;
+    padding-left: 1rem;
+  }
+}
+
+.nav-container .header-container .left-content .netflix-svg {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .left-content .netflix-svg {
+    display: flex;
+  }
+}
+
 .nav-container .header-container .right-content {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+}
+
+@media (min-width: 640px) {
+  .nav-container .header-container .right-content {
+    align-items: center;
+  }
 }
 
 .nav-container .header-container .right-content .mobile-icon {

@@ -9,7 +9,6 @@ html {
 // NAV-BAR
 .nav-container {
   background-color: white;
-  height: 66px;
   .header-container {
       max-width: 1248px;
       width: 1248px;
@@ -23,6 +22,12 @@ html {
           font-size: 18px;
           margin: 20px;
           color: #221f1f;
+          @apply
+            sm:flex
+            text-[16px]
+            sm:text-[18px]
+            font-semibold
+            sm:font-light
         }
         .help-center:hover { 
           text-decoration: underline;
@@ -30,6 +35,24 @@ html {
           @apply
           cursor-pointer
         }
+        .n-svg { 
+          display: none;
+        }
+        @media (max-width: 640px) { 
+          .n-svg { 
+            @apply
+            flex
+            pl-4
+          }
+        }
+        .netflix-svg { 
+          display: none;
+          @apply
+          sm:flex
+        }
+        @apply
+        block
+        sm:flex
       }
       .right-content {
           .mobile-icon { 
@@ -47,16 +70,20 @@ html {
         @apply
         flex
         justify-end
-        items-center
+        sm:items-center
       }  
       @apply
       flex
       justify-between
+      pt-2
+      sm:pt-0
   }
   @apply
   text-black  
   flex
   justify-center
+  h-[98px]
+  sm:h-[66px]
 }
 
 
