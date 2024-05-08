@@ -13,6 +13,7 @@ body {
 }
 
 .navbar-container {
+  user-select: none;
   display: flex;
   position: fixed;
   top: 0;
@@ -108,7 +109,7 @@ body {
   display: block;
 }
 .browse-menu .browse-list-container .broswe-item a:hover {
-  background-color: #ddd;
+  background-color: #b3b3b3;
 }
 .browse-menu:hover .browse-list-container {
   display: block;
@@ -171,7 +172,7 @@ body {
   z-index: 1;
   left: -210px;
   padding: 10px; /* Increase padding for larger hover area */
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .dropdown-content ul {
   list-style: none;
@@ -179,6 +180,7 @@ body {
   margin: 0;
 }
 .dropdown-content ul li {
+  color: #fff;
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
   margin-bottom: 20px; /* Add spacing between list items */
@@ -190,6 +192,13 @@ body {
   margin-right: 10px; /* Add spacing between image and text */
   height: auto;
   border-radius: 4%;
+}
+.dropdown-content ul li:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content:hover {
+  display: block;
 }
 
 .dropdown-image {
