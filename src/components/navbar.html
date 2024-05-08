@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-Navbar</title>
+    <link rel="stylesheet" href="../css/test/o_navbar.css">
+    <script type="module" src="../js/navbar.js" defer></script>
+</head>
+<body>
+    <!-- The first image is netflix logo -->
+    <!-- The second image is big emoji -->
+
+    <div class="navbar-container" id="navbar-container">
+        <!-- Logo section -->
+        <div class="nav_logo">
+            <svg viewBox="0 0 111 30" class="svg-icon svg-icon-netflix-logo"><g id="netflix-logo"><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z" id="Fill-14" fill="#E50914"></path></g></svg>
+        </div>
+        
+        <!-- Navigation links section -->
+        <div class="links1 ">
+            <a href=""><li>Home</li></a>
+            <a href=""><li>TV Shows</li></a>
+            <a href=""><li>Movies</li></a>
+            <a href=""><li>Latest</li></a>
+            <a href=""><li>My List</li></a>
+            <a href=""><li>Browse by Languages</li></a>
+        </div>
+        <div class="browse-menu md:hidden block" >
+            <div class="browse-white text-white text-xs mt-2">Browse &#x25BC;</div>
+            <div class="browse-list-container">
+                <hr>
+                <div class="broswe-item"><a href="#">Home</a></div>
+                <div class="broswe-item"><a href="#">TV Shows</a></div>
+                <div class="broswe-item"><a href="#">Movies</a></div>
+                <div class="broswe-item"><a href="#">Latest</a></div>
+                <div class="broswe-item"><a href="#">My List</a></div>
+                <div class="broswe-item"><a href="#">Browse by Languages</a></div>
+            </div>
+        </div>
+    
+        <!-- Avatar section -->
+        <div class="avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon ltr-4z3qvp e1svuwfo1" data-name="MagnifyingGlass" aria-labelledby=":r26:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path></svg>
+            <p class="kid-hidden hidden md:flex">Kids</p>
+            
+            <!-- notification dropdown -->
+            <div class="dropdown-notification-container">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-4z3qvp e1svuwfo1" data-name="Bell" aria-labelledby=":r27:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg>
+                <div class="dropdown-notification">
+                    <ul>
+                        <li>
+                            <img src="https://dnm.nflximg.net/api/v6/kvDymu0eXRyicIuSUzvRrxrm5dU/AAAABVJgRTyoKQrPCK2MY7Nz15QTE8XdzAqrU3T2z3sYL2E2YCWVGcttQzKoOhdAMk15rKq5sru65Bn5LCksCUa3AaZNyM41lyx-X6MKiovSgb2zIYRs3fuX0o4vOeUnQwrAANhTJeazHMvd28s.jpg?r=32b" alt="">
+                            <div>
+                                <p>Continue Watching</p>
+                                <p>Looksim</p>
+                                <p>4 days ago</p>
+                            </div>
+                        </li>
+                        <hr  style="width:100%;">
+
+                        <li>
+                            <img src="https://dnm.nflximg.net/api/v6/kvDymu0eXRyicIuSUzvRrxrm5dU/AAAABT8KSOhtdEi5wLqaiPdJZENGDpZ38PGkwZyZ4_OWXjjyjBi8JXnwtH0gDw-wHN-oel2fak3PaARhAftHemXHv0u9w9KMQeDl9QUlBJiqgvDW39XzvF7haU7XzB2zDm0W3rugMNlA6Mi8PiA.jpg?r=83f" alt="">
+                            <div>
+                                <p>New Arrival</p>
+                                <p>Jurassic World: Dominion</p>
+                                <p>5 days ago</p>
+                            </div>
+                        </li>
+                        <hr style="width:100%;">
+                        
+                        <li>
+                            <img src="https://dnm.nflximg.net/api/v6/kvDymu0eXRyicIuSUzvRrxrm5dU/AAAABbwow2Uw0LAksDAlTWL8__QTXyM9OEOhj2c3cnhRK0fnS2LpmAtJd1tUXWaos5AbiT_E5JCvwvfQOmNJ6Az5onxWOPC9G-Lq6mIXcIKvyHt_KVss9WRU-YQvgTJEzArHd3bS93dODypIEhQ.jpg?r=211" alt="">
+                            <div>
+                                <p>New Arrival</p>
+                                <p>Our Living World</p>
+                                <p>1 week ago</p>
+                            </div>
+                        </li>
+                        <hr style="width:100%;">
+
+                        <li>
+                            <img src="https://assets.nflxext.com/us/email/gem/comingsoon/csInapp_112x63.png" alt="">
+                            <div>
+                                <p>Netflix Lookahead</p>
+                                <p>Explore what's coming soon.</p>
+                                <p>2 weeks ago</p>
+                            </div>
+                        </li>
+                        <hr style="width:100%;">
+
+                        <li>
+                            <img src="https://dnm.nflximg.net/api/v6/kvDymu0eXRyicIuSUzvRrxrm5dU/AAAABTQkeWcSGpf0U1oyV6kQMen4IlgE0pXZQG_vVWz0lQM4pkLPJiST24YjsD9dITBLujb6VAWhpsqbrUE7wIQWm4tfvR-wsJXgFWuIOzioiluC2h2H6kZeWwfesm9_wtVQeC_QL__zvkoR4rw.jpg?r=283" alt="">
+                            <div>
+                                <p>New Arrival</p>
+                                <p>Parasyte: The Grey</p>
+                                <p>2 weeks ago</p>
+                            </div>
+                        </li>
+                        <hr style="width:100%;">
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <!-- image dropdown -->
+            <div class="dropdown-image-container" id="dropdown-image-container">
+                <div class="dropdown-image">
+                    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXYofKdCJceEP7pdxcEZ9wt80GsxEyXIbnG_QM8znksNz3JexvRbDLr0_AcNKr2SJtT-MLr1eCOA-e7xlDHsx4Jmmsi5HL8.png?r=1d4" alt="smily-face-logo" class="nav_avatar">
+                    <span class="arrow-down">&#x25BC;</span>
+                </div>
+                
+                <!-- drop-down -->
+                <div class="dropdown-content" id="dropdown-content">
+                    <ul>
+                        <li>
+                        <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229" alt="">
+                        <div>
+                            <p>mobile</p>
+                        </div>
+
+                        <li>
+                            <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABeuqjuQsRgqEDlibtJTI5BMf8IxhLlLOeIT6xI4TL57mqv7XHja43gx02S8pZVe8JNGRQXjnrUk1VcsTXqi83tFKPI6OR3k.png?r=bd7 alt=">
+                            <div>
+                                <p>tablet</p>
+                            </div>
+                        </li>
+                        <!-- Your dropdown content here -->
+                        <li>
+                            <img src=https://occ-0-64-58.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABebkcO417lVuILWpoX8Pu7U4OsmXF-KtFL-xTG8OS5OSwMWnOhHaRDsFyDvWgUv45-O-fRUMd1Ay-FH99lt2XfeGUx9MSQ0.png?r=f55 alt="">
+                            <div>
+                                <p>Kids</p>
+                            </div>
+                        </li>
+                        <hr style="width:100%;">
+
+                        <li>
+                            <div class="mr-3 #334155">
+                                <svg style="--darkreader-inline-color: #808080; width: 24px; height: 24px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-darkreader-inline-color="">
+                                        <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z" fill="gray"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <p>Manange Profile</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="mr-3">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="checkmark-group--icon-custom" aria-hidden="true">
+                                    <path fill="gray" d="M6 1C3.79086 1 2 2.79086 2 5V17C2 19.2091 3.79086 21 6 21H9.58579L8.29289 22.2929L9.70711 23.7071L12.7071 20.7071C13.0976 20.3166 13.0976 19.6834 12.7071 19.2929L9.70711 16.2929L8.29289 17.7071L9.58579 19H6C4.89543 19 4 18.1046 4 17V5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V17C20 18.1046 19.1046 19 18 19H15V21H18C20.2091 21 22 19.2091 22 17V5C22 2.79086 20.2091 1 18 1H6ZM7.5 10C8.32843 10 9 9.32843 9 8.5C9 7.67157 8.32843 7 7.5 7C6.67157 7 6 7.67157 6 8.5C6 9.32843 6.67157 10 7.5 10ZM18 8.5C18 9.32843 17.3284 10 16.5 10C15.6716 10 15 9.32843 15 8.5C15 7.67157 15.6716 7 16.5 7C17.3284 7 18 7.67157 18 8.5ZM16.402 12.1985C15.7973 12.6498 14.7579 13 13.5 13C12.2421 13 11.2027 12.6498 10.598 12.1985L9.40195 13.8015C10.4298 14.5684 11.9192 15 13.5 15C15.0808 15 16.5702 14.5684 17.598 13.8015L16.402 12.1985Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p>Transfer Profile</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="mr-3  -ml-2 #334155">
+                                <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                </svg>
+                            </div>                          
+                                
+                            <div>
+                                <p>Account</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="gray" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                                    </svg>
+                            </div>
+                            <div>
+                                <p>Help Center</p>
+                            </div>
+                        </li>
+                        <hr style="width: 100%;">
+                        <p class="center-text-signout">Sign out of Netflix</p>
+                    </ul>
+                </div>
+                    
+                </div>
+        </div>                      
+    </div>
+     
+    <!-- Example image -->
+    <div>
+        <img src="./smiling-face.jpg" alt="">
+        <img src="./smiling-face.jpg" alt="">
+        <img src="./smiling-face.jpg" alt="">
+        <img src="./smiling-face.jpg" alt="">
+        <img src="./smiling-face.jpg" alt="">
+        <img src="./smiling-face.jpg" alt="">
+    </div>
+</body>
+</html>
