@@ -822,10 +822,6 @@ body {
   cursor: pointer;
 }
 
-.nav-container .help-center2 {
-  color: white;
-}
-
 .notification-bar {
   background-color: #EAEAE6;
   display: flex;

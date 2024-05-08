@@ -106,9 +106,6 @@ body {
   text-decoration: underline;
   @apply cursor-pointer;
 }
-.nav-container .help-center2 {
-  color: white;
-}
 
 .notification-bar {
   background-color: #EAEAE6;
