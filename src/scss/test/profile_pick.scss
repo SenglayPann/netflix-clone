@@ -3,16 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html { 
-    font-size: 62.5%;
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
-.container { 
-    width: 100vw;
-    height: 100vh;
+.main-container { 
     background-color: #141414;
+    min-height: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     .content { 
-
         .title {
             text-align: center;
             font-size: 34px;
@@ -26,7 +29,7 @@ html {
         }
 
         .profile-container { 
-            gap: 2vw;
+            gap: 4vw;
             @apply 
             flex
             flex-wrap
