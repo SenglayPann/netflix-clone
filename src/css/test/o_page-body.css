@@ -100,7 +100,7 @@
   --slider-padding: 5vw;
   --card-border: 0.5vw;
   --img-container-gap: 0.2vw;
-  --hover-card-position-top: -7vw;
+  --hover-card-position-top: -5vw;
   --items-per-screen: 2;
   --slider-index: 0;
   --black-bg: #141414;
@@ -312,7 +312,7 @@ body {
 
 .genre-title .sliding-indicator {
   top: 0.3vw;
-  left: 9.8vw;
+  left: 100%;
   position: absolute;
   font-size: 1vw;
   color: #54b9c5;
@@ -323,7 +323,7 @@ body {
 
 .genre-title .sliding-arrow {
   top: 0.1vw;
-  left: 10vw;
+  left: 100%;
   position: absolute;
   font-size: 1vw;
   opacity: 0;
@@ -355,38 +355,36 @@ body {
 
 .title-name:hover + .sliding-indicator {
   opacity: 1;
-  left: 11vw;
+  left: 105%;
 }
 
 .title-name:hover + .sliding-indicator + .sliding-arrow {
   scale: 0.8;
   top: 0;
-  left: 15.3vw;
+  left: calc(110% + 4vw);
   opacity: 1;
 }
 
 .sliding-indicator:hover {
   opacity: 1;
-  left: 11vw;
+  left: 105%;
 }
 
 .sliding-indicator:hover + .sliding-arrow {
   scale: 0.8;
   top: 0;
-  left: 15.3vw;
   opacity: 1;
+  left: calc(110% + 4vw);
 }
 
 @media (min-width: 0) and (max-width: 700px) {
   .genre-title .sliding-indicator {
-    left: 5rem;
     top: 0.2rem;
     font-size: 0.5rem;
     color: #54b9c5;
   }
 
   .genre-title .sliding-arrow {
-    left: 5.3rem;
     top: 0rem;
     font-size: 1vw;
   }
@@ -400,21 +398,12 @@ body {
     fill: #54b9c5;
   }
 
-  .genre-title .sliding-indicator:hover {
-    left: 5.8rem;
-  }
-
-  .genre-title .sliding-indicator:hover + .sliding-arrow {
-    left: 8.1rem;
-  }
-
   .title-name:hover + .sliding-indicator {
     opacity: 1;
-    left: 5.8rem;
   }
 
   .title-name:hover + .sliding-indicator + .sliding-arrow {
-    left: 8.1rem;
+    left: calc(105% + 37px);
     opacity: 1;
   }
 }
@@ -455,7 +444,7 @@ body {
   background-color: none;
   border-radius: var(--card-border);
   z-index: -1;
-  scale: 0.97;
+  scale: 0.95;
   pointer-events: none;
   transition: scale 0.2s ease-out, z-index 0.2s ease-out, opacity 0.2s ease-out, left 0.2s ease-out, top 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -538,6 +527,10 @@ body {
 .carousel-container .slider .img-container:hover .hidden-info-card img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.carousel-row {
+  margin-bottom: 3vw;
 }
 
 .carousel-row .carousel-progress-container {
@@ -951,18 +944,24 @@ body {
 .movie-brief-info .brief-genre {
   display: flex;
   align-items: center;
-  gap: 5px;
+  flex-wrap: wrap;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 
 .movie-brief-info .brief-genre div {
   font-size: 0.6rem;
   color: white;
   font-weight: 200;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
 }
 
-.movie-brief-info .brief-genre span {
+.movie-brief-info .brief-genre div span {
   color: #aaa;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #modal-container {
@@ -1040,6 +1039,7 @@ body {
 }
 
 #modal .modal-content-area .modal-video-overlay #closing-button {
+  transform: rotate(45deg);
   cursor: pointer;
   position: absolute;
   background-color: #181818;
@@ -1048,6 +1048,10 @@ body {
   border-radius: 50%;
   right: 15px;
   top: 15px;
+  padding-left: 1px;
+  padding-bottom: 2px;
+  font-size: 2rem;
+  font-weight: 200;
   display: flex;
   justify-content: center;
   align-items: center;
