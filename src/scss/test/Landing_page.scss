@@ -17,7 +17,7 @@ body{
     display:flex;
     justify-content:center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     width: 100%;
 
@@ -443,10 +443,12 @@ body{
         }
         
         .left-side {
-            width: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
         .right-side {
-            width: 50%;
+            width: 100%;
             align-self: center;
             h2 {
                 font-size: 48px ;

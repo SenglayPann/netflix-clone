@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   width: 100%;
 }
@@ -457,10 +457,12 @@ body {
   }
 }
 .layout4-container .layout4-main .left-side {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .layout4-container .layout4-main .right-side {
-  width: 50%;
+  width: 100%;
   align-self: center;
 }
 .layout4-container .layout4-main .right-side h2 {
