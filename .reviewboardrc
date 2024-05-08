@@ -1,5 +1,5 @@
 REVIEWBOARD_URL = "https://review.clp.kr/"
 REPOSITORY = "CyberNexus/Team-Projects/Netflix-Clone"
 REPOSITORY_TYPE = "git"
-BRANCH = "feature/navbar-footer"
-LAND_DEST_BRANCH = "feature/navbar-footer"
+BRANCH = "feature/carousel"
+LAND_DEST_BRANCH = "feature/carousel"
