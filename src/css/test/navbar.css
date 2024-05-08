@@ -79,12 +79,6 @@ body {
   cursor: pointer; /* Add cursor pointer to indicate it's clickable */
 }
 
-/* Dropdown container */
-.browse-menu {
-  position: relative;
-  display: inline-block;
-}
-
 /* Dropdown content */
 .browse-menu {
   position: relative;
@@ -151,18 +145,21 @@ body {
   border-radius: 4%;
 }
 
-.dropdown-image {
-  display: flex;
-  align-items: center;
-}
-
 .dropdown-image-container {
   position: relative;
   display: inline-block;
+  /* Dropdown content */
 }
-
-/* black box hover */
-.dropdown-content {
+.dropdown-image-container .dropdown-image {
+  display: flex;
+  align-items: center;
+  /* Apply rotation to the span when hovering over the image */
+}
+.dropdown-image-container .dropdown-image:hover .arrow-down {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+.dropdown-image-container .dropdown-content {
   color: gray;
   display: none;
   position: absolute;
@@ -174,7 +171,7 @@ body {
   padding: 10px; /* Increase padding for larger hover area */
   margin-top: 10px;
 }
-.dropdown-content ul {
+.dropdown-image-container .dropdown-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -188,8 +185,8 @@ body {
   margin-top: 20px;
   margin-right: 10px;
 }
-.dropdown-content ul li img {
-  margin-right: 10px; /* Add spacing between image and text */
+.dropdown-image-container .dropdown-content ul li img {
+  margin-right: 10px;
   height: auto;
   border-radius: 4%;
 }
@@ -215,8 +212,7 @@ body {
 .dropdown-image-container:hover .dropdown-content {
   display: block;
 }
-
-.center-text-signout {
+.dropdown-image-container .center-text-signout {
   display: flex;
   justify-content: center;
   align-items: center;
