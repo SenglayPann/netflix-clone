@@ -23,13 +23,21 @@
                 <li>RESOURCES</li>
             </ul>
         </div>
-        <div class="input-background-color">
-            <div class="input">
-                <svg width="25" height="25" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.6295 37.623L27.5414 24.3566C29.3245 21.8691 30.3854 18.8111 30.3854 15.5123C30.3854 7.21185 23.7255 0.453805 15.5409 0.453805C7.34747 0.44489 0.6875 7.20293 0.6875 15.5034C0.6875 23.8038 7.34747 30.5619 15.532 30.5619C19.0804 30.5619 22.3346 29.2958 24.8934 27.1828L37.9102 40.3869L40.6295 37.623ZM15.532 27.0848C9.23758 27.0848 4.1111 21.887 4.1111 15.5034C4.1111 9.11979 9.23758 3.92198 15.532 3.92198C21.8264 3.92198 26.9529 9.11979 26.9529 15.5034C26.9529 21.887 21.8354 27.0848 15.532 27.0848Z" fill="white"/>
-                </svg>
+        <div class="switch-background">
+            <div class="input-background-color">
+                <div class="input">
+                    <svg width="25" height="25" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40.6295 37.623L27.5414 24.3566C29.3245 21.8691 30.3854 18.8111 30.3854 15.5123C30.3854 7.21185 23.7255 0.453805 15.5409 0.453805C7.34747 0.44489 0.6875 7.20293 0.6875 15.5034C0.6875 23.8038 7.34747 30.5619 15.532 30.5619C19.0804 30.5619 22.3346 29.2958 24.8934 27.1828L37.9102 40.3869L40.6295 37.623ZM15.532 27.0848C9.23758 27.0848 4.1111 21.887 4.1111 15.5034C4.1111 9.11979 9.23758 3.92198 15.532 3.92198C21.8264 3.92198 26.9529 9.11979 26.9529 15.5034C26.9529 21.887 21.8354 27.0848 15.532 27.0848Z" fill="white"/>
+                    </svg>             
+                </div>
+            </div>     
+            <div  class="circle-container">
+                <button onclick="changeStyle()">
+                    <div class="circle"></div>
+                    <div class="half-circle"></div>
+                </button>
             </div>
-        </div>  
+        </div>
     </div>
 </nav>
 
@@ -66,8 +74,7 @@
     <div class="container parent-2box">
         <div class="box-child1">
             <div class="box-navbar1">
-                <h3>Investor Events</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" id="wifi"><defs><linearGradient id="b" x1="-909.131" x2="-904.895" y1="956.684" y2="952.552" gradientTransform="translate(255.506 -869.862)" gradientUnits="userSpaceOnUse" xlink:href="#a"></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#402d5f"></stop><stop offset="1" stop-color="#2f213e"></stop></linearGradient></defs><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1;marker:none" fill="url(#b)" d="M-653.545 79.5a.5.5 0 0 0 .05 1c3.32 0 6 2.68 6 6a.5.5 0 1 0 1 0c0-3.86-3.14-7-7-7a.5.5 0 0 0-.05 0zm0 2a.5.5 0 0 0 .05 1c2.216 0 4 1.785 4 4a.5.5 0 1 0 1 0c0-2.756-2.244-5-5-5a.5.5 0 0 0-.05 0zm0 2a.5.5 0 0 0 .05 1c1.111 0 2 .89 2 2a.5.5 0 1 0 1 0c0-1.65-1.348-3-3-3a.5.5 0 0 0-.05 0zm.05 2c-.545 0-1 .454-1 1s.455 1 1 1c.547 0 1-.454 1-1s-.453-1-1-1z" color="#000" enable-background="accumulate" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(658.494 -75.5)"></path></svg>
+                <h3>Investor Events</h3>                 
             </div>
             <div class="first-box-parent">
                 <div class="first-box">
@@ -77,9 +84,9 @@
                         </div>
                         <p class="date">Jun 6,2024 03:00 PM PST</p>
                         <ul class="list">
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/calendar.svg" alt=""></li>
                             <li>Add to Calendar <span class="span">|</span></li>
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/webcast.svg" alt=""></li>
                             <li>Webcast</li>
                         </ul>
                     </div>
@@ -89,15 +96,15 @@
                         </div>
                         <p class="date">Apr 18, 2024 01:45 PM PST</p>
                         <ul class="list1">
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/webcast.svg" alt=""></li>
                             <li>Video Interview</li>
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/pdf.svg" alt=""></li>
                             <li>Letter to Shareholders</li>
                         </ul>
                         <ul class="list2">
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/xls.svg" alt=""></li>
                             <li>Financial Statements</li>
-                            <li>svg</li>
+                            <li class="image-in-list"><img src="https://s22.q4cdn.com/959853165/files/design/svg/pdf.svg" alt=""></li>
                             <li>Transcript</li>
                         </ul>
                     </div>
@@ -147,24 +154,23 @@
             <div class="nav-parent">
                 <nav>
                     <h2>Financial Releases and Updates</h2>
-                    <h3>wifi</h3>
                 </nav>
                 <div class="parent-3box">
                     <div class="child-box child-box1">
                         <a href="#">
-                            <p>Netflix to Announce First <br> Quarter 2024 Financial Results</p>
+                            <p>Netflix to Announce First Quarter 2024 Financial Results</p>
                         </a>
                         <h5>Mar 15, 2024</h5>
                     </div>
                     <div class="child-box child-box2">
                         <a href="#">
-                            <p>Netflix CFO to Present at the <br> Morgan Stanley Technology,<br> Media & Telecom Conference</p>
+                            <p>Netflix CFO to Present at the Morgan Stanley Technology,<br> Media & Telecom Conference</p>
                         </a>
                         <h5>Feb 27, 2024</h5>
                     </div>
                     <div class="child-box child-box3">
                         <a href="#">
-                            <p>Netflix to Announce Fourth <br> Quarter 2023 Financial Results</p>
+                            <p>Netflix to Announce Fourth  Quarter 2023 Financial Results</p>
                         </a>
                         <h5>Dec 15, 2023</h5>
                     </div>
@@ -172,7 +178,7 @@
                 </div>
                 <div class="all-release">
                     <div class="child-all-release">
-                        <button>ALL RELEASES ></button>
+                        <button>ALL RELEASES <img src="https://s22.q4cdn.com/959853165/files/design/svg/button-arrow1.svg" alt=""></button>
                     </div>
                 </div>
             </div>
@@ -205,7 +211,7 @@
             </div>
             <div class="all-quarters">
                 <div class="all-quarters-button">
-                    <button>ALL QUARTERS ></button>
+                    <button>ALL QUARTERS<img src="https://s22.q4cdn.com/959853165/files/design/svg/button-arrow1.svg" alt=""></button>
                 </div>
             </div>
         </div>
@@ -235,6 +241,25 @@
                 <h3> IR Contacts</h3>
             </div>
         </div>
+<!-- display-when-small-screen  -->
+        <div class="parent-item2">
+            <div class="items2">
+                <img src="https://s22.q4cdn.com/959853165/files/design/svg/txt-rtf-doc.svg" alt="">
+                <h3>Annual Reports<br>& Proxies</h3>
+            </div>
+            <div class="items2">
+                <img src="https://s22.q4cdn.com/959853165/files/design/svg/SEC-filings.svg" alt="">
+                <h3>SEC<br>Filings</h3>
+            </div>
+            <div class="items2">
+                <img src="https://s22.q4cdn.com/959853165/files/design/svg/graph.svg" alt="">
+                <h3>Stock<br>Information</h3>
+            </div>
+            <div class="items2">
+                <img src="https://s22.q4cdn.com/959853165/files/design/svg/contact.svg" alt="">
+                <h3> IR Contacts</h3>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -260,8 +285,7 @@
                 <rect width="30" height="30" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>
-                
+                </svg>              
         </div>
     </div>
 </footer>
@@ -273,6 +297,9 @@
         </div>
     </div>
 </div>
+
+
+<!-- test -->
 
 </body>
 </html>
