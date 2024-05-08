@@ -686,8 +686,10 @@ video {
 }
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header {
+  align-content: center;
   height: 66px;
   width: auto;
+  position: relative;
 }
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
@@ -699,6 +701,18 @@ video {
   background-color: black;
 }
 
+@media (max-width: 599px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
+    height: 98px;
+  }
+}
+
+@media (min-width: 600px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
+    padding: 0px 60px;
+  }
+}
+
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box {
   display: flex;
   padding: 0px 24px 0px 0px;
@@ -707,6 +721,12 @@ video {
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .logo {
   height: 32px;
   width: auto;
+}
+
+@media (max-width: 599px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .logo {
+    display: none;
+  }
 }
 
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center {
@@ -725,60 +745,99 @@ video {
   margin: 0px 0px 0px 16px;
 }
 
+@media (max-width: 599px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .help-center {
+    display: none;
+  }
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .responsive-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .responsive-nav .nexflix-vertical {
+  display: flex;
+  position: relative;
+  margin-right: 70px;
+  top: 5px;
+}
+
+@media (max-width: 599px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .responsive-nav .nexflix-vertical {
+    display: flex;
+    height: 32px;
+    padding-bottom: 16px;
+  }
+}
+
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .responsive-nav .responsive-helpcenter {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  top: 10px;
+}
+
+@media (min-width: 600px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .responsive-nav {
+    display: none;
+    height: 98px;
+  }
+}
+
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box {
   color: white;
 }
 
-.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a {
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a:hover {
   text-decoration: underline;
 }
 
-.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box a i {
+.legal-notices-subpage .global-container-ligal-notices .legal-notices-header .right-side-box i {
   color: red;
   position: relative;
   top: 3px;
   padding-right: 5px;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications {
+.legal-notices-global-notifications {
   width: auto;
   color: black;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 {
-  height: 81px;
+.legal-notices-global-notifications .global-notifications-box-1 {
   padding: 0px 24px;
   background-color: #eaeae6;
   border-bottom: 1px solid #d5d4d1;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper {
+.legal-notices-global-notifications .global-notifications-box-1 .notifications-upper {
   top: 50%;
   display: flex;
   padding: 16px 16px 16px 40px;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 {
+.legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 {
   padding-right: 24px;
   padding-top: 15px;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 svg {
+.legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 svg {
   width: 16px;
   height: 20px;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-1 {
+.legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-1 {
   font-size: 16px;
   font-weight: 700;
 }
 
-.legal-notices-subpage .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-2 {
+.legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .upper-paragraph1 .upper-para-2 {
   font-size: 16px;
 }
 
-.legal-notices-subpage .content-part-container {
-  height: 92vh;
+.content-part-container {
   margin: 0 auto;
   margin-left: 10%;
   margin-right: 10%;
@@ -786,29 +845,31 @@ video {
   margin-bottom: 36px;
 }
 
-.legal-notices-subpage .content-part-container .content-part {
+.content-part-container .content-part {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 36px;
+  position: relative;
 }
 
-.legal-notices-subpage .content-part-container .content-part .right-side-box {
+.content-part-container .content-part .right-side-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.legal-notices-subpage .content-part-container .content-part .right-side-box svg {
+.content-part-container .content-part .right-side-box svg {
   margin-right: 8px;
   font-size: 16px;
 }
 
-.legal-notices-subpage .content-part-container .content-part a p {
+.content-part-container .content-part a p {
   font-size: 14px;
+  margin: 0;
 }
 
-.legal-notices-subpage .content-part-container .button-box {
+.content-part-container .button-box {
   cursor: pointer;
   display: flex;
   background-color: lightgrey;
@@ -820,51 +881,47 @@ video {
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.legal-notices-subpage .content-part-container .button-box button {
+.content-part-container .button-box button {
   margin-left: 10px;
 }
 
-.title-part {
-  height: 50px;
-}
-
-.title-part .title {
+.title {
   font-size: 40px;
   font-weight: 800;
   padding-bottom: 32px;
 }
 
-.title-part .legal-notices-para {
+.legal-notices-para {
   font-size: 16px;
   margin-bottom: 16px;
 }
 
-.title-part h3 {
+h3 {
   margin: 40px 0px 8px;
   font-size: 18px;
   font-weight: 700;
 }
 
-.title-part p {
+p {
   margin: 0px 0px 16px;
   font-size: 16px;
 }
 
-.title-part p a {
+p a {
   color: red;
 }
 
-.accordion-box-container .accordion-box {
+.accordion-box {
   border: 1px solid #eaeae6;
   border-radius: 4px;
 }
 
-.accordion-box-container .accordion-box .accordion {
+.accordion-box .accordion {
   color: rgb(229, 9, 20);
   font-weight: 600;
 }
 
-.accordion-box-container .accordion-box .accordion i {
+.accordion-box .accordion i {
   color: black;
   padding-right: 5px;
   position: relative;
@@ -874,11 +931,11 @@ video {
   width: 24px;
 }
 
-.accordion-box-container .accordion-box .accordion:hover {
+.accordion-box .accordion:hover {
   text-decoration: underline;
 }
 
-.accordion-box-container .accordion-box .panel {
+.accordion-box .panel {
   padding-left: 64px;
   padding: 0 18px;
   background-color: white;
@@ -887,18 +944,18 @@ video {
   transition: max-height 0.2s ease-out;
 }
 
-.accordion-box-container .accordion-box .panel li {
+.accordion-box .panel li {
   margin-left: 64px;
   list-style-type: disc;
   margin-bottom: 8px;
   padding-bottom: 24px;
 }
 
-.accordion-box-container .accordion-box .panel .netflix {
+.accordion-box .panel .netflix {
   padding-top: 24px;
 }
 
-.accordion-box-container .accordion-box .panel a {
+.accordion-box .panel a {
   color: #e50914;
   text-decoration: underline;
 }
@@ -919,7 +976,6 @@ video {
 }
 
 .footer-part {
-  height: 220px;
   background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
   padding: 0px 0px 48px;
 }
