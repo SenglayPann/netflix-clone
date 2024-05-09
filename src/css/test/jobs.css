@@ -84,11 +84,13 @@ html {
     width: 660px;
   }
 }
-.hero-container .content-container .content-main .button input {
+.hero-container .content-container .content-main .button input[type=text] {
   font-size: 32px;
+  border: none;
+  outline: none;
 }
 @media (max-width: 800px) {
-  .hero-container .content-container .content-main .button input {
+  .hero-container .content-container .content-main .button input[type=text] {
     font-size: 16px;
   }
 }
@@ -197,6 +199,10 @@ html {
   font-size: 12px;
   width: 180px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  box-sizing: border-box;
 }
 .layout-container .layout-main .content-text {
   padding: 27px;
@@ -238,7 +244,7 @@ html {
   justify-content: space-between;
   padding: 27px;
 }
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .footer-container .footer-main {
     display: flex;
   }
@@ -264,11 +270,12 @@ html {
 }
 .footer-container .footer-main .footer-left .footer-logo-top {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 @media (min-width: 801px) {
   .footer-container .footer-main .footer-left .footer-logo-top {
     margin-bottom: 16px;
+    justify-content: flex-end;
   }
 }
 .footer-container .footer-main .footer-left .footer-logo-top svg {
@@ -280,6 +287,8 @@ html {
 }
 .footer-container .footer-main .footer-left .footer-sub-bottom ul {
   display: flex;
+  color: #221f1f;
+  font-weight: 200;
 }
 @media (max-width: 800px) {
   .footer-container .footer-main .footer-left .footer-sub-bottom ul {
