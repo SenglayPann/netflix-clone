@@ -19,7 +19,8 @@ html {
   width: 1248px;
   min-width: auto;
   height: 100%;
-  @apply flex
+  @apply px-2
+      flex
       justify-between
       pt-2
       sm:pt-0;
@@ -40,6 +41,9 @@ html {
             sm:text-[18px]
             font-semibold
             sm:font-light;
+}
+.nav-container .header-container .left-content .help-center p {
+  margin-right: 10px;
 }
 .nav-container .header-container .left-content .help-center:hover {
   text-decoration: underline;
@@ -64,16 +68,41 @@ html {
         justify-end
         sm:items-center;
 }
-.nav-container .header-container .right-content .mobile-icon {
+.nav-container .header-container .right-content .link-box {
+  @apply flex;
+}
+.nav-container .header-container .right-content .link-box .mobile-icon {
   height: 25px;
   width: 25px;
 }
-.nav-container .header-container .right-content p {
-  color: #221f1f;
+.nav-container .header-container .right-content .link-box a {
+  color: black;
+  @apply font-light;
 }
-.nav-container .header-container .right-content p:hover {
+.nav-container .header-container .right-content .link-box a:hover {
   text-decoration: underline;
   @apply cursor-pointer;
+}
+.nav-container .header-container .right-content .dropdown {
+  display: none;
+  border-radius: 4px;
+  flex-direction: column;
+  padding: 16px;
+  background-color: white;
+  position: absolute;
+  top: 65px;
+  margin-left: -50px;
+  right: 20px;
+  border: 1px solid lightgrey;
+}
+.nav-container .header-container .right-content .dropdown a {
+  @apply gap-2
+            flex
+            justify-start
+            items-center;
+}
+.nav-container .header-container .right-content .dropdown a:hover {
+  @apply underline;
 }
 
 .notification-bar {
@@ -360,14 +389,21 @@ html {
   pb-12
   px-3;
 }
-.footer-container .footer-links {
-  width: 100%;
+.footer-container .footer-inner-container {
+  @apply flex
+    justify-center;
 }
-.footer-container .footer-links .link {
+.footer-container .footer-inner-container .footer-links {
+  width: 70%;
+}
+.footer-container .footer-inner-container .footer-links .link {
   color: rgba(0, 0, 0, 0.7019607843);
   @apply text-sm
-      block
-      mb-4;
+        block
+        mb-4;
+}
+.footer-container .footer-inner-container .footer-links .link:hover {
+  @apply underline;
 }
 
 /*# sourceMappingURL=help_center.css.map */
