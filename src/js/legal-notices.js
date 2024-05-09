@@ -3,7 +3,6 @@ var acc = document.getElementsByClassName("link-box");
 var i;
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
         var dropdown = this.nextElementSibling;
         if (dropdown.style.display === "block") {
             dropdown.style.display = "none";

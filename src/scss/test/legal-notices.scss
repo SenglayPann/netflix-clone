@@ -94,7 +94,7 @@
                         }
                     }
                     .dropdown {
-                        display: flex;
+                        display: none;
                         border-radius: 4px;
                         flex-direction: column;
                         padding: 16px;
@@ -103,7 +103,7 @@
                         position: absolute;
                         top: 65px;
                         margin-left: -50px;
-                        right: 50px;
+                        right: 20px;
                         border: 1px solid lightgrey;
                         
                         a {
@@ -136,10 +136,13 @@
                 padding: 0px 24px;
                 background-color:#eaeae6;
                 border-bottom: 1px solid #d5d4d1;
+                
                 .notifications-upper {
                     top: 50%;
                     display: flex;
                     padding: 16px 16px 16px 40px;
+
+                    
                     .bell1 {
                         padding-right: 24px;
                         padding-top: 15px;
