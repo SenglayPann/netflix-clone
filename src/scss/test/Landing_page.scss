@@ -111,18 +111,19 @@ body{
                 
             }
             .input-email {
-                // flex-grow: ;
-        
-                padding: 15px 16px 15px;
+                // flex-grow: 
                 justify-content: center;
                 flex-grow: 1;
-                border: 1px solid gray;
-   
+                border: 2px solid gray;
+                border-radius: 4px;
 
                 input {
                     width: 368px;
                     height: 100%;
                     background: none;
+                    padding: 15px 16px 15px;
+                    border-radius: 4px;
+                    outline: 2px solid white;
                     @media (max-width: 400px) {
                         width: 250px;
                     }
@@ -138,6 +139,7 @@ body{
                 font-weight: 700;
                 text-wrap: nowrap;
                 display: flex;
+                cursor: pointer;
                 
                 span {
                     position: relative;

@@ -1056,8 +1056,9 @@ body {
               }
             }
           }
-
+          
           .b1 {
+            color: #141414;
             display: flex;
             align-items: center;
             font-size: 12px;
@@ -1376,3 +1377,6 @@ body {
 
 }
 
+button.b1 {
+  background-color: #e5e5e5 ;
+}

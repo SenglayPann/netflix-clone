@@ -684,6 +684,18 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .-mb-20 {
   margin-bottom: -5rem;
 }
@@ -692,8 +704,56 @@ video {
   margin-left: -0.5rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
+
 .mb-\[20px\] {
   margin-bottom: 20px;
+}
+
+.mb-\[24px\] {
+  margin-bottom: 24px;
+}
+
+.mb-\[26px\] {
+  margin-bottom: 26px;
+}
+
+.mb-\[48px\] {
+  margin-bottom: 48px;
+}
+
+.mb-\[8px\] {
+  margin-bottom: 8px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-\[16px\] {
+  margin-left: 16px;
+}
+
+.ml-\[5\%\] {
+  margin-left: 5%;
+}
+
+.mr-0 {
+  margin-right: 0px;
 }
 
 .mr-3 {
@@ -702,6 +762,10 @@ video {
 
 .mr-32 {
   margin-right: 8rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mt-2 {
@@ -716,8 +780,32 @@ video {
   margin-top: 1rem;
 }
 
+.mt-\[16px\] {
+  margin-top: 16px;
+}
+
+.mt-\[24px\] {
+  margin-top: 24px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
+.mt-\[8px\] {
+  margin-top: 8px;
+}
+
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -740,19 +828,62 @@ video {
   justify-content: flex-start;
 }
 
-.bg-cyan-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+.border-t-\[4px\] {
+  border-top-width: 4px;
 }
 
-.bg-cyan-900 {
+.border-t-red-600 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
+.bg-\[\#fafafa\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(22 78 99 / var(--tw-bg-opacity));
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-\[24px\] {
+  line-height: 24px;
+}
+
+.leading-\[27px\] {
+  line-height: 27px;
+}
+
+.leading-\[30px\] {
+  line-height: 30px;
 }
 
 .text-red-600 {
@@ -763,6 +894,27 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 * {
@@ -892,16 +1044,19 @@ body {
 }
 
 .content-part .hero-content .email-signup-part .input-email {
-  padding: 15px 16px 15px;
   justify-content: center;
   flex-grow: 1;
-  border: 1px solid gray;
+  border: 2px solid gray;
+  border-radius: 4px;
 }
 
 .content-part .hero-content .email-signup-part .input-email input {
   width: 368px;
   height: 100%;
   background: none;
+  padding: 15px 16px 15px;
+  border-radius: 4px;
+  outline: 2px solid white;
 }
 
 @media (max-width: 400px) {
@@ -919,6 +1074,7 @@ body {
   font-weight: 700;
   text-wrap: nowrap;
   display: flex;
+  cursor: pointer;
 }
 
 .content-part .hero-content .email-signup-part .getstarted-button span {
@@ -1509,4 +1665,10 @@ body {
   }
 }
 
-/*# sourceMappingURL=o_landing_page.css.map */
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=o_Landing_page.css.map */

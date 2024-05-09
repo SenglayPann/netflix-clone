@@ -111,3 +111,16 @@ content.addEventListener('keypress', (event) => {
     }, 1000);
   }
 });
+
+var dropDowns = document.querySelectorAll(".link-box");
+
+dropDowns.forEach(function(dropDown) {
+    dropDown.addEventListener("click", function() {
+        var dropdown = this.nextElementSibling;
+        if (dropdown.style.display === "flex") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "flex";
+        }
+    });
+});

@@ -14,6 +14,7 @@ body {
 }
 
 .navbar-container {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
     user-select: none;
     display: flex;
     position: fixed;
@@ -47,7 +48,7 @@ body {
 
         a {
             margin-left: 20px;
-            color: white;
+            color: #b3b3b3;
             font-size: 12px;
         }
         @apply 

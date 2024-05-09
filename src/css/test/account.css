@@ -7,7 +7,6 @@ html {
 }
 
 .nav-container {
-  padding: 10px 3.3rem;
   justify-content: center;
   display: flex;
 }
@@ -21,10 +20,7 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  @apply flex
-            justify-center
-            min-[965px]:h-[45px]
-            max-[964px]:h-[58px];
+  @apply h-[58px];
 }
 .nav-container .nav-container-larger .header-container .left-content {
   width: 80vw;
@@ -430,6 +426,9 @@ html {
 .footer-container .footer-box .footer-links .footer-link span a {
   @apply text-[13px]
                 text-nowrap;
+}
+.footer-container .footer-box .footer-links .footer-link:hover {
+  @apply underline;
 }
 
 /*# sourceMappingURL=account.css.map */

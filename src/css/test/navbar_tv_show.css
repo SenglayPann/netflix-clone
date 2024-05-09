@@ -1,0 +1,72 @@
+@import url(../main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: grey;
+  height: 200vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.6s;
+}
+.navbar.nav_black {
+  background-color: black;
+}
+.navbar .child-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .child-navbar .left {
+  display: flex;
+  width: 50%;
+  gap: 20px;
+  padding-left: 40px;
+  align-items: center;
+}
+.navbar .child-navbar .left .movie {
+  font-size: 38px;
+  font-weight: bolder;
+  color: white;
+}
+.navbar .child-navbar .left .genres {
+  border: 2px solid white;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.navbar .child-navbar .left .genres button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .child-navbar .right {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding-right: 40px;
+  align-items: center;
+}
+.navbar .child-navbar .right .box-1 {
+  border: 1px white solid;
+  width: 45px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.navbar .child-navbar .right .box-2 {
+  border: 1px white solid;
+  width: 45px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=navbar_tv_show.css.map */

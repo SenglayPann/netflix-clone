@@ -588,18 +588,237 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+
+.-ml-2 {
+  margin-left: -0.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-\[16px\] {
+  margin-bottom: 16px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[24px\] {
+  margin-bottom: 24px;
+}
+
+.mb-\[26px\] {
+  margin-bottom: 26px;
+}
+
+.mb-\[48px\] {
+  margin-bottom: 48px;
+}
+
+.mb-\[8px\] {
+  margin-bottom: 8px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-\[16px\] {
+  margin-left: 16px;
+}
+
+.ml-\[5\%\] {
+  margin-left: 5%;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-32 {
+  margin-right: 8rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-\[16px\] {
+  margin-top: 16px;
+}
+
+.mt-\[24px\] {
+  margin-top: 24px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
+.mt-\[8px\] {
+  margin-top: 8px;
+}
+
 .block {
   display: block;
 }
 
-.bg-cyan-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+.inline {
+  display: inline;
 }
 
-.text-green-600 {
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.border-t-\[4px\] {
+  border-top-width: 4px;
+}
+
+.border-t-red-600 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
+.bg-\[\#fafafa\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-\[24px\] {
+  line-height: 24px;
+}
+
+.leading-\[27px\] {
+  line-height: 27px;
+}
+
+.leading-\[30px\] {
+  line-height: 30px;
+}
+
+.text-red-600 {
   --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 body {
@@ -608,14 +827,15 @@ body {
 
 @media (max-width: 1199px) {
   .parents2 {
+    transition: 1s;
     display: none;
   }
 }
 
 @media (min-width: 1200px) {
   .parents {
+    transition: 1s;
     display: none;
-    transition: 1ms;
   }
 }
 
@@ -624,10 +844,11 @@ body {
   height: 1300px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 20%, transparent 85%), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
   background-size: cover;
-  transition: 1.4ms;
+  transition: 1s;
 }
 
 .parents2 .mid1 {
+  transition: 1s;
   width: 100%;
   height: 100%;
   position: relative;
@@ -637,6 +858,7 @@ body {
 }
 
 .parents2 .mid1 .redeem-your-gift2 {
+  transition: 1s;
   display: flex;
   justify-content: flex-start;
   font-size: 60px;
@@ -738,6 +960,7 @@ body {
 }
 
 .parents {
+  transition: 1s;
   width: 100%;
   height: 700px;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
@@ -855,6 +1078,7 @@ body {
 
 @media (min-width: 1200px) {
   .mid1 {
+    transition: 1s;
     position: relative;
     right: 25%;
     margin-top: -200px;
@@ -865,6 +1089,7 @@ body {
 
 @media (min-width: 1900px) {
   .mid1 {
+    transition: 1s;
     position: relative;
     right: 35%;
     margin-top: -200px;
@@ -883,6 +1108,7 @@ body {
   }
 
   .mid1 .redeem-your-gift2 h2 {
+    transition: 1s;
     font-size: 80px;
   }
 }
@@ -915,6 +1141,32 @@ body {
 
 .footer-text {
   margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .footer .footer-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=o_gift_card.css.map */
