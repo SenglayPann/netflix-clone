@@ -1212,6 +1212,7 @@ body {
 }
 
 #modal .modal-content-area .modal-video-overlay .modal-left-info .modal-movie-buttons .b1 {
+  color: #141414;
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -1567,6 +1568,10 @@ body {
   border: 1px solid #aaa;
   padding: 0 5px;
   border-radius: 2px;
+}
+
+button.b1 {
+  background-color: #e5e5e5;
 }
 
 /*# sourceMappingURL=o_page-body.css.map */

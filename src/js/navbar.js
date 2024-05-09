@@ -11,7 +11,6 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const dropDownListContainer = document.getElementById('dropdown-image-container');
     const dropDownList = document.getElementById('dropdown-content');
-    console.log(dropDownList)
     let timeout ;
 
     
@@ -30,3 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(timeout);
     })
 })
+
+

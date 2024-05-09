@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix My List Grid</title>
+<style>
+  /* Define styles for the grid container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Define styles for grid items (each movie/show) */
+  .grid-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Define styles for the image */
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Define styles for the title */
+  .grid-item h3 {
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <!-- Example grid items (replace with your content) -->
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 1">
+    <h3>Movie or Show 1</h3>
+  </div>
+  <div class="grid-item">
+    <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdCS_VMaInm715PWzyGY3D6mvEgDDebeNe1F4Js9juCXwce373tnJ4zTTLn2HDw3LY8713zz7TSj3SG6ADRJMDJvotbredf7Wn6Er9gtXoiKVqZTavCfQ09ek3Kzv0gbPPq1.jpg?r=2c4" alt="Movie or Show 2">
+    <h3>Movie or Show 2</h3>
+  </div>
+  <!-- Add more grid items as needed -->
+</div>
+
+</body>
+</html>
