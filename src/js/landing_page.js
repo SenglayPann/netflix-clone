@@ -26,7 +26,7 @@ const button = document.getElementById("start-button");
 function checkEmail() {
     const inputValue = inputBox.value;
     if (inputValue === 'cybernexus@gmail.com') { 
-        window.location.href = 'sign_in.html';
+        window.location.href = './pages/sign_in.html';
     } else { 
         setTimeout(() => {
             alert("Invalid email!! Please enter 'cybernexus@gmail.com'");
