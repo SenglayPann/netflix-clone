@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+}
 // navbar
 .parent-navbar {
     width: 100%;
@@ -80,6 +83,7 @@
 .parent-navbar-under-ring {
     display: flex;
     justify-content: center;
+    width: 100%;
     .navbar-under-ring {
         display: flex;
         justify-content: space-between;
@@ -93,6 +97,7 @@
             }
         }
         .button-print {
+            margin-right: 20px;
             cursor: pointer;
             display: flex;
             background-color: lightgrey;
@@ -116,6 +121,7 @@
     justify-content: center;
     position: relative;
     top: 25px;
+    width: 100%;
     .netflix {
         font-size: 40px;
         font-weight: bold;
@@ -140,6 +146,12 @@
             }
         }
     }
+    ol {
+        li {
+            font-weight: bold;
+            padding-left: 20px;
+        }
+    }
 }
 
 // footer
@@ -149,17 +161,18 @@
     position: relative;
     top: 80px;
     background: linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
-    .footer-child :hover {
-        text-decoration: underline;
-    }
     .footer-child {
+        padding-left: 20px;
         list-style: none;
         color: gray;
         margin-top: 30px;
-        cursor: pointer;
         font-size: 14px;
         li {
             margin-bottom: 10px;
+            padding-left: 20px;
+            width: 200px;
+            text-decoration: underline;
         }
     }
+
 }

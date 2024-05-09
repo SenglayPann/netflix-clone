@@ -848,7 +848,6 @@ body {
 }
 
 .parents2 .mid1 {
-  transition: 1s;
   width: 100%;
   height: 100%;
   position: relative;
@@ -858,7 +857,6 @@ body {
 }
 
 .parents2 .mid1 .redeem-your-gift2 {
-  transition: 1s;
   display: flex;
   justify-content: flex-start;
   font-size: 60px;
@@ -1078,7 +1076,6 @@ body {
 
 @media (min-width: 1200px) {
   .mid1 {
-    transition: 1s;
     position: relative;
     right: 25%;
     margin-top: -200px;
@@ -1089,7 +1086,6 @@ body {
 
 @media (min-width: 1900px) {
   .mid1 {
-    transition: 1s;
     position: relative;
     right: 35%;
     margin-top: -200px;
@@ -1108,7 +1104,6 @@ body {
   }
 
   .mid1 .redeem-your-gift2 h2 {
-    transition: 1s;
     font-size: 80px;
   }
 }
@@ -1143,14 +1138,10 @@ body {
   margin-bottom: 10px;
 }
 
-@media (max-width: 700px) {
-  .footer .footer-parent {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-    margin-left: 50px;
-  }
+.test {
+  width: 200px;
+  height: 400px;
+  background-color: red;
 }
 
 @media (min-width: 768px) {
@@ -1169,4 +1160,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=o_gift_card.css.map */
+/*# sourceMappingURL=testo_gift_card.css.map */

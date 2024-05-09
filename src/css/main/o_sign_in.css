@@ -1,6 +1,102 @@
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
-*/
+/* Font Family injection */
+
+* {
+  font-family: 'Netflix Sans';
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 100;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 300;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 400;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 700;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 800;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+
+  font-weight: 900;
+
+  font-display: optional;
+
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format('woff')
+}
+
+.netflix-sans-font-loaded {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.nkufi-font-loaded {
+  font-family: NKufi,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.netflix-sans-font-loaded.graphik-font-loaded {
+  font-family: GraphikTH,'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+.error-page {
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: rgba(0,0,0,.18);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-top: 68px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000
+}
+
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -821,336 +917,188 @@ video {
   transition-duration: 150ms;
 }
 
-body {
-  background-color: black;
-}
-
-@media (max-width: 1199px) {
-  .parents2 {
-    transition: 1s;
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .parents {
-    transition: 1s;
-    display: none;
-  }
-}
-
-.parents2 {
-  width: 100%;
-  height: 1300px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 20%, transparent 85%), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
-  background-size: cover;
-  transition: 1s;
-}
-
-.parents2 .mid1 {
-  transition: 1s;
+.background-image {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.4), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/ff5587c5-1052-47cf-974b-a97e3b4f0656/9083b875-c04d-4fef-9c32-fba604ed25ab/KH-en-20240506-popsignuptwoweeks-perspective_alpha_website_large.jpg");
   width: 100%;
   height: 100%;
-  position: relative;
-  left: 40px;
-  top: 380px;
-  z-index: 1;
-}
-
-.parents2 .mid1 .redeem-your-gift2 {
-  transition: 1s;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 60px;
-  color: #FFFFFF;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-}
-
-.parents2 .mid1 .enter2 {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 30px;
-  color: #FFFFFF;
-}
-
-.parents2 .mid1 .input-parent2 {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.parents2 .mid1 .input-parent2 .input2 {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
-  width: 253px;
-  height: 46px;
-  border: 1px solid #8c8c8c;
-  display: block;
-  color: #fff;
-  font-size: 16px;
-}
-
-.parents2 .mid1 .button-redeem2 {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.parents2 .mid1 .button-redeem2 .redeem2 {
-  background-color: #E50914;
-  color: #fff;
-  min-width: 152px;
-  min-height: 48px;
-  border-radius: 2px;
-  display: block;
-  border: none;
-  font-size: 16px;
-}
-
-.parents2 .mid1 .link2 {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-.parents2 .mid1 .link2 .need-help2 {
-  text-decoration: none;
-  color: #A6A6A6;
-}
-
-.parents2 .mid1 .link2 :hover {
-  text-decoration: underline;
-}
-
-.parents2 .mid1 .this-page2 {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.parents2 .mid1 .this-page2 .paragraph2 {
-  color: #8C8C8C;
-  width: 450px;
-}
-
-.parents2 .mid1 .this-page2 .learn-more2 {
-  color: #0071EB;
-}
-
-.parents2 .child2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.parents2 .child2 .svg-icon2 {
-  width: 100px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.parents2 .child2 .sign-in2 {
-  background-color: #E50914;
-  color: #fff;
-  width: 110px;
-  height: 35px;
-  border-radius: 4px;
-  margin-right: 30px;
-  border: none;
-  margin-top: 20px;
-}
-
-.parents {
-  transition: 1s;
-  width: 100%;
-  height: 700px;
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
   background-size: cover;
+  background-position: center;
 }
 
-.parents .mid {
+.background-image .background-gradient {
   width: 100%;
   height: 100%;
-  position: relative;
-  top: 380px;
-  z-index: 1;
+  background: rgba(10, 10, 11, 0.5);
 }
 
-.parents .mid .redeem-your-gift {
-  display: flex;
-  justify-content: center;
-  font-size: 60px;
-  color: #FFFFFF;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
+.background-image .background-gradient .navbar .logo {
+  width: 200px;
+  height: auto;
 }
 
-.parents .mid .enter {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  color: #FFFFFF;
-}
-
-.parents .mid .input-parent {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.parents .mid .input-parent .input {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
-  width: 253px;
-  height: 46px;
-  border: 1px solid #8c8c8c;
-  display: block;
-  color: #fff;
-  font-size: 16px;
-}
-
-.parents .mid .button-redeem {
+.box-main {
   display: flex;
   justify-content: center;
 }
 
-.parents .mid .button-redeem .redeem {
-  background-color: #E50914;
-  color: #fff;
-  min-width: 152px;
-  min-height: 48px;
-  border-radius: 2px;
-  display: block;
-  border: none;
-  font-size: 16px;
+.box-child {
+  padding: 48px 68px;
 }
 
-.parents .mid .link {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-.parents .mid .link .need-help {
-  text-decoration: none;
-  color: #A6A6A6;
-}
-
-.parents .mid .link :hover {
-  text-decoration: underline;
-}
-
-.parents .mid .this-page {
-  display: flex;
-  justify-content: center;
-}
-
-.parents .mid .this-page .paragraph {
-  color: #8C8C8C;
+.box {
+  background-color: rgba(0, 0, 0, 0.7);
   width: 450px;
-}
-
-.parents .mid .this-page .learn-more {
-  color: #0071EB;
-}
-
-.parents .child {
+  height: 807px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.parents .child .svg-icon {
-  width: 100px;
-  margin-left: 30px;
-  margin-top: 20px;
+.box h3 {
+  color: white;
+  font-size: 32px;
 }
 
-.parents .child .sign-in {
-  background-color: #E50914;
-  color: #fff;
-  width: 110px;
-  height: 35px;
+.box .small-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.box .small-box .email-box input {
+  width: 314px;
+  height: 56px;
+  border: 1px solid lightgrey;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  margin-right: 30px;
-  border: none;
-  margin-top: 20px;
 }
 
-@media (min-width: 1200px) {
-  .mid1 {
-    transition: 1s;
-    position: relative;
-    right: 25%;
-    margin-top: -200px;
-    -webkit-font-smoothing: antialiased;
-    background-color: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent);
-  }
+.box .small-box .password-box input {
+  width: 314px;
+  height: 56px;
+  border: 1px solid lightgrey;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
-@media (min-width: 1900px) {
-  .mid1 {
-    transition: 1s;
-    position: relative;
-    right: 35%;
-    margin-top: -200px;
-    -webkit-font-smoothing: antialiased;
-    background-color: linear-gradient(180deg, rgba(26, 26, 26, 0.9), transparent);
-    width: 1360px;
-  }
-
-  .mid1 .need-help2 {
-    text-shadow: 1px 1px 10px #000;
-  }
-
-  .mid1 .paragraph2 {
-    text-shadow: 1px 1px 10px #000;
-    width: auto;
-  }
-
-  .mid1 .redeem-your-gift2 h2 {
-    transition: 1s;
-    font-size: 80px;
-  }
+.box .small-box .sign-in-box button {
+  width: 314px;
+  height: 40px;
+  background-color: #E50914;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
 }
 
-.list {
-  list-style: none;
+.box .small-box h5 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-weight: 300;
+  margin: 0%;
 }
 
-.list :hover {
-  text-decoration: underline;
+.box .small-box .code-box button {
+  width: 314px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  color: white;
+}
+
+.box .small-box .forgot {
+  color: white;
+}
+
+.box .small-box .box-under {
+  width: 314px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box .small-box .box-under .input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box .small-box .box-under .input h5 {
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+.box .small-box .box-under .input input {
+  width: 20px;
+  height: 20px;
+}
+
+.box .small-box .box-under .new {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.box .small-box .box-under .new .new-to-netflix {
+  color: rgba(255, 255, 255, 0.7019607843);
+}
+
+.box .small-box .box-under .new .sign-up {
+  color: white;
+}
+
+.box .small-box .box-under p {
+  margin-top: 0%;
+  color: #8C8C8C;
+  font-size: 13px;
+}
+
+.box .small-box .box-under p span {
+  color: blue;
   cursor: pointer;
 }
 
-.footer {
-  margin-top: 300px;
-  position: relative;
-  z-index: 2;
+footer {
+  height: 348px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.footer-parent {
+footer .line-1 {
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-size: 16px;
+}
+
+footer .line-2 {
+  display: flex;
   width: 100%;
-  height: 100%;
+  gap: 50px;
+  font-size: 14px;
+}
+
+footer .line-2 a {
+  color: rgba(255, 255, 255, 0.7019607843);
+}
+
+footer .line-3 {
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  color: #8C8C8C;
+  gap: 50px;
+  font-size: 14px;
 }
 
-.footer-text {
-  margin-bottom: 10px;
+footer .line-3 a {
+  color: rgba(255, 255, 255, 0.7019607843);
 }
 
-@media (max-width: 700px) {
-  .footer .footer-parent {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-    margin-left: 50px;
-  }
+footer .line-4-button button {
+  color: white;
+  width: 124px;
+  height: 32px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -1169,4 +1117,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=o_gift_card.css.map */
+/*# sourceMappingURL=o_sign_in.css.map */
