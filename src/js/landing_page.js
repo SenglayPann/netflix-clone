@@ -47,5 +47,5 @@ button.addEventListener('click', function() {
 
 const signInButton = document.getElementById('sign-in')
 signInButton.addEventListener("click", function() {
-    window.location.href = 'sign_in.html'
+    window.location.href = './pages/sign_in.html'
 })
