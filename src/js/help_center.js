@@ -20,18 +20,15 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// window.onscroll = function() {detectStickyDiv()};
-  
-//   function detectStickyDiv() {
-//     const dropdownBorder = document.getElementById('dropdown-border');
-//     var inputBox = document.getElementById("input-box");
-//     var rect = inputBox.getBoundingClientRect();
-    
-//     if (rect.top <= 0) {
-//       dropdownBorder.style.setProperty("top", "5px");
-//       dropdownBorder.style.setProperty("opacity", "1");
-//     } else {
-//       dropdownBorder.style.setProperty("top", "-42px");
-//       dropdownBorder.style.setProperty("opacity", "0");
-//     }
-//   }
+var dropDowns = document.querySelectorAll(".link-box");
+
+dropDowns.forEach(function(dropDown) {
+    dropDown.addEventListener("click", function() {
+        var dropdown = this.nextElementSibling;
+        if (dropdown.style.display === "flex") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "flex";
+        }
+    });
+});

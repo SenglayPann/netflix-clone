@@ -21,6 +21,9 @@ html {
         .help-center { 
           font-size: 18px;
           margin: 20px;
+          p {
+            margin-right: 10px;
+          }
           color: #221f1f;
           @apply
             sm:flex
@@ -55,24 +58,54 @@ html {
         sm:flex
       }
       .right-content {
+        .link-box { 
           .mobile-icon { 
             height: 25px;
             width: 25px;
           }
-          p { 
-            color: #221f1f;
+          a { 
+            color: black;
+            @apply
+            font-light
           }
-          p:hover { 
+          a:hover { 
           text-decoration: underline;
           @apply
           cursor-pointer
+          }
+        @apply
+        flex
+        }
+        .dropdown { 
+          display: none;
+          border-radius: 4px;
+          flex-direction: column;
+          padding: 16px;
+          background-color: white;
+          position: absolute;
+          top: 65px;
+          margin-left: -50px;
+          right: 20px;
+          border: 1px solid lightgrey;  
+          a {
+            @apply
+            gap-2
+            flex
+            justify-start
+            items-center
+          }
+          a:hover { 
+            @apply
+            underline
+          }
         }
         @apply
         flex
         justify-end
         sm:items-center
-      }  
+      }       
       @apply
+      px-2
       flex
       justify-between
       pt-2
@@ -413,26 +446,27 @@ html {
 // FOOTER SECTION 
 .footer-container { 
   background-color: #fafafa;
-  .footer-links { 
-    width: 100%;
-    .link { 
-      color: #000000B3;
-      @apply
-      text-sm
-      block
-      mb-4
+  .footer-inner-container { 
+    .footer-links { 
+      width: 70%;
+      .link { 
+        color: #000000B3;
+        @apply
+        text-sm
+        block
+        mb-4
+      }
+      .link:hover { 
+        @apply
+        underline
+      }
     }
+    @apply
+    flex
+    justify-center
   }
   @apply
   pt-16
   pb-12
   px-3
 }
-
-// #input-box {
-//   position: -webkit-sticky;
-//   position: sticky;
-//   top: 0;
-//   background-color: lightblue;
-//   z-index: 0;
-// }

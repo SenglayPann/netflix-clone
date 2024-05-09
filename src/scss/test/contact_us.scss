@@ -44,7 +44,8 @@ body {
 
 // NAV-BAR
 .nav-container {
-    background-color: #000000;
+  background-color: #000000;
+  height: 100vh;
     .header-container {
         max-width: 720px;
         width: 720px;
@@ -56,6 +57,9 @@ body {
           .help-center { 
             margin: 20px;
             color: white;
+            p { 
+              margin-right: 10px;
+            }
             @apply
             sm:flex
             text-[16px]
@@ -86,19 +90,46 @@ body {
           sm:flex
         }
         .right-content {
+          .link-box { 
             .mobile-icon { 
               height: 25px;
               width: 25px;
             }
-            p { 
+            a { 
               color: white;
               @apply
               font-extralight
             }
-            p:hover { 
+            a:hover { 
             text-decoration: underline;
             @apply
             cursor-pointer
+            }
+          @apply
+          flex
+          }
+          .dropdown { 
+            display: none;
+            border-radius: 4px;
+            flex-direction: column;
+            padding: 16px;
+            background-color: white;
+            position: absolute;
+            top: 65px;
+            margin-left: -50px;
+            right: 20px;
+            border: 1px solid lightgrey;  
+            a {
+              @apply
+              gap-2
+              flex
+              justify-start
+              items-center
+            }
+            a:hover { 
+              @apply
+              underline
+            }
           }
           @apply
           flex
@@ -106,6 +137,7 @@ body {
           sm:items-center
         }       
         @apply
+        relative
         flex
         justify-between
         pt-2
@@ -183,6 +215,7 @@ body {
         border: 1px solid rgb(213, 212, 209);
         .input-box { 
           input { 
+            width: 95%;
             @apply
             outline-none
             border-none

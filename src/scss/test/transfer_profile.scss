@@ -228,10 +228,7 @@ html {
             text-decoration: none;
             @apply 
             text-lg
-                }
-            .footer-title:hover { 
-                text-decoration: underline;
-                }
+            }
             @apply
             mb-5    
         } 
@@ -253,7 +250,11 @@ html {
                 @apply
                 text-[13px]
                 text-nowrap
-                }
+            }
+            a:hover { 
+                @apply
+                underline
+            }
             }
             @apply
             w-[120px]
