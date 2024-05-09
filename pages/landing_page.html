@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://help.nflxext.com/nficon2023.ico">
     <title>Landing page</title>
     <link rel="stylesheet" href="../src/css/test/o_Landing_page.css">
+    <script src="../src/js/landing_page.js" defer></script>
 </head>
 <body>
     <!-- nav-bar -->
@@ -234,28 +236,5 @@
             <div class="footer-inner">Netflix Cambodia</div>
         </div>
     </div>
-    <script>
-        var acc = document.getElementsByClassName("layout5-box-inner");
-        var i;
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                var svg = this.querySelector('svg');
-                console.log(panel.style.maxHeight)
-                if (panel.style.maxHeight) {
-                    svg.style.transform = 'rotate(0deg)';
-                    panel.style.padding = '0px';
-                    panel.style.maxHeight = null;
-                } else {
-                    svg.style.transform = 'rotate(45deg)';
-                    panel.style.padding = '24px';
-                    panel.style.maxHeight = panel.scrollHeight + 48 + "px";
-                } 
-                
-                
-            });
-        }
-    </script>
 </body>
 </html>
