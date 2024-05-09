@@ -9,7 +9,6 @@ html {
 
 // NAV-BAR
 .nav-container {
-    padding: 10px 3.3rem; 
     justify-content: center;
     display: flex;
     .nav-container-larger {
@@ -44,10 +43,7 @@ html {
                 }
             }  
             @apply
-            flex
-            justify-center
-            min-[965px]:h-[45px]
-            max-[964px]:h-[58px]
+            h-[58px]
         }
     }
 }
@@ -493,6 +489,10 @@ html {
             sm:w-[198px]
             md:w-[213px]
             lg:w-[227px]
+        }
+        .footer-link:hover { 
+            @apply
+            underline
         }
         @apply 
         min-h-[128px] 

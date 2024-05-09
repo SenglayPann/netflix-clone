@@ -10,26 +10,28 @@
 
     .global-container-ligal-notices {
         .legal-notices-header {
-            align-content: center;
+            display: flex;
+            justify-content: center;
             height:66px;
-            width: auto;
             position: relative;
+            background-color: black;
+            
+            @media (max-width:599px) {
+                display: flex;
+                height: 98px;
+                padding-bottom: 16px;
+            }
+
             .header-material{
                 height: 100%;
                 display: flex;
+                width: 1920px;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0px 12px;
-                background-color: black;
-                
-                @media (max-width:599px) {
-                    height: 98px;
-                }
-                @media (min-width:600px) {
-                    padding: 0px 60px;
-                }
+                margin: 0% 10%;
                 .left-side-box {
                     display: flex;
+                    justify-content: space-between;
                     padding: 0px 24px 0px 0px;    
                         .logo {
                             height: 32px;
@@ -130,17 +132,18 @@
             }
         
         .legal-notices-global-notifications {
-            width: auto;
+            display: flex;
+            flex-direction: column;
             color: black;
             .global-notifications-box-1 {
-                padding: 0px 24px;
                 background-color:#eaeae6;
                 border-bottom: 1px solid #d5d4d1;
                 
                 .notifications-upper {
+                    margin: 0% 10%;
                     top: 50%;
                     display: flex;
-                    padding: 16px 16px 16px 40px;
+                    padding: 16px 0px 16px 0px;
 
                     
                     .bell1 {
@@ -317,9 +320,7 @@
                         padding-left: 5px;
                     }
                 }
-                .footer-part {
-                         
-                    // height: 220px;
+                .footer-part {     
                     background:linear-gradient(10deg, rgba(229, 9, 20, 0) 58%, rgb(229, 9, 20) 128%), #000;
                     padding: 0px 0px 48px;
                     .container {
@@ -336,6 +337,9 @@
                                     margin: 0px 0px 14px;
                                     a {
                                         font-size: 14px;
+                                    }
+                                    a:hover {
+                                        text-decoration: underline;
                                     }
                                 }
                                 li:last-child {
