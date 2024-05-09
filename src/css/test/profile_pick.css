@@ -1,0 +1,94 @@
+@import url(../../css/main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: #141414;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply flex
+    justify-center
+    items-center;
+}
+.main-container .content .title {
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  @apply flex
+            justify-center
+            md:text-[3.8vw]
+            text-white;
+}
+.main-container .content .profile-container {
+  gap: 4vw;
+  @apply flex
+            flex-wrap
+            justify-center
+            mt-[35px];
+}
+.main-container .content .user-profile {
+  height: 10vw;
+  min-height: 8.4rem;
+  max-height: 20rem;
+  min-width: 0.84rem;
+  max-width: 20rem;
+  text-decoration: none;
+  @apply mb-[15px]
+                flex-grow-0
+                flex-shrink-0
+                justify-center
+                items-center;
+}
+.main-container .content .user-profile .user-profile-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  @apply relative
+                    block
+                    border-none
+                    outline-none;
+}
+.main-container .content .user-profile .user-profile-icon:hover {
+  outline: 3px solid white;
+}
+.main-container .content .user-profile .user-profile-name {
+  font-size: calc(1em + 0.5vw);
+  color: #808080;
+  font-weight: 200;
+  @apply text-center
+                    mt-[5px];
+}
+.main-container .content .user-profile g:hover {
+  fill: white;
+}
+.main-container .content .button-container {
+  @apply flex
+            justify-center;
+}
+.main-container .content .button-container .manage-profile {
+  border: 1px solid grey;
+  color: grey;
+  padding: 0.8rem 2.6rem;
+  letter-spacing: 0.3rem;
+  font-size: calc(0.4em + 1.1vw + 0.2vh);
+  cursor: pointer;
+  font-weight: 200;
+  @apply mt-[7rem]
+            bg-transparent;
+}
+.main-container .content .button-container .manage-profile:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/*# sourceMappingURL=profile_pick.css.map */

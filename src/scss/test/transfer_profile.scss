@@ -1,0 +1,282 @@
+@import url(../../css/main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { 
+    font-family: 'Netflix Sans';
+}
+// NAV-BAR
+.nav-container {
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    .header-container {
+        width: 100%;
+        height: 100%;
+        .left-content {
+            margin-left: 20px;
+            svg { 
+                @apply
+                h-5
+                w-[74px]
+                sm:h-[45px]
+                sm:w-[167px]
+            }
+            @apply
+            mt-4
+            sm:mt-0
+            w-[167px]
+            h-[90px]
+            min-w-[75px]
+            max-w-[166.5px]
+            min-h-[20px]
+            max-h-[45px]
+        }
+        .sign-out { 
+            font-size: 18px;
+            color: #221f1f;
+            height: 90px;
+            font-weight: 500;
+            @apply
+            flex
+            items-center
+            px-[29px]
+            text-sm
+            sm:text-[16px]
+            md:text-[19px]
+        }
+        .sign-out:hover { 
+            text-decoration: underline;
+            @apply
+            cursor-pointer
+        }
+        @apply
+        flex
+        justify-between 
+        items-center
+    }
+    @apply
+    h-[46px]
+    sm:h-[76px]
+    md:h-[91px]
+}
+
+// MAIN BODY 
+.body-container { 
+    width: 100%;
+    .content-container { 
+        padding: 20px 32px 60px;
+        margin: 0px 0px 15px;
+        .title-container { 
+            .title { 
+                font-weight: 500;
+                color: #333333;
+                @apply
+                text-[27px]
+                sm:text-[32px]
+            }
+            @apply
+            text-center
+            mb-3
+        }
+        .profile-container { 
+            display: flex;
+            justify-content: center;
+            .profile-icon { 
+                border-radius: 10%;
+            }
+            .profile-name {
+                @apply
+                mx-[15px]
+                text-[20px]
+                flex
+                items-center
+                font-semibold
+            }
+            @apply
+            my-[35px]
+        }
+        .link-container {
+            a { 
+                color: #0071eb;
+                text-decoration: none;
+                @apply
+                text-center
+                text-lg
+            }
+            a:hover { 
+                text-decoration: underline;
+            }
+            @apply
+            text-center
+            mb-[35px]
+        }
+        .button-container { 
+            .transfer-button { 
+                border-radius: 5px;
+                background-color: #e51e13;
+                @apply
+                border-none
+                text-white
+                text-lg
+                w-[340px]
+                h-[48px]
+            }
+            .transfer-button:hover { 
+                background-color: #c01910;
+            }
+            @apply
+            flex
+            justify-center
+        }
+        .learn-more-container { 
+            margin: 0px 55px;
+            padding: 15px 0px 35px;
+            span { 
+                p { 
+                    color: #333333;
+                    @apply
+                    text-lg
+                    text-center
+                    font-semibold
+                }
+                p:hover { 
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        .sub-title-container {
+            .sub-title { 
+                color: #333333;
+                @apply
+                text-lg
+                md:text-[23px]
+                text-center
+                font-semibold
+            }
+            @apply
+            mt-[18px]
+            mb-[6px]
+        }
+        .check-mark-container { 
+            .check-mark-content { 
+                .check-mark-item { 
+                    span { 
+                        display: flex;
+                        .svg-box { 
+                           @apply
+                           mt-[6px]
+                        }
+                        p { 
+                            color: #333;
+                            @apply
+                            text-lg
+                            font-light
+                            text-wrap
+                            ml-[10px]
+                        }
+                    }
+                    #span-games { 
+                        #text-box { 
+                            p { 
+                                font-style: italic;
+                                @apply
+                                font-light
+                            }
+                        }
+                    }
+                    @apply
+                    mt-5
+                }
+                #item-odd { 
+                    margin-top: 0;
+                }
+                #mark-odd { 
+                    @apply
+                    ml-10
+                    mt-5
+                }
+            }
+            @apply
+            flex
+            min-w-[270px]
+            max-w-[400px]
+            m-[25px]
+            mx-auto
+        }
+        @apply
+        flex
+        flex-col
+        justify-center
+        mb-[95px]
+    }
+}
+// FOOTER SECTION
+
+
+.footer-container {
+    background-color: #f3f3f3;
+    border-top: 1px solid #e6e6e6;
+    .footer-box {
+        .footer-title-container {
+            .footer-title {
+            color: #737373;
+            text-decoration: none;
+            @apply 
+            text-lg
+            }
+            @apply
+            mb-5    
+        } 
+        .footer-links {
+            color: #737373;
+            box-sizing: border-box;
+            max-width: 1000px;
+            min-width: 288px;
+            position: relative;
+  
+        .footer-link {
+            position: relative; 
+            display: inline-block; 
+            margin: 0 0 16px; 
+            padding: 0 22px 0 0;
+            span {
+                width: 100%;
+            a { 
+                @apply
+                text-[13px]
+                text-nowrap
+            }
+            a:hover { 
+                @apply
+                underline
+            }
+            }
+            @apply
+            w-[120px]
+            sm:w-[198px]
+            md:w-[213px]
+            lg:w-[227px]
+        }
+        @apply 
+        min-h-[128px] 
+        max-h-[144px]
+    } 
+      @apply 
+      mx-[20px] 
+      sm:mx-[22px]
+      md:mx-[37px]
+      lg:mx-[67px]
+      pt-[30px]
+    } 
+    @apply 
+    min-h-[165px] 
+    max-h-[245px]
+    h-[245px] 
+    pb-5
+}
+  

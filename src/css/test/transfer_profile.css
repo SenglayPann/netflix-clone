@@ -1,0 +1,237 @@
+@import url(../../css/main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  font-family: "Netflix Sans";
+}
+
+.nav-container {
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  @apply h-[46px]
+    sm:h-[76px]
+    md:h-[91px];
+}
+.nav-container .header-container {
+  width: 100%;
+  height: 100%;
+  @apply flex
+        justify-between 
+        items-center;
+}
+.nav-container .header-container .left-content {
+  margin-left: 20px;
+  @apply mt-4
+            sm:mt-0
+            w-[167px]
+            h-[90px]
+            min-w-[75px]
+            max-w-[166.5px]
+            min-h-[20px]
+            max-h-[45px];
+}
+.nav-container .header-container .left-content svg {
+  @apply h-5
+                w-[74px]
+                sm:h-[45px]
+                sm:w-[167px];
+}
+.nav-container .header-container .sign-out {
+  font-size: 18px;
+  color: #221f1f;
+  height: 90px;
+  font-weight: 500;
+  @apply flex
+            items-center
+            px-[29px]
+            text-sm
+            sm:text-[16px]
+            md:text-[19px];
+}
+.nav-container .header-container .sign-out:hover {
+  text-decoration: underline;
+  @apply cursor-pointer;
+}
+
+.body-container {
+  width: 100%;
+}
+.body-container .content-container {
+  padding: 20px 32px 60px;
+  margin: 0px 0px 15px;
+  @apply flex
+        flex-col
+        justify-center
+        mb-[95px];
+}
+.body-container .content-container .title-container {
+  @apply text-center
+            mb-3;
+}
+.body-container .content-container .title-container .title {
+  font-weight: 500;
+  color: #333333;
+  @apply text-[27px]
+                sm:text-[32px];
+}
+.body-container .content-container .profile-container {
+  display: flex;
+  justify-content: center;
+  @apply my-[35px];
+}
+.body-container .content-container .profile-container .profile-icon {
+  border-radius: 10%;
+}
+.body-container .content-container .profile-container .profile-name {
+  @apply mx-[15px]
+                text-[20px]
+                flex
+                items-center
+                font-semibold;
+}
+.body-container .content-container .link-container {
+  @apply text-center
+            mb-[35px];
+}
+.body-container .content-container .link-container a {
+  color: #0071eb;
+  text-decoration: none;
+  @apply text-center
+                text-lg;
+}
+.body-container .content-container .link-container a:hover {
+  text-decoration: underline;
+}
+.body-container .content-container .button-container {
+  @apply flex
+            justify-center;
+}
+.body-container .content-container .button-container .transfer-button {
+  border-radius: 5px;
+  background-color: #e51e13;
+  @apply border-none
+                text-white
+                text-lg
+                w-[340px]
+                h-[48px];
+}
+.body-container .content-container .button-container .transfer-button:hover {
+  background-color: #c01910;
+}
+.body-container .content-container .learn-more-container {
+  margin: 0px 55px;
+  padding: 15px 0px 35px;
+}
+.body-container .content-container .learn-more-container span p {
+  color: #333333;
+  @apply text-lg
+                    text-center
+                    font-semibold;
+}
+.body-container .content-container .learn-more-container span p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.body-container .content-container .sub-title-container {
+  @apply mt-[18px]
+            mb-[6px];
+}
+.body-container .content-container .sub-title-container .sub-title {
+  color: #333333;
+  @apply text-lg
+                md:text-[23px]
+                text-center
+                font-semibold;
+}
+.body-container .content-container .check-mark-container {
+  @apply flex
+            min-w-[270px]
+            max-w-[400px]
+            m-[25px]
+            mx-auto;
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item {
+  @apply mt-5;
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item span {
+  display: flex;
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item span .svg-box {
+  @apply mt-[6px];
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item span p {
+  color: #333;
+  @apply text-lg
+                            font-light
+                            text-wrap
+                            ml-[10px];
+}
+.body-container .content-container .check-mark-container .check-mark-content .check-mark-item #span-games #text-box p {
+  font-style: italic;
+  @apply font-light;
+}
+.body-container .content-container .check-mark-container .check-mark-content #item-odd {
+  margin-top: 0;
+}
+.body-container .content-container .check-mark-container .check-mark-content #mark-odd {
+  @apply ml-10
+                    mt-5;
+}
+
+.footer-container {
+  background-color: #f3f3f3;
+  border-top: 1px solid #e6e6e6;
+  @apply min-h-[165px] 
+    max-h-[245px]
+    h-[245px] 
+    pb-5;
+}
+.footer-container .footer-box {
+  @apply mx-[20px] 
+      sm:mx-[22px]
+      md:mx-[37px]
+      lg:mx-[67px]
+      pt-[30px];
+}
+.footer-container .footer-box .footer-title-container {
+  @apply mb-5;
+}
+.footer-container .footer-box .footer-title-container .footer-title {
+  color: #737373;
+  text-decoration: none;
+  @apply text-lg;
+}
+.footer-container .footer-box .footer-links {
+  color: #737373;
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-width: 288px;
+  position: relative;
+  @apply min-h-[128px] 
+        max-h-[144px];
+}
+.footer-container .footer-box .footer-links .footer-link {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 0 22px 0 0;
+  @apply w-[120px]
+            sm:w-[198px]
+            md:w-[213px]
+            lg:w-[227px];
+}
+.footer-container .footer-box .footer-links .footer-link span {
+  width: 100%;
+}
+.footer-container .footer-box .footer-links .footer-link span a {
+  @apply text-[13px]
+                text-nowrap;
+}
+.footer-container .footer-box .footer-links .footer-link span a:hover {
+  @apply underline;
+}
+
+/*# sourceMappingURL=transfer_profile.css.map */

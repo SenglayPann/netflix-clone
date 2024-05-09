@@ -1,0 +1,226 @@
+@import url(../main/font.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Netflix Sans";
+}
+
+/* Navbar-Chhunkea */
+body {
+  background-color: gray;
+  margin: 0; /* Reset default margin */
+}
+
+.navbar-container {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+  user-select: none;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center; /* Center all the letters */
+  justify-content: space-between; /* Add this line to evenly space the logo and links */
+  padding: 20px;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+  /* Scrolling black */
+}
+.navbar-container .nav_logo {
+  width: 100px;
+  height: 20px;
+}
+.navbar-container .nav_avatar {
+  width: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.navbar-container.nav_black {
+  background-color: black;
+}
+.navbar-container .links1 {
+  justify-content: space-between;
+  list-style-type: none;
+  @apply hidden
+        md:flex;
+}
+.navbar-container .links1 a {
+  margin-left: 20px;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.navbar-container .avatar {
+  display: flex;
+  align-items: center; /* Align items to vertically center */
+  gap: 20px;
+  color: white;
+  margin-left: auto; /* Push the avatar section to the right */
+  margin-right: 10px;
+}
+.navbar-container .avatar .arrow-down {
+  font-size: 9px;
+  width: 10px; /* Adjust the width as needed */
+  display: inline-block; /* Ensure the element takes up space horizontally */
+  color: white;
+  margin-left: 10px;
+}
+.navbar-container .avatar .arrow-down .browse-white {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Dropdown button */
+.browse-white {
+  color: white;
+  padding: 8px 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+/* Dropdown container */
+.browse-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.browse-menu {
+  position: relative;
+  display: inline-block;
+  /* Dropdown content */
+  /* Show dropdown content on hover */
+}
+.browse-menu .browse-list-container {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 260px;
+  z-index: 1;
+  left: -100px;
+}
+.browse-menu .browse-list-container .broswe-item a {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+  padding: 10px 50px 10px 30px; /* top right bottom left */
+  text-decoration: none;
+  display: block;
+}
+.browse-menu .browse-list-container .broswe-item a:hover {
+  background-color: #b3b3b3;
+}
+.browse-menu:hover .browse-list-container {
+  display: block;
+}
+
+.dropdown-notification-container {
+  position: relative;
+}
+.dropdown-notification-container .dropdown-notification {
+  color: gray;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -350px;
+}
+.dropdown-notification-container:hover .dropdown-notification {
+  display: block;
+}
+.dropdown-notification-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-notification-container ul li {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Add spacing between list items */
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.dropdown-notification-container ul li img {
+  margin-right: 10px; /* Add spacing between image and text */
+  width: 150px;
+  height: auto;
+  border-radius: 4%;
+}
+
+.dropdown-image {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* black box hover */
+.dropdown-content {
+  color: gray;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -210px;
+  padding: 10px; /* Increase padding for larger hover area */
+  margin-top: 10px;
+}
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-content ul li {
+  color: #fff;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Add spacing between list items */
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.dropdown-content ul li img {
+  margin-right: 10px; /* Add spacing between image and text */
+  height: auto;
+  border-radius: 4%;
+}
+.dropdown-content ul li:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-image {
+  display: flex;
+  align-items: center;
+}
+
+/* image drop down */
+.dropdown-image-container {
+  position: relative;
+  display: inline-block;
+  /* Show dropdown content on hover */
+}
+.dropdown-image-container:hover .dropdown-content {
+  display: block;
+}
+
+.center-text-signout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=navbar.css.map */

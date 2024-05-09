@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// gift card
+body {
+    background-color: black;
+}
+
+@media(max-width: 1199px) {
+    .parents2 {
+        transition: 1s;
+        display: none;
+    }
+}
+
+@media(min-width: 1200px) {
+    .parents {
+        transition: 1s;
+        display: none;
+    }
+}
+
+.parents2 {
+    width: 100%;
+    height: 1300px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .8) 20%, transparent 85%), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-size: cover;
+    transition: 1s;
+    .mid1 {
+        transition: 1s;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        left: 40px;
+        top: 380px;
+        z-index: 1;
+        .redeem-your-gift2 {
+            transition: 1s;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 60px;
+            color: #FFFFFF;
+            font-weight: 500;
+            text-shadow: 1px 1px 10px #000;
+        }
+        .enter2 {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 30px;
+            color: #FFFFFF;
+        }
+        .input-parent2 {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            .input2 {
+                background-color: rgba(0, 0, 0, .8);
+                border-radius: 2px;
+                width: 253px;
+                height: 46px;
+                border: 1px solid #8c8c8c;
+                display: block;
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+        .button-redeem2 {
+            display: flex;
+            justify-content: flex-start;
+            .redeem2 {
+                background-color: #E50914;
+                color: #fff;
+                min-width: 152px;
+                min-height: 48px;
+                border-radius: 2px;
+                display: block;
+                border: none;
+                font-size: 16px;
+            }
+        }
+        .link2 {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            .need-help2 {
+                text-decoration: none;
+                color: #A6A6A6;
+            }
+        }
+        .link2 :hover {
+            text-decoration: underline ;
+        }
+        .this-page2 {
+            display: flex;
+            justify-content: flex-start;
+            .paragraph2  {
+                color: #8C8C8C;
+                width: 450px;
+            }
+            .learn-more2 {
+                color: #0071EB;
+            }
+        }
+    }
+    .child2 {
+        display: flex;
+        justify-content: space-between;
+        .svg-icon2 {
+            width: 100px;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        .sign-in2 {
+            background-color: #E50914;
+            color: #fff;
+            width: 110px;
+            height: 35px;
+            border-radius: 4px;
+            margin-right: 30px ;
+            border: none;
+            margin-top: 20px;
+        }
+    }
+}
+
+.parents {
+    transition: 1s;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(180deg, rgba(26, 26, 26, .9), transparent), url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/ea74f0f8-14a0-4a03-990c-ded6036a66ab/KH-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-size: cover;
+    .mid {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 380px;
+        z-index: 1;
+        .redeem-your-gift {
+            display: flex;
+            justify-content: center;
+            font-size: 60px;
+            color: #FFFFFF;
+            font-weight: 500;
+            text-shadow: 1px 1px 10px #000;
+        }
+        .enter {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            color: #FFFFFF;
+        }
+        .input-parent {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            .input {
+                background-color: rgba(0, 0, 0, .8);
+                border-radius: 2px;
+                width: 253px;
+                height: 46px;
+                border: 1px solid #8c8c8c;
+                display: block;
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+        .button-redeem {
+            display: flex;
+            justify-content: center;
+            .redeem {
+                background-color: #E50914;
+                color: #fff;
+                min-width: 152px;
+                min-height: 48px;
+                border-radius: 2px;
+                display: block;
+                border: none;
+                font-size: 16px;
+            }
+        }
+        .link {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            .need-help {
+                text-decoration: none;
+                color: #A6A6A6;
+            }
+        }
+        .link :hover {
+            text-decoration: underline ;
+        }
+        .this-page {
+            display: flex;
+            justify-content: center;
+            .paragraph  {
+                color: #8C8C8C;
+                width: 450px;
+            }
+            .learn-more {
+                color: #0071EB;
+            }
+        }
+    }
+    .child {
+        display: flex;
+        justify-content: space-between;
+        .svg-icon {
+            width: 100px;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        .sign-in {
+            background-color: #E50914;
+            color: #fff;
+            width: 110px;
+            height: 35px;
+            border-radius: 4px;
+            margin-right: 30px ;
+            border: none;
+            margin-top: 20px;
+        }
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .mid1 {
+        transition: 1s;
+        position: relative;
+        right: 25%;
+        margin-top: -200px;
+        -webkit-font-smoothing: antialiased;
+        background-color: linear-gradient(180deg, rgba(26, 26, 26, .9), transparent);
+    }
+}
+@media (min-width: 1900px) {
+    .mid1 {
+        transition: 1s;
+        position: relative;
+        right: 35%;
+        margin-top: -200px;
+        -webkit-font-smoothing: antialiased;
+        background-color: linear-gradient(180deg, rgba(26, 26, 26, .9), transparent);
+        width: 1360px;
+        .need-help2 {
+            text-shadow: 1px 1px 10px #000;
+        }
+        .paragraph2 {
+            text-shadow: 1px 1px 10px #000;
+            width: auto;
+        }
+        .redeem-your-gift2 {
+            h2 {
+                transition: 1s;
+                font-size: 80px;
+            }
+        }
+    }
+}
+
+// footer
+.list {
+    list-style: none;
+}
+.list :hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 300px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.footer-parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    color: #8C8C8C;
+}
+.footer-text {
+    margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+    .footer {
+        .footer-parent {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            margin-left: 50px;
+        }
+    }
+}

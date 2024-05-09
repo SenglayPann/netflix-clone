@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "CyberNexus/Team-Projects/Netflix-Clone"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/legal-notices"
+LAND_DEST_BRANCH = "feature/legal-notices"
