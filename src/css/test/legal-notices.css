@@ -7,31 +7,30 @@
   height: 100%;
 }
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header {
-  align-content: center;
+  display: flex;
+  justify-content: center;
   height: 66px;
-  width: auto;
   position: relative;
+  background-color: black;
+}
+@media (max-width: 599px) {
+  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header {
+    display: flex;
+    height: 98px;
+    padding-bottom: 16px;
+  }
 }
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
   height: 100%;
   display: flex;
+  width: 1920px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 12px;
-  background-color: black;
-}
-@media (max-width: 599px) {
-  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
-    height: 98px;
-  }
-}
-@media (min-width: 600px) {
-  .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material {
-    padding: 0px 60px;
-  }
+  margin: 0% 10%;
 }
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box {
   display: flex;
+  justify-content: space-between;
   padding: 0px 24px 0px 0px;
 }
 .legal-notices-subpage .global-container-ligal-notices .legal-notices-header .header-material .left-side-box .logo {
@@ -130,18 +129,19 @@
 }
 
 .legal-notices-global-notifications {
-  width: auto;
+  display: flex;
+  flex-direction: column;
   color: black;
 }
 .legal-notices-global-notifications .global-notifications-box-1 {
-  padding: 0px 24px;
   background-color: #eaeae6;
   border-bottom: 1px solid #d5d4d1;
 }
 .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper {
+  margin: 0% 10%;
   top: 50%;
   display: flex;
-  padding: 16px 16px 16px 40px;
+  padding: 16px 0px 16px 0px;
 }
 .legal-notices-global-notifications .global-notifications-box-1 .notifications-upper .bell1 {
   padding-right: 24px;
@@ -324,6 +324,9 @@
 }
 .footer-part .container .footer-box ul li a {
   font-size: 14px;
+}
+.footer-part .container .footer-box ul li a:hover {
+  text-decoration: underline;
 }
 .footer-part .container .footer-box ul li:last-child {
   margin-bottom: 0;
